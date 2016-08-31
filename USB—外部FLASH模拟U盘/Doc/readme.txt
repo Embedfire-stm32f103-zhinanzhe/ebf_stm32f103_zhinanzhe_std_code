@@ -54,7 +54,7 @@ USB：
 USB Device接口与STM32相连：
 	D- 				<--------> PA11
 	D+ 				<--------> PA12
-	D+的上拉使能控制	<--------> PD3 (低电平使能USB)
+	D+的上拉使能控制	<--------> PD6 (低电平使能USB)
 	
 相关引脚在hw_config.c文件配置
 
@@ -63,7 +63,7 @@ FLASH芯片的SPI接口与STM32的SPI3相连。
 		SCK	<--->PA5
 		MISO<--->PA6
 		MOSI<--->PA7
-		CS	<--->PA4
+		CS	<--->PC0
 
 串口(TTL-USB TO USART)：
 CH340的收发引脚与STM32的发收引脚相连。

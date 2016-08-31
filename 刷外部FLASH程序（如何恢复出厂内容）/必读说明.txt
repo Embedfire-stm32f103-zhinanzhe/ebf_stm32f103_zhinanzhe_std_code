@@ -60,7 +60,7 @@ FLASH芯片的SPI接口与STM32的SPI3相连。
 		SCK	<--->PA5
 		MISO<--->PA6
 		MOSI<--->PA7
-		CS	<--->PA4
+		CS	<--->PC0
 
 串口(TTL-USB TO USART)：
 CH340的收发引脚与STM32的发收引脚相连。

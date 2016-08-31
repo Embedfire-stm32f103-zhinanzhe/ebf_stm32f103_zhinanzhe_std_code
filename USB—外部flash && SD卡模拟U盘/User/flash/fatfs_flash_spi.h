@@ -45,9 +45,9 @@
 
 //CS(NSS)引脚 片选选普通GPIO即可
 #define      FLASH_SPI_CS_APBxClock_FUN       RCC_APB2PeriphClockCmd
-#define      FLASH_SPI_CS_CLK                  RCC_APB2Periph_GPIOA    
-#define      FLASH_SPI_CS_PORT                 GPIOA
-#define      FLASH_SPI_CS_PIN                  GPIO_Pin_4
+#define      FLASH_SPI_CS_CLK                  RCC_APB2Periph_GPIOC    
+#define      FLASH_SPI_CS_PORT                 GPIOC
+#define      FLASH_SPI_CS_PIN                  GPIO_Pin_0
 
 //SCK引脚
 #define      FLASH_SPI_SCK_APBxClock_FUN      RCC_APB2PeriphClockCmd
