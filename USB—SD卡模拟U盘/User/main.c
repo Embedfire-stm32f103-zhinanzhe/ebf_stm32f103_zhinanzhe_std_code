@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-霸道 STM32 开发板 
+  * 实验平台:秉火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
@@ -52,7 +52,7 @@ int main(void)
  
  	while (bDeviceState != CONFIGURED);	 //等待配置完成
 	   
-	printf("\r\n 秉火 F103-霸道 STM32 USB MASS STORAGE 实验\r\n");
+	printf("\r\n 秉火 F103-指南者 STM32 USB MASS STORAGE 实验\r\n");
 	 
   while (1)
   {

@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Component Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'F103-霸道-STM32' 
+ * Project: 'F103-指南者-STM32' 
  * Target:  'USB Mass Storage' 
  */
 

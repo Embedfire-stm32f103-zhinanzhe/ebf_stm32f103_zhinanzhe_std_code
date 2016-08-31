@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-霸道 STM32 开发板 
+  * 实验平台:秉火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
@@ -23,7 +23,7 @@
 /*-------------   例程使用说明 ------------------*/
 
 //本工程仅适用已插入SD卡用户，如果没有SD卡请使用名为：
-//（2.STM32-F103-霸道_USB Mass Storage_flash）工程，不然在
+//（2.STM32-F103-指南者_USB Mass Storage_flash）工程，不然在
 //没有SD卡情况下使用本工程会导致模拟U盘速度非常慢。
 
 /*---------------------------------------------*/
@@ -53,7 +53,7 @@ int main(void)
  
  	while (bDeviceState != CONFIGURED);	 //等待配置完成
 	   
-	printf("\r\n 秉火 F103-霸道 STM32 USB MASS STORAGE 实验\r\n");
+	printf("\r\n 秉火 F103-指南者 STM32 USB MASS STORAGE 实验\r\n");
 	 
   while (1)
   {
