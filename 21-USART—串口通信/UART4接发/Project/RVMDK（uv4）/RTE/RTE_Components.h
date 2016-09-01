@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'BH-F103' 
- * Target:  '°´¼ü-EXTI' 
+ * Target:  'USART' 
  */
 
 #ifndef RTE_COMPONENTS_H
