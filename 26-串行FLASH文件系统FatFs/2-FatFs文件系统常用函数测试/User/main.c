@@ -106,13 +106,13 @@ static FRESULT miscellaneous(void)
   return res_flash;
 }
 
+  FILINFO fno;
 
 /**
   * 文件信息获取
   */
 static FRESULT file_check(void)
 {
-  FILINFO fno;
   
   /* 获取文件信息 */
   res_flash=f_stat("1:TestDir/testdir.txt",&fno);
