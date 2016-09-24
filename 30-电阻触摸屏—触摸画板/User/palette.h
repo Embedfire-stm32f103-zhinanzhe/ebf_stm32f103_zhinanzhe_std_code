@@ -2,7 +2,7 @@
 #define _PALETTE_H
 
 #include "stm32f10x.h"
-#include "./lcd/bsp_lcd.h"
+#include "./lcd/bsp_ili9341_lcd.h"
  
 
 #define COLOR_BLOCK_WIDTH   40

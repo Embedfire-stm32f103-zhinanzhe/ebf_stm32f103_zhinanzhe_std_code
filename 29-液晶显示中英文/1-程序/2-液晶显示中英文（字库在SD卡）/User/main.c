@@ -17,7 +17,7 @@
  
 #include "stm32f10x.h"
 #include "./usart/bsp_usart.h"	
-#include "./lcd/bsp_lcd.h"
+#include "./lcd/bsp_ili9341_lcd.h"
 
 static void LCD_Test(void);	
 static void Delay ( __IO uint32_t nCount );
