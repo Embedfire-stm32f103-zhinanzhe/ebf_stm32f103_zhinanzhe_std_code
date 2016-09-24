@@ -1,0 +1,7 @@
+GB2312字模
+寻址公式：
+pos = ((High8bit-0xa1)*94+Low8bit-0xa1)*16*16/8;
+
+
+其中：16*16/8 的16*16为矩阵大小，根据自己的配置修改。
+工程中读取字模的函数为 bsp_spi_flash.c 文件的 GetGBKCode_from_EXFlash 。

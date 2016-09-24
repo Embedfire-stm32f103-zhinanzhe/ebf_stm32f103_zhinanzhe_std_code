@@ -51,9 +51,18 @@ Aux_Data_Typedef  burn_data[] =
   [AUX_HZLIB] =
   {
     .filename           =   "0:/srcdata/HZLIB.bin",
-    .description        =   "裸机中文字库",
+    .description        =   "裸机中文字库（旧版，为兼容而保留）",
     .start_addr         =   1*4096 ,
     .length             =   53*4096, 
+    .burn_option      =  UPDATE,
+  },
+	
+	 [AUX_GB2312] = 
+  {
+    .filename           =   "0:/srcdata/GB2312_H1616.FON",
+    .description        =   "GB2312字库（修复HZLIB不支持标点的问题）",
+    .start_addr         =   387*4096 ,
+    .length             =   64*4096, 
     .burn_option      =  UPDATE,
   },
   
@@ -64,16 +73,7 @@ Aux_Data_Typedef  burn_data[] =
     .start_addr         =   465*4096 ,
     .length             =   43*4096,
     .burn_option      =  UPDATE,      
-  },
-      
-  [AUX_GB2312_H2424] =
-  {
-    .filename           =   "0:/srcdata/GB2312_H2424.FON",
-    .description        =   "裸机中文字库",
-    .start_addr         =   1360*4096 ,
-    .length             =   144*4096,
-    .burn_option      =  DO_NOT_UPDATE,      
-  },
+  },      
   
   [AUX_FILE_SYSTEM] =
   {
@@ -85,6 +85,7 @@ Aux_Data_Typedef  burn_data[] =
   }
 
 };
+
 
 
 static int copy_dir(char *src_path,char *dst_path);
