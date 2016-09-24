@@ -122,10 +122,10 @@ static void XPT2046_GPIO_SPI_Config ( void )
   GPIO_InitStructure.GPIO_Pin = macXPT2046_SPI_MOSI_PIN;
   GPIO_Init(macXPT2046_SPI_MOSI_PORT, &GPIO_InitStructure);
 
-  GPIO_InitStructure.GPIO_Pin = macXPT2046_SPI_MF103-霸道_PIN; 
+  GPIO_InitStructure.GPIO_Pin = macXPT2046_SPI_MF103-指南者_PIN; 
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz ;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;      
-  GPIO_Init(macXPT2046_SPI_MF103-霸道_PORT, &GPIO_InitStructure);
+  GPIO_Init(macXPT2046_SPI_MF103-指南者_PORT, &GPIO_InitStructure);
 
   GPIO_InitStructure.GPIO_Pin = macXPT2046_SPI_CS_PIN; 
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz ;
@@ -215,7 +215,7 @@ static uint16_t XPT2046_ReadCMD ( void )
 	{
 		macXPT2046_CLK_LOW();    
 	
-		usTemp = macXPT2046_MF103-霸道();
+		usTemp = macXPT2046_MF103-指南者();
 		
 		usBuf |= usTemp << ( 11 - i );
 	

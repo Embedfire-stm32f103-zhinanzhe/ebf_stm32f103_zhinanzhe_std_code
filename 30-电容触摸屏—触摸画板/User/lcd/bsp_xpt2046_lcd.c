@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-霸道 STM32 开发板 
+  * 实验平台:秉火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :http://firestm32.taobao.com
   *
@@ -511,7 +511,6 @@ uint8_t XPT2046_Touch_Calibrate ( uint8_t LCD_Mode )
 		uint16_t usTest_x = 0, usTest_y = 0, usGap_x = 0, usGap_y = 0;
 		
 	  char * pStr = 0;
-		float * ulHeadAddres ;
 	
     strType_XPT2046_Coordinate strCrossCoordinate[4], strScreenSample[4];
 	  
@@ -571,7 +570,7 @@ uint8_t XPT2046_Touch_Calibrate ( uint8_t LCD_Mode )
 		usGap_x = ( usTest_x > strCrossCoordinate[3].x ) ? ( usTest_x - strCrossCoordinate[3].x ) : ( strCrossCoordinate[3].x - usTest_x );   //实际X坐标与计算坐标的绝对差
 		usGap_y = ( usTest_y > strCrossCoordinate[3].y ) ? ( usTest_y - strCrossCoordinate[3].y ) : ( strCrossCoordinate[3].y - usTest_y );   //实际Y坐标与计算坐标的绝对差
 		
-    if ( ( usGap_x > 10 ) || ( usGap_y > 10 ) ) goto Failure;       //可以通过修改这两个值的大小来调整精度    
+    if ( ( usGap_x > 15 ) || ( usGap_y > 15 ) ) goto Failure;       //可以通过修改这两个值的大小来调整精度    
 		
 
     /* 校准系数为全局变量 */ 
@@ -583,18 +582,22 @@ uint8_t XPT2046_Touch_Calibrate ( uint8_t LCD_Mode )
 		strXPT2046_TouchPara[LCD_Mode].dY_Y = ( CalibrationFactor.En * 1.0 ) / CalibrationFactor.Divider;
 		strXPT2046_TouchPara[LCD_Mode].dY   = ( CalibrationFactor.Fn * 1.0 ) / CalibrationFactor.Divider;
 
-    /* 打印校校准系数 */ 
-		XPT2046_INFO ( "显示模式【%d】校准系数如下：", LCD_Mode);
-		
-		ulHeadAddres = ( float* ) ( & strXPT2046_TouchPara[LCD_Mode] );
-		
-    for ( i = 0; i < 6; i ++ )
-		{					
-			printf ( "%12f,", *ulHeadAddres++  );			
-		}	
-		printf("\r\n");
-		
-	
+		#if 0  //输出调试信息，注意要先初始化串口
+			{
+						float * ulHeadAddres ;
+				/* 打印校校准系数 */ 
+				XPT2046_INFO ( "显示模式【%d】校准系数如下：", LCD_Mode);
+				
+				ulHeadAddres = ( float* ) ( & strXPT2046_TouchPara[LCD_Mode] );
+				
+				for ( i = 0; i < 6; i ++ )
+				{					
+					printf ( "%12f,", *ulHeadAddres++  );			
+				}	
+				printf("\r\n");
+			}
+		#endif
+			
 	ILI9341_Clear ( 0, 0, LCD_X_LENGTH, LCD_Y_LENGTH );
 	
 	LCD_SetTextColor(GREEN);

@@ -6,9 +6,9 @@
 
 
 /******************************* XPT2046 触摸屏触摸信号指示引脚定义(不使用中断) ***************************/
-#define             XPT2046_PENIRQ_GPIO_CLK                        RCC_APB2Periph_GPIOF   
-#define             XPT2046_PENIRQ_GPIO_PORT                       GPIOF
-#define             XPT2046_PENIRQ_GPIO_PIN                        GPIO_Pin_9
+#define             XPT2046_PENIRQ_GPIO_CLK                        RCC_APB2Periph_GPIOE   
+#define             XPT2046_PENIRQ_GPIO_PORT                       GPIOE
+#define             XPT2046_PENIRQ_GPIO_PIN                        GPIO_Pin_4
 
 //触屏信号有效电平
 #define             XPT2046_PENIRQ_ActiveLevel                     0
@@ -17,19 +17,19 @@
 
 
 /******************************* XPT2046 触摸屏模拟SPI引脚定义 ***************************/
-#define             XPT2046_SPI_GPIO_CLK                         RCC_APB2Periph_GPIOF| RCC_APB2Periph_GPIOG
+#define             XPT2046_SPI_GPIO_CLK                         RCC_APB2Periph_GPIOE| RCC_APB2Periph_GPIOD
 
-#define             XPT2046_SPI_CS_PIN		                        GPIO_Pin_10
-#define             XPT2046_SPI_CS_PORT		                      GPIOF
+#define             XPT2046_SPI_CS_PIN		                        GPIO_Pin_13
+#define             XPT2046_SPI_CS_PORT		                      GPIOD
 
-#define	            XPT2046_SPI_CLK_PIN	                        GPIO_Pin_7
-#define             XPT2046_SPI_CLK_PORT	                        GPIOG
+#define	            XPT2046_SPI_CLK_PIN	                        GPIO_Pin_0
+#define             XPT2046_SPI_CLK_PORT	                        GPIOE
 
-#define	            XPT2046_SPI_MOSI_PIN	                        GPIO_Pin_11
-#define	            XPT2046_SPI_MOSI_PORT	                      GPIOF
+#define	            XPT2046_SPI_MOSI_PIN	                        GPIO_Pin_2
+#define	            XPT2046_SPI_MOSI_PORT	                      GPIOE
 
-#define	            XPT2046_SPI_MISO_PIN	                        GPIO_Pin_6
-#define	            XPT2046_SPI_MISO_PORT	                      GPIOF
+#define	            XPT2046_SPI_MISO_PIN	                        GPIO_Pin_3
+#define	            XPT2046_SPI_MISO_PORT	                      GPIOE
 
 
 #define             XPT2046_CS_ENABLE()                          GPIO_SetBits ( XPT2046_SPI_CS_PORT, XPT2046_SPI_CS_PIN )    

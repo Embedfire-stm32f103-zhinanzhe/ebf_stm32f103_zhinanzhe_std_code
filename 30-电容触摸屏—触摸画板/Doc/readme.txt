@@ -4,7 +4,7 @@
 【*】程序简介
 
 -工程名称：触摸画板实验
--实验平台: 秉火STM32 霸道 开发板 
+-实验平台: 秉火STM32 指南者 开发板 
 -MDK版本：5.16
 -ST固件库版本：3.5
 
@@ -69,23 +69,23 @@
 
 
 		/*液晶控制信号线*/
-		ILI9341_CS 	<--->	PG12      	//片选，选择NOR/SRAM块 BANK1_NOR/SRAM4
-		ILI9341_DC  <---> 	PE2			//PE2为FSMC_A23,本引脚决定了访问LCD时使用的地址
+		ILI9341_CS 	<--->	PD7      	//片选，选择NOR/SRAM块 BANK1_NOR/SRAM1
+		ILI9341_DC  <---> 	PD11		//PD11为FSMC_A16,本引脚决定了访问LCD时使用的地址
 		ILI9341_WR 	<---> 	PD5			//写使能
 		ILI9341_RD  <---> 	PD4			//读使能
-		ILI9341_RST	<---> 	PG11		//复位引脚
-		ILI9341_BK 	<---> 	PG6 		//背光引脚
+		ILI9341_RST	<---> 	PE1			//复位引脚
+		ILI9341_BK 	<---> 	PD12 		//背光引脚
 		
 	数据信号线省略,本实验没有驱动触摸屏，详看触摸画板实验。
 	
 触摸屏：
 触摸屏控制芯片XPT2046与STM32的普通GPIO相连，使用模拟SPI进行通讯。
-		XPT2046_SCK		<--->PG7
-		XPT2046_MISO	<--->PF6
-		XPT2046_MOSI	<--->PF11
-		XPT2046_CS		<--->PF10
+		XPT2046_SCK		<--->PE0
+		XPT2046_MISO	<--->PE3
+		XPT2046_MOSI	<--->PE2
+		XPT2046_CS		<--->PD13
 		
-		XPT2046_PENIRQ	<--->PF9	//触摸信号，低电平表示有触摸
+		XPT2046_PENIRQ	<--->PE4	//触摸信号，低电平表示有触摸
 
 
 FLASH(W25Q64)：
@@ -93,7 +93,7 @@ FLASH芯片的SPI接口与STM32的SPI3相连。
 		SCK	<--->PA5
 		MISO<--->PA6
 		MOSI<--->PA7
-		CS	<--->PA4
+		CS	<--->PC0
 
 串口(TTL-USB TO USART)：
 CH340的收发引脚与STM32的发收引脚相连。
