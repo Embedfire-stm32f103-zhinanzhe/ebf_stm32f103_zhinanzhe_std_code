@@ -338,7 +338,7 @@ uint8_t SRAM_Test(void)
   /* 16位的数据 */
   uint16_t uhWritedata_16b = 0, uhReaddata_16b = 0; 
   
-  SRAM_INFO("正在检测SRAM，以8位、16位的方式读写sdram...");
+  SRAM_INFO("正在检测SRAM，以8位、16位的方式读写sram...");
 
 
   /*按8位格式读写数据，并校验*/
