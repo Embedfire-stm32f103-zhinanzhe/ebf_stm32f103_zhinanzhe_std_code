@@ -385,8 +385,8 @@ void SD_DMA_RxConfig(uint32_t *BufferDST, uint32_t BufferSize)
   /*!< DMA2 Channel4 Config */
   DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)SDIO_FIFO_ADDRESS;  //外设地址，fifo
   DMA_InitStructure.DMA_MemoryBaseAddr = (uint32_t)BufferDST; //目标地址
-  DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;	//外设为原地址
-  DMA_InitStructure.DMA_BufferSize = BufferSize / 4;  //1/4缓存大小
+  DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralSRC;	//外设为源地址
+  DMA_InitStructure.DMA_BufferSize = BufferSize / 4;  //除以4，把字转成字节单位
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;//使能外设地址不自增
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;	  //使能存储目标地址自增
   DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Word;  //外设数据大小为字，32位
@@ -509,7 +509,6 @@ SD_Error SD_Init(void)
 
   /* 配置SDIO外设
    * 上电识别，卡初始化都完成后，进入数据传输模式，提高读写速度
-   * 速度若超过24M要进入bypass模式 
    */
   
   /* SDIOCLK = HCLK, SDIO_CK = HCLK/(2 + SDIO_TRANSFER_CLK_DIV) */  
@@ -518,7 +517,7 @@ SD_Error SD_Init(void)
 	/*上升沿采集数据 */
   SDIO_InitStructure.SDIO_ClockEdge = SDIO_ClockEdge_Rising;
 
-	/* 时钟频率若超过24M,要开启此模式 */
+	/* Bypass模式使能的话，SDIO_CK不经过SDIO_ClockDiv分频 */
   SDIO_InitStructure.SDIO_ClockBypass = SDIO_ClockBypass_Disable; 
 	
 	/* 若开启此功能，在总线空闲时关闭sd_clk时钟 */
@@ -649,7 +648,7 @@ SD_Error SD_PowerON(void)
 /********************************************************************************************************/   
   /* 下面发送一系列命令,开始卡识别流程
    * CMD0: GO_IDLE_STATE(复位所以SD卡进入空闲状态) 
-   * 没有相应 
+   * 没有响应  
 	 */
   SDIO_CmdInitStructure.SDIO_Argument = 0x0;
   SDIO_CmdInitStructure.SDIO_CmdIndex = SD_CMD_GO_IDLE_STATE;
@@ -1342,7 +1341,7 @@ SD_Error SD_ReadBlock(uint8_t *readbuff, uint32_t ReadAddr, uint16_t BlockSize)
 
   TransferError = SD_OK;
   TransferEnd = 0;	 //传输结束标置位，在中断服务置1
-  StopCondition = 0;  //怎么用的？
+  StopCondition = 0;  
   
   SDIO->DCTRL = 0x0;
 
@@ -2119,7 +2118,7 @@ SD_Error SD_SendSDStatus(uint32_t *psdstatus)
  */
 SD_Error SD_ProcessIRQSrc(void)
 {
-  if (StopCondition == 1)  //什么时候置1了？
+  if (StopCondition == 1)  
   {
     SDIO->ARG = 0x0;   //命令参数寄存器
     SDIO->CMD = 0x44C;	  // 命令寄存器： 0100 	01 	 	001100
