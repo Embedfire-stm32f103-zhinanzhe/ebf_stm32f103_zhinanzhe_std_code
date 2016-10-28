@@ -1,0 +1,403 @@
+
+========================================================================
+
+** ELF Header Information
+
+    File Name: Á÷Ë®µÆ.axf
+
+    Machine class: ELFCLASS32 (32-bit)
+    Data encoding: ELFDATA2LSB (Little endian)
+    Header version: EV_CURRENT (Current version)
+    Operating System ABI: none
+    ABI Version: 0
+    File Type: ET_EXEC (Executable) (2)
+    Machine: EM_ARM (ARM)
+
+    Image Entry point: 0x08000131
+    Flags: EF_ARM_HASENTRY (0x05000002)
+
+    ARM ELF revision: 5 (ABI version 2)
+
+    Built with
+    Component: ARM Compiler 5.05 update 2 (build 169) Tool: armasm [4d0f2f]
+    Component: ARM Compiler 5.05 update 2 (build 169) Tool: armlink [4d0f33]
+
+    Header size: 52 bytes (0x34)
+    Program header entry size: 32 bytes (0x20)
+    Section header entry size: 40 bytes (0x28)
+
+    Program header entries: 1
+    Section header entries: 16
+
+    Program header offset: 279836 (0x0004451c)
+    Section header offset: 279868 (0x0004453c)
+
+    Section header string table index: 15
+
+========================================================================
+
+** Program header #0 (PT_LOAD) [PF_X + PF_W + PF_R + PF_ARM_ENTRY]
+    Size : 4200 bytes (3176 bytes in file)
+    Virtual address: 0x08000000 (Alignment 8)
+
+
+========================================================================
+
+** Section #1 'ER_IROM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_EXECINSTR]
+    Size   : 3136 bytes (alignment 4)
+    Address: 0x08000000
+
+
+** Section #2 'RW_IRAM1' (SHT_PROGBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 40 bytes (alignment 4)
+    Address: 0x20000000
+
+
+** Section #3 'RW_IRAM1' (SHT_NOBITS) [SHF_ALLOC + SHF_WRITE]
+    Size   : 1024 bytes (alignment 8)
+    Address: 0x20000028
+
+
+** Section #4 '.debug_abbrev' (SHT_PROGBITS)
+    Size   : 1476 bytes
+
+
+** Section #5 '.debug_frame' (SHT_PROGBITS)
+    Size   : 1960 bytes
+
+
+** Section #6 '.debug_info' (SHT_PROGBITS)
+    Size   : 20580 bytes
+
+
+** Section #7 '.debug_line' (SHT_PROGBITS)
+    Size   : 3700 bytes
+
+
+** Section #8 '.debug_loc' (SHT_PROGBITS)
+    Size   : 2916 bytes
+
+
+** Section #9 '.debug_macinfo' (SHT_PROGBITS)
+    Size   : 214288 bytes
+
+
+** Section #10 '.debug_pubnames' (SHT_PROGBITS)
+    Size   : 1509 bytes
+
+
+** Section #11 '.symtab' (SHT_SYMTAB)
+    Size   : 3920 bytes (alignment 4)
+    String table #12 '.strtab'
+    Last local symbol no. 95
+
+    Symbol table .symtab (244 symbols, 95 local)
+
+      #  Symbol Name                Value      Bind  Sec  Type  Vis  Size
+    ========================================================================
+
+      1  $d.realdata                0x08000000   Lc    1   --   De 
+      2  $t                         0x08000130   Lc    1   --   De 
+      3  $d                         0x0800013c   Lc    1   --   De 
+      4  $t                         0x08000144   Lc    1   --   De 
+      5  $d                         0x08000160   Lc    1   --   De 
+      6  $t                         0x08000168   Lc    1   --   De 
+      7  $d                         0x08000322   Lc    1   --   De 
+      8  $t                         0x08000348   Lc    1   --   De 
+      9  $d                         0x0800067e   Lc    1   --   De 
+     10  $t                         0x080006a4   Lc    1   --   De 
+     11  $d                         0x08000a24   Lc    1   --   De 
+     12  $t                         0x08000a48   Lc    1   --   De 
+     13  $d                         0x08000b56   Lc    1   --   De 
+     14  $t                         0x08000b60   Lc    1   --   De 
+     15  $d                         0x08000bd6   Lc    1   --   De 
+     16  $t                         0x08000bdc   Lc    1   --   De 
+     17  $d                         0x08000bf8   Lc    1   --   De 
+     18  $t                         0x08000c00   Lc    1   --   De 
+     19  $d.realdata                0x08000c20   Lc    1   --   De 
+     20  $d.realdata                0x20000000   Lc    2   --   De 
+     21  ..\..\Libraries\CMSIS\startup\startup_stm32f10x_hd.s
+                                    0x00000000   Lc  Abs  File  De 
+     22  STACK                      0x20000028   Lc    3  Sect  De   0x400
+     23  RESET                      0x08000000   Lc    1  Sect  De   0x130
+     24  .text                      0x08000144   Lc    1  Sect  De   0x24
+     25  ..\\..\\Libraries\\CMSIS\\core_cm3.c
+                                    0x00000000   Lc  Abs  File  De 
+     26  ..\..\Libraries\CMSIS\core_cm3.c
+                                    0x00000000   Lc  Abs  File  De 
+     27  ..\..\Libraries\CMSIS\system_stm32f10x.c
+                                    0x00000000   Lc  Abs  File  De 
+     28  .text                      0x08000168   Lc    1  Sect  De 
+     29  SetSysClockTo72            0x08000169   Lc    1  Code  De   0xd6
+     30  SetSysClock                0x0800023f   Lc    1  Code  De   0x8
+     31  .data                      0x20000000   Lc    2  Sect  De   0x14
+     32  ..\..\Libraries\FWlib\src\misc.c
+                                    0x00000000   Lc  Abs  File  De 
+     33  ..\..\Libraries\FWlib\src\stm32f10x_adc.c
+                                    0x00000000   Lc  Abs  File  De 
+     34  ..\..\Libraries\FWlib\src\stm32f10x_bkp.c
+                                    0x00000000   Lc  Abs  File  De 
+     35  ..\..\Libraries\FWlib\src\stm32f10x_can.c
+                                    0x00000000   Lc  Abs  File  De 
+     36  ..\..\Libraries\FWlib\src\stm32f10x_cec.c
+                                    0x00000000   Lc  Abs  File  De 
+     37  ..\..\Libraries\FWlib\src\stm32f10x_crc.c
+                                    0x00000000   Lc  Abs  File  De 
+     38  ..\..\Libraries\FWlib\src\stm32f10x_dac.c
+                                    0x00000000   Lc  Abs  File  De 
+     39  ..\..\Libraries\FWlib\src\stm32f10x_dbgmcu.c
+                                    0x00000000   Lc  Abs  File  De 
+     40  ..\..\Libraries\FWlib\src\stm32f10x_dma.c
+                                    0x00000000   Lc  Abs  File  De 
+     41  ..\..\Libraries\FWlib\src\stm32f10x_exti.c
+                                    0x00000000   Lc  Abs  File  De 
+     42  ..\..\Libraries\FWlib\src\stm32f10x_flash.c
+                                    0x00000000   Lc  Abs  File  De 
+     43  ..\..\Libraries\FWlib\src\stm32f10x_fsmc.c
+                                    0x00000000   Lc  Abs  File  De 
+     44  ..\..\Libraries\FWlib\src\stm32f10x_gpio.c
+                                    0x00000000   Lc  Abs  File  De 
+     45  .text                      0x08000348   Lc    1  Sect  De 
+     46  ..\..\Libraries\FWlib\src\stm32f10x_i2c.c
+                                    0x00000000   Lc  Abs  File  De 
+     47  ..\..\Libraries\FWlib\src\stm32f10x_iwdg.c
+                                    0x00000000   Lc  Abs  File  De 
+     48  ..\..\Libraries\FWlib\src\stm32f10x_pwr.c
+                                    0x00000000   Lc  Abs  File  De 
+     49  ..\..\Libraries\FWlib\src\stm32f10x_rcc.c
+                                    0x00000000   Lc  Abs  File  De 
+     50  .text                      0x080006a4   Lc    1  Sect  De 
+     51  .data                      0x20000014   Lc    2  Sect  De   0x14
+     52  APBAHBPrescTable           0x20000014   Lc    2  Data  De   0x10
+     53  ADCPrescTable              0x20000024   Lc    2  Data  De   0x4
+     54  ..\..\Libraries\FWlib\src\stm32f10x_rtc.c
+                                    0x00000000   Lc  Abs  File  De 
+     55  ..\..\Libraries\FWlib\src\stm32f10x_sdio.c
+                                    0x00000000   Lc  Abs  File  De 
+     56  ..\..\Libraries\FWlib\src\stm32f10x_spi.c
+                                    0x00000000   Lc  Abs  File  De 
+     57  ..\..\Libraries\FWlib\src\stm32f10x_tim.c
+                                    0x00000000   Lc  Abs  File  De 
+     58  ..\..\Libraries\FWlib\src\stm32f10x_usart.c
+                                    0x00000000   Lc  Abs  File  De 
+     59  ..\..\Libraries\FWlib\src\stm32f10x_wwdg.c
+                                    0x00000000   Lc  Abs  File  De 
+     60  ..\..\User\main.c          0x00000000   Lc  Abs  File  De 
+     61  .text                      0x08000a48   Lc    1  Sect  De 
+     62  ..\..\User\stm32f10x_it.c  0x00000000   Lc  Abs  File  De 
+     63  .text                      0x08000b60   Lc    1  Sect  De 
+     64  ..\..\User\Led\bsp_led.c   0x00000000   Lc  Abs  File  De 
+     65  .text                      0x08000b7c   Lc    1  Sect  De 
+     66  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     67  .ARM.Collect$$$$00000000   0x08000130   Lc    1  Sect  De 
+     68  dc.s                       0x00000000   Lc  Abs  File  De 
+     69  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     70  .ARM.Collect$$$$00000001   0x08000130   Lc    1  Sect  De   0x4
+     71  .ARM.Collect$$$$00002712   0x08000140   Lc    1  Sect  De   0x4
+     72  __lit__00000000            0x08000140   Lc    1  Data  De   0x4
+     73  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     74  .ARM.Collect$$$$00000004   0x08000134   Lc    1  Sect  De   0x4
+     75  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     76  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     77  .ARM.Collect$$$$00000008   0x08000138   Lc    1  Sect  De 
+     78  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     79  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     80  .ARM.Collect$$$$0000000A   0x08000138   Lc    1  Sect  De 
+     81  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     82  .ARM.Collect$$$$0000000B   0x08000138   Lc    1  Sect  De   0x8
+     83  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     84  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     85  .ARM.Collect$$$$0000000D   0x08000140   Lc    1  Sect  De 
+     86  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     87  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     88  .ARM.Collect$$$$0000000F   0x08000140   Lc    1  Sect  De 
+     89  ../clib/microlib/init/entry.s
+                                    0x00000000   Lc  Abs  File  De 
+     90  init.s                     0x00000000   Lc  Abs  File  De 
+     91  .text                      0x08000bdc   Lc    1  Sect  De   0x24
+     92  handlers.s                 0x00000000   Lc  Abs  File  De 
+     93  i.__scatterload_copy       0x08000c00   Lc    1  Sect  De   0xe
+     94  i.__scatterload_null       0x08000c0e   Lc    1  Sect  De   0x2
+     95  i.__scatterload_zeroinit   0x08000c10   Lc    1  Sect  De   0xe
+     96  BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2
+                                    0x00000000   Gb  Abs   --   Hi 
+     97  __ARM_use_no_argv          0x00000000   Gb  Abs   --   Hi 
+     98  __Vectors_Size             0x00000130   Gb  Abs   --   Hi 
+     99  __Vectors                  0x08000000   Gb    1  Data  Hi   0x4
+    100  __Vectors_End              0x08000130   Gb    1  Data  Hi 
+    101  __main                     0x08000131   Gb    1  Code  Hi 
+    102  _main_stk                  0x08000131   Gb    1  Code  Hi 
+    103  _main_scatterload          0x08000135   Gb    1  Code  Hi 
+    104  __main_after_scatterload   0x08000139   Gb    1  Code  Hi 
+    105  _main_clock                0x08000139   Gb    1  Code  Hi 
+    106  _main_cpp_init             0x08000139   Gb    1  Code  Hi 
+    107  _main_init                 0x08000139   Gb    1  Code  Hi 
+    108  __rt_final_cpp             0x08000141   Gb    1  Code  Hi 
+    109  __rt_final_exit            0x08000141   Gb    1  Code  Hi 
+    110  Reset_Handler              0x08000145   Wk    1  Code  Hi   0x8
+    111  ADC1_2_IRQHandler          0x0800015f   Wk    1  Code  Hi 
+    112  ADC3_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    113  CAN1_RX1_IRQHandler        0x0800015f   Wk    1  Code  Hi 
+    114  CAN1_SCE_IRQHandler        0x0800015f   Wk    1  Code  Hi 
+    115  DMA1_Channel1_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    116  DMA1_Channel2_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    117  DMA1_Channel3_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    118  DMA1_Channel4_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    119  DMA1_Channel5_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    120  DMA1_Channel6_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    121  DMA1_Channel7_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    122  DMA2_Channel1_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    123  DMA2_Channel2_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    124  DMA2_Channel3_IRQHandler   0x0800015f   Wk    1  Code  Hi 
+    125  DMA2_Channel4_5_IRQHandler 0x0800015f   Wk    1  Code  Hi 
+    126  EXTI0_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    127  EXTI15_10_IRQHandler       0x0800015f   Wk    1  Code  Hi 
+    128  EXTI1_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    129  EXTI2_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    130  EXTI3_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    131  EXTI4_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    132  EXTI9_5_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    133  FLASH_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    134  FSMC_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    135  I2C1_ER_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    136  I2C1_EV_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    137  I2C2_ER_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    138  I2C2_EV_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    139  PVD_IRQHandler             0x0800015f   Wk    1  Code  Hi 
+    140  RCC_IRQHandler             0x0800015f   Wk    1  Code  Hi 
+    141  RTCAlarm_IRQHandler        0x0800015f   Wk    1  Code  Hi 
+    142  RTC_IRQHandler             0x0800015f   Wk    1  Code  Hi 
+    143  SDIO_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    144  SPI1_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    145  SPI2_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    146  SPI3_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    147  TAMPER_IRQHandler          0x0800015f   Wk    1  Code  Hi 
+    148  TIM1_BRK_IRQHandler        0x0800015f   Wk    1  Code  Hi 
+    149  TIM1_CC_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    150  TIM1_TRG_COM_IRQHandler    0x0800015f   Wk    1  Code  Hi 
+    151  TIM1_UP_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    152  TIM2_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    153  TIM3_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    154  TIM4_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    155  TIM5_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    156  TIM6_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    157  TIM7_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    158  TIM8_BRK_IRQHandler        0x0800015f   Wk    1  Code  Hi 
+    159  TIM8_CC_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    160  TIM8_TRG_COM_IRQHandler    0x0800015f   Wk    1  Code  Hi 
+    161  TIM8_UP_IRQHandler         0x0800015f   Wk    1  Code  Hi 
+    162  UART4_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    163  UART5_IRQHandler           0x0800015f   Wk    1  Code  Hi 
+    164  USART1_IRQHandler          0x0800015f   Wk    1  Code  Hi 
+    165  USART2_IRQHandler          0x0800015f   Wk    1  Code  Hi 
+    166  USART3_IRQHandler          0x0800015f   Wk    1  Code  Hi 
+    167  USBWakeUp_IRQHandler       0x0800015f   Wk    1  Code  Hi 
+    168  USB_HP_CAN1_TX_IRQHandler  0x0800015f   Wk    1  Code  Hi 
+    169  USB_LP_CAN1_RX0_IRQHandler 0x0800015f   Wk    1  Code  Hi 
+    170  WWDG_IRQHandler            0x0800015f   Wk    1  Code  Hi 
+    171  SystemInit                 0x08000247   Gb    1  Code  Hi   0x4e
+    172  SystemCoreClockUpdate      0x08000295   Gb    1  Code  Hi   0x8e
+    173  GPIO_DeInit                0x08000349   Gb    1  Code  Hi   0xac
+    174  GPIO_AFIODeInit            0x080003f5   Gb    1  Code  Hi   0x14
+    175  GPIO_Init                  0x08000409   Gb    1  Code  Hi   0x116
+    176  GPIO_StructInit            0x0800051f   Gb    1  Code  Hi   0x10
+    177  GPIO_ReadInputDataBit      0x0800052f   Gb    1  Code  Hi   0x12
+    178  GPIO_ReadInputData         0x08000541   Gb    1  Code  Hi   0x8
+    179  GPIO_ReadOutputDataBit     0x08000549   Gb    1  Code  Hi   0x12
+    180  GPIO_ReadOutputData        0x0800055b   Gb    1  Code  Hi   0x8
+    181  GPIO_SetBits               0x08000563   Gb    1  Code  Hi   0x4
+    182  GPIO_ResetBits             0x08000567   Gb    1  Code  Hi   0x4
+    183  GPIO_WriteBit              0x0800056b   Gb    1  Code  Hi   0xa
+    184  GPIO_Write                 0x08000575   Gb    1  Code  Hi   0x4
+    185  GPIO_PinLockConfig         0x08000579   Gb    1  Code  Hi   0x12
+    186  GPIO_EventOutputConfig     0x0800058b   Gb    1  Code  Hi   0x1a
+    187  GPIO_EventOutputCmd        0x080005a5   Gb    1  Code  Hi   0x6
+    188  GPIO_PinRemapConfig        0x080005ab   Gb    1  Code  Hi   0x8a
+    189  GPIO_EXTILineConfig        0x08000635   Gb    1  Code  Hi   0x42
+    190  GPIO_ETH_MediaInterfaceConfig
+                                    0x08000677   Gb    1  Code  Hi   0x8
+    191  RCC_DeInit                 0x080006a5   Gb    1  Code  Hi   0x40
+    192  RCC_HSEConfig              0x080006e5   Gb    1  Code  Hi   0x46
+    193  RCC_GetFlagStatus          0x0800072b   Gb    1  Code  Hi   0x38
+    194  RCC_WaitForHSEStartUp      0x08000763   Gb    1  Code  Hi   0x38
+    195  RCC_AdjustHSICalibrationValue
+                                    0x0800079b   Gb    1  Code  Hi   0x14
+    196  RCC_HSICmd                 0x080007af   Gb    1  Code  Hi   0x6
+    197  RCC_PLLConfig              0x080007b5   Gb    1  Code  Hi   0x18
+    198  RCC_PLLCmd                 0x080007cd   Gb    1  Code  Hi   0x6
+    199  RCC_SYSCLKConfig           0x080007d3   Gb    1  Code  Hi   0x12
+    200  RCC_GetSYSCLKSource        0x080007e5   Gb    1  Code  Hi   0xa
+    201  RCC_HCLKConfig             0x080007ef   Gb    1  Code  Hi   0x12
+    202  RCC_PCLK1Config            0x08000801   Gb    1  Code  Hi   0x12
+    203  RCC_PCLK2Config            0x08000813   Gb    1  Code  Hi   0x14
+    204  RCC_ITConfig               0x08000827   Gb    1  Code  Hi   0x1a
+    205  RCC_USBCLKConfig           0x08000841   Gb    1  Code  Hi   0x8
+    206  RCC_ADCCLKConfig           0x08000849   Gb    1  Code  Hi   0x12
+    207  RCC_LSEConfig              0x0800085b   Gb    1  Code  Hi   0x32
+    208  RCC_LSICmd                 0x0800088d   Gb    1  Code  Hi   0x6
+    209  RCC_RTCCLKConfig           0x08000893   Gb    1  Code  Hi   0xc
+    210  RCC_RTCCLKCmd              0x0800089f   Gb    1  Code  Hi   0x8
+    211  RCC_GetClocksFreq          0x080008a7   Gb    1  Code  Hi   0xc0
+    212  RCC_AHBPeriphClockCmd      0x08000967   Gb    1  Code  Hi   0x1a
+    213  RCC_APB2PeriphClockCmd     0x08000981   Gb    1  Code  Hi   0x1a
+    214  RCC_APB1PeriphClockCmd     0x0800099b   Gb    1  Code  Hi   0x1a
+    215  RCC_APB2PeriphResetCmd     0x080009b5   Gb    1  Code  Hi   0x1a
+    216  RCC_APB1PeriphResetCmd     0x080009cf   Gb    1  Code  Hi   0x1a
+    217  RCC_BackupResetCmd         0x080009e9   Gb    1  Code  Hi   0x8
+    218  RCC_ClockSecuritySystemCmd 0x080009f1   Gb    1  Code  Hi   0x6
+    219  RCC_MCOConfig              0x080009f7   Gb    1  Code  Hi   0x6
+    220  RCC_ClearFlag              0x080009fd   Gb    1  Code  Hi   0xe
+    221  RCC_GetITStatus            0x08000a0b   Gb    1  Code  Hi   0x14
+    222  RCC_ClearITPendingBit      0x08000a1f   Gb    1  Code  Hi   0x6
+    223  Delay                      0x08000a49   Gb    1  Code  Hi   0x12
+    224  main                       0x08000a5b   Gb    1  Code  Hi   0xfc
+    225  NMI_Handler                0x08000b61   Gb    1  Code  Hi   0x2
+    226  HardFault_Handler          0x08000b63   Gb    1  Code  Hi   0x4
+    227  MemManage_Handler          0x08000b67   Gb    1  Code  Hi   0x4
+    228  BusFault_Handler           0x08000b6b   Gb    1  Code  Hi   0x4
+    229  UsageFault_Handler         0x08000b6f   Gb    1  Code  Hi   0x4
+    230  SVC_Handler                0x08000b73   Gb    1  Code  Hi   0x2
+    231  DebugMon_Handler           0x08000b75   Gb    1  Code  Hi   0x2
+    232  PendSV_Handler             0x08000b77   Gb    1  Code  Hi   0x2
+    233  SysTick_Handler            0x08000b79   Gb    1  Code  Hi   0x2
+    234  LED_GPIO_Config            0x08000b7d   Gb    1  Code  Hi   0x5a
+    235  __scatterload              0x08000bdd   Gb    1  Code  Hi   0x1c
+    236  __scatterload_rt2          0x08000bdd   Gb    1  Code  Hi 
+    237  __scatterload_copy         0x08000c01   Gb    1  Code  Hi   0xe
+    238  __scatterload_null         0x08000c0f   Gb    1  Code  Hi   0x2
+    239  __scatterload_zeroinit     0x08000c11   Gb    1  Code  Hi   0xe
+    240  Region$$Table$$Base        0x08000c20   Gb    1   --   Hi 
+    241  Region$$Table$$Limit       0x08000c40   Gb    1   --   Hi 
+    242  SystemCoreClock            0x20000000   Gb    2  Data  Hi   0x4
+    243  AHBPrescTable              0x20000004   Gb    2  Data  Hi   0x10
+    244  __initial_sp               0x20000428   Gb    3  Data  Hi 
+
+
+** Section #12 '.strtab' (SHT_STRTAB)
+    Size   : 4452 bytes
+
+
+** Section #13 '.note' (SHT_NOTE)
+    Size   : 28 bytes (alignment 4)
+
+
+** Section #14 '.comment' (SHT_PROGBITS)
+    Size   : 21620 bytes
+
+
+** Section #15 '.shstrtab' (SHT_STRTAB)
+    Size   : 156 bytes
+
+

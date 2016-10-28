@@ -1,0 +1,28 @@
+说明
+本目录下的是使用fromelf工具根据MDK的“多彩流水灯.axf”、“bsp_led”及“多彩流水灯.lib”的ELF信息输出的文件。
+文件的后缀名中的a、c、d、e、v等等是fromelf的选项。
+
+
+
+如“多彩流水灯_axf_elfInfo_v.txt”使用以下语句生成:
+
+fromelf --text -v 多彩流水灯.axf > 多彩流水灯_axf_elfInfo_v.txt
+
+其它依次类推。
+
+其中重点推荐浏览一下-v与-c文件
+
+fromelfHelp.txt是fromelf的帮助信息，方便查阅。
+
+
+                -v          verbose
+                -a          print data addresses (For images built with debug)
+                -c          disassemble code
+                -d          print contents of data section
+                -e          print exception tables
+                -g          print debug tables
+                -r          print relocation information
+                -s          print symbol table
+                -t          print string table
+                -y          print dynamic segment contents
+                -z          print code and data size information

@@ -1,0 +1,27 @@
+div.Bdy pre {
+	background: rgb(240, 224, 160); font: 10pt/120% Courier; padding: 5px; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy li pre {
+	margin: 3px 0px;
+}
+div.Bdy form table.Form {
+	margin: 12px auto; width: 250px;
+}
+div.Bdy img.part {
+	border: 1px dotted rgb(0, 0, 0); border-image: none;
+}
+div.Bdy img.uvbutton {
+	border: currentColor; border-image: none; margin-top: 2pt; margin-bottom: 2pt; vertical-align: middle;
+}
+div.Bdy img.uvtoolbar {
+	border: currentColor; border-image: none; margin-top: 2pt; margin-bottom: 2pt; vertical-align: middle;
+}
+div.Bdy img.uvicon {
+	border: 1px solid rgb(0, 0, 0); border-image: none; margin-top: 2pt; margin-bottom: 2pt; vertical-align: middle;
+}
+div.Bdy img.uvbuttonl {
+	border: currentColor; border-image: none; clear: left; margin-right: 10px; margin-bottom: 10px;
+}
+div.Bdy img.uvbuttonr {
+	border: currentColor; border-image: none; clear: right; margin-bottom: 10px; margin-left: 10px;
+}

@@ -1,0 +1,1656 @@
+body {
+	background: url("../images/white_carbon.png") 0px 0px rgb(231, 230, 231) !important; font: 100%/normal "Helvetica Neue", Helvetica, Verdana sans-serif; margin: 0px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy {
+	overflow: auto; padding-bottom: 10px; position: relative;
+}
+div.Bdy a {
+	color: rgb(0, 102, 153);
+}
+td.Bdy a {
+	color: rgb(0, 102, 153);
+}
+div.Bdy a:visited {
+	color: rgb(102, 0, 102);
+}
+td.Bdy a:visited {
+	color: rgb(102, 0, 102);
+}
+body * {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+table.Main td.Top table tr.Titl td div.Titl p {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+table.Main td table tr.Menu td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+table.Main td table tr.Menu td form input.button {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+table.Forum tr.Menu td.LMenu {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+#vm p {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+#vm li {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h1 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h2 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h3 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h4 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h5 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h6 {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy blockquote {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table tr th {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table tr td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy .TinyButton {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbar p {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbar p a {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbar ul li {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbar ul li span.note {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbar ul li a {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbarquote p {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbarquote p a {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbarquote ul li {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.rbarquote ul li span.note {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+textaream div.Bdy div.rbarquote ul li a {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table.Tab tr th {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table.Tab tr td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.dlfile {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+#sc_drag_size {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+#sc_drag_cancel {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+#sc_drag_crop {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.bm table th {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.bm table td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.bbets div.title {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table.Tab tr td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy table.Tab tr.thl td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy form table tr td {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy form table tr th {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy div.dlfile {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif;
+}
+div.Bdy h1 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h2 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h3 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h4 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h5 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h6 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h1 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h2 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h3 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h4 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h5 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+.Bdy h6 {
+	padding: 0px; font-weight: 400; margin-top: 0.2em; margin-bottom: 0.5em;
+}
+div.Bdy h1 {
+	font-size: 2.2em;
+}
+.Bdy h1 {
+	font-size: 2.2em;
+}
+div.Bdy h2 {
+	font-size: 1.68em;
+}
+.Bdy h2 {
+	font-size: 1.68em;
+}
+div.Bdy h3 {
+	font-size: 1.43em;
+}
+.Bdy h3 {
+	font-size: 1.43em;
+}
+div.Bdy h4 {
+	font-size: 1.12em;
+}
+.Bdy h4 {
+	font-size: 1.12em;
+}
+div.Bdy h5 {
+	font-size: 1em;
+}
+.Bdy h5 {
+	font-size: 1em;
+}
+div.Bdy h6 {
+	text-transform: uppercase; font-size: 0.8em;
+}
+.Bdy h6 {
+	text-transform: uppercase; font-size: 0.8em;
+}
+div.Bdy p {
+	margin: 0px 0px 1em;
+}
+.Bdy p {
+	margin: 0px 0px 1em;
+}
+div.Bdy div.Bdy div.hmtitle {
+	font-size: 16px;
+}
+.Bdy div.Bdy div.hmtitle {
+	font-size: 16px;
+}
+div.Bdy p {
+	line-height: 1.6;
+}
+div.Bdy li {
+	line-height: 1.6;
+}
+.Bdy p {
+	line-height: 1.6;
+}
+.Bdy li {
+	line-height: 1.6;
+}
+table.header {
+	border-collapse: collapse; background-color: rgb(0, 132, 171);
+}
+table.header td {
+	padding: 0px 20px;
+}
+table.header a {
+	border: currentColor; border-image: none; position: relative;
+}
+table.header a:visited {
+	border: currentColor; border-image: none; position: relative;
+}
+table.header img {
+	border: currentColor; border-image: none; position: relative;
+}
+table.header tr td:first-child img {
+	top: 3px;
+}
+table.header tr td:last-child img {
+	top: 2px;
+}
+tr.topRow {
+	height: 0px;
+}
+td.Top {
+	height: 0px;
+}
+table.Main > tr {
+	height: 0px;
+}
+table.Main {
+	background: rgb(255, 255, 255); border: currentColor; border-image: none; box-shadow: 0px 0px 20px rgba(50,50,50,0.3); -webkit-box-shadow: 0 0 20px rgba(50, 50, 50, .3); -moz-box-shadow: 0 0 20px rgba(50, 50, 50, .3);
+}
+table.Main td.Bdy {
+	padding: 0px 12px; width: 710px; height: 100%;
+}
+table.Main td.Bdy img {
+	max-width: 710px;
+}
+table.Main td.Bar {
+	background: rgb(255, 255, 255); padding: 12px 0px 6px 12px; border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+table.Main td table tr.Menu td {
+	height: auto;
+}
+td.LMenu {
+	overflow: hidden; padding-top: 0px; padding-bottom: 0px;
+}
+td.LMenu a {
+	background: rgb(0, 51, 102); padding: 10px 15px; color: rgb(255, 255, 255); line-height: 1; font-size: 14px; border-right-color: rgb(0, 21, 49); border-right-width: 1px; border-right-style: solid; float: left; display: block;
+}
+td.LMenu a:first-child {
+	border-left-color: rgb(0, 21, 49); border-left-width: 1px; border-left-style: solid;
+}
+td.LMenu a:hover {
+	color: rgb(127, 193, 213); background-color: rgb(0, 21, 49);
+}
+td.LMenu a:hover:visited {
+	color: rgb(127, 193, 213); background-color: rgb(0, 21, 49);
+}
+#search {
+	background: url("../images/magnifier.png") no-repeat 0px 0px rgb(255, 255, 255); padding: 2px 2px 2px 24px; border: currentColor; border-image: none; font-size: 14px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.search-icon {
+	left: 32px; top: 3px; color: rgb(0, 51, 102); display: none; position: relative; z-index: 2;
+}
+.Bdy h1.strapline {
+	padding-top: 0px; font-size: 28px; font-weight: 400; margin-bottom: 10px;
+}
+#vm {
+	padding: 0px 0px 5px; border: currentColor; border-image: none;
+}
+#vm span.toc {
+	font-family: "Helvetica Neue",Helvetica,Verdana,Arial,sans-serif; font-size: 12px; margin-bottom: 3px; margin-left: 10px;
+}
+#vm p {
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(221, 221, 221) currentColor currentColor; margin: 0px 10px; padding: 5px 0px; border-image: none; font-size: 14px;
+}
+#vm p:first-child {
+	border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+#vm ul {
+	padding: 0px 10px 10px; font-size: 12px;
+}
+#vm li {
+	font-size: 13px; margin-bottom: 3px;
+}
+#vm a {
+	padding: 3px; border: currentColor; border-image: none; display: block; white-space: pre-wrap; -ms-zoom: 1;
+}
+#vm a .ss-book {
+	top: 2px; color: rgb(153, 153, 153); position: relative;
+}
+#vm a .ss-openbook {
+	top: 2px; color: rgb(153, 153, 153); position: relative;
+}
+#vm a .ss-file {
+	top: 2px; color: rgb(153, 153, 153); position: relative;
+}
+#vm a#va {
+	background: rgb(221, 221, 221);
+}
+#vm a:hover {
+	background: rgb(221, 221, 221); padding: 3px; border: currentColor; border-image: none; color: rgb(0, 171, 222); text-decoration: none;
+}
+#vm span.toc a:hover {
+	background: rgb(221, 221, 221); padding: 3px; border: currentColor; border-image: none; color: rgb(0, 171, 222); text-decoration: none;
+}
+#vm .current > a {
+	background: rgb(221, 221, 221); font-weight: 700;
+}
+#vm .current > a:visited {
+	background: rgb(221, 221, 221); font-weight: 700;
+}
+#vm .current > a .ss-book {
+	color: purple;
+}
+#vm .current > a .ss-openbook {
+	color: purple;
+}
+#vm .current > a .ss-file {
+	color: purple;
+}
+#vm .current > a:visited .ss-book {
+	color: purple;
+}
+#vm .current > a:visited .ss-openbook {
+	color: purple;
+}
+#vm .current > a:visited .ss-file {
+	color: purple;
+}
+#vm li ul {
+	padding: 0px 0px 0px 8px; margin-top: 5px; margin-left: 5px; border-left-color: rgb(221, 221, 221); border-left-width: 1px; border-left-style: solid;
+}
+#vm ul li ul li a {
+	padding: 3px; width: auto; font-size: 12px;
+}
+#vm ul li ul li ul li a {
+	padding: 3px; width: auto; font-size: 12px;
+}
+div.Bdy form button.ui-multiselect {
+	padding: 2px 0px 2px 4px; text-align: left;
+}
+div.Bdy div.rbar {
+	border-color: rgb(221, 221, 221); padding-bottom: 10px; margin-bottom: 1em;
+}
+.Bot .Menu td {
+	padding: 10px 20px; width: 20%;
+}
+.Bot .Menu h4 {
+	font-size: 14px; margin-top: 0px; margin-bottom: 0.5em;
+}
+.Bot .Menu h5 {
+	font-size: 12px; margin-top: 0px; margin-bottom: 0.5em;
+}
+.Bot .Menu ul {
+	list-style: none; margin: 0px; padding: 0px; font-size: 12px;
+}
+.Bot .Menu li {
+	margin-bottom: 0.5em;
+}
+.Bot .boilerplate {
+	background: rgb(0, 34, 68); color: rgb(255, 255, 255);
+}
+.Bot .boilerplate h5 {
+	margin: 0px 0px 5px;
+}
+.Bot .boilerplate h6 {
+	margin: 0px 0px 5px;
+}
+.Bot .boilerplate .footerlinks {
+	text-align: center;
+}
+.Bot .boilerplate td {
+	padding: 10px 20px; text-align: left; vertical-align: middle;
+}
+.Bot .boilerplate p {
+	margin: 5px 0px; font-size: 12px;
+}
+.Bot .boilerplate td a {
+	color: rgb(255, 255, 255); font-weight: 400; text-decoration: none;
+}
+.Bot .boilerplate td a:visited {
+	color: rgb(255, 255, 255); font-weight: 400; text-decoration: none;
+}
+.Bot tr.Menu a {
+	padding: 0px;
+}
+table.Main td.Bot table tr.Menu td {
+	vertical-align: top;
+}
+div.Bdy a.button {
+	padding: 5px; border-radius: 3px; border: 1px solid rgb(175, 115, 9); border-image: none; color: rgb(255, 255, 255); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #e7b864; text-shadow: 0px 1px 0px #a06703; background-image: linear-gradient(rgb(231, 156, 24), rgb(189, 124, 10)); background-clip: padding-box; background-color: rgb(231, 156, 24);
+}
+div.Bdy a.button:visited {
+	padding: 5px; border-radius: 3px; border: 1px solid rgb(175, 115, 9); border-image: none; color: rgb(255, 255, 255); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #e7b864; text-shadow: 0px 1px 0px #a06703; background-image: linear-gradient(rgb(231, 156, 24), rgb(189, 124, 10)); background-clip: padding-box; background-color: rgb(231, 156, 24);
+}
+div.Bdy a:not(:disabled).button:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #e1a437; background-image: linear-gradient(rgb(203, 139, 26), rgb(174, 114, 10)); background-color: rgb(203, 139, 26);
+}
+div.Bdy a:not(:disabled).button:hover:visited {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #e1a437; background-image: linear-gradient(rgb(203, 139, 26), rgb(174, 114, 10)); background-color: rgb(203, 139, 26);
+}
+div.Bdy a:not(:disabled).button:active {
+	border: 1px solid rgb(175, 115, 9); border-image: none; box-shadow: inset 0px 0px 8px 4px #9e690a, inset 0px 0px 8px 4px #9e690a, 0px 1px 1px 0px #eee;
+}
+div.Bdy a:not(:disabled).button:active:visited {
+	border: 1px solid rgb(175, 115, 9); border-image: none; box-shadow: inset 0px 0px 8px 4px #9e690a, inset 0px 0px 8px 4px #9e690a, 0px 1px 1px 0px #eee;
+}
+div.Bdy a.rfq.button:hover {
+	color: rgb(255, 255, 255);
+}
+div.Bdy a.download.button {
+	padding: 5px; border-radius: 3px; border: 1px solid rgb(16, 87, 108); border-image: none; color: rgb(255, 255, 255); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #44adcc; text-shadow: 0px 1px 0px #0a4a5d; background-image: linear-gradient(rgb(34, 132, 161), rgb(18, 97, 121)); background-clip: padding-box; background-color: rgb(34, 132, 161);
+}
+div.Bdy a:not(:disabled).download.button:hover {
+	color: rgb(255, 255, 255); cursor: pointer; box-shadow: inset 0px 1px 0px 0px #2e91ae; background-image: linear-gradient(rgb(33, 113, 137), rgb(17, 86, 107)); background-color: rgb(33, 113, 137);
+}
+div.Bdy a:not(:disabled).download.button:active {
+	border: 1px solid rgb(16, 87, 108); border-image: none; box-shadow: inset 0px 0px 8px 4px #0f4b5d, inset 0px 0px 8px 4px #0f4b5d, 0px 1px 1px 0px #eee;
+}
+div.Bdy a.features.button {
+	padding: 5px; border-radius: 3px; border: 1px solid rgb(66, 66, 66); border-image: none; color: rgb(255, 255, 255); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #8c8c8c; text-shadow: 0px 1px 0px #383838; background-image: linear-gradient(rgb(102, 102, 102), rgb(74, 74, 74)); background-clip: padding-box; background-color: rgb(102, 102, 102);
+}
+div.Bdy a:not(:disabled).features.button:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #737373; background-image: linear-gradient(rgb(89, 89, 89), rgb(66, 66, 66)); background-color: rgb(89, 89, 89);
+}
+div.Bdy a:not(:disabled).features.button:active {
+	border: 1px solid rgb(66, 66, 66); border-image: none; box-shadow: inset 0px 0px 8px 4px #3b3b3b, inset 0px 0px 8px 4px #3b3b3b, 0px 1px 1px 0px #eee;
+}
+div.Bdy a.button span {
+	top: 1px; position: relative;
+}
+.button-wrapper {
+	padding-bottom: 1px; margin-left: 10px; float: right;
+}
+.button-wrapper .button {
+	margin-left: 10px;
+}
+textarea {
+	overflow: auto;
+}
+div.Bdy form input {
+	padding: 2px; font-size: 12px;
+}
+.Bdy form .button {
+	padding: 7px 18px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; color: rgb(255, 255, 255); font-size: 11px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+.Bdy form .submit {
+	padding: 7px 18px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; color: rgb(255, 255, 255); font-size: 11px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+.Bdy form input[type=reset] {
+	padding: 3px; border-radius: 3px; border: 1px solid rgb(182, 182, 182); border-image: none; color: rgb(51, 51, 51); font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #fff; text-shadow: 0px 1px 0px #e4e4e4; background-image: linear-gradient(rgb(218, 218, 218), rgb(190, 190, 190)); background-clip: padding-box; background-color: rgb(218, 218, 218);
+}
+.Bdy form input[type=reset]:not(:disabled):hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #e7e7e7; background-image: linear-gradient(rgb(205, 205, 205), rgb(182, 182, 182)); background-color: rgb(205, 205, 205);
+}
+.Bdy form input[type=reset]:not(:disabled):active {
+	border: 1px solid rgb(182, 182, 182); border-image: none; box-shadow: inset 0px 0px 8px 4px #afafaf, inset 0px 0px 8px 4px #afafaf, 0px 1px 1px 0px #eee;
+}
+#keilsrchfm .button {
+	padding: 3px 8px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; width: auto; color: rgb(255, 255, 255); font-size: 12px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+.placeholder {
+	color: rgb(153, 153, 153);
+}
+.new-form {
+	overflow: hidden;
+}
+.new-form fieldset {
+	margin: 0px 0px 1.12em; padding: 1em; border: 1px solid rgb(238, 238, 238); border-image: none;
+}
+.new-form legend {
+	margin: 0px 0px 0.5em -0.18em; padding: 0px 0.18em; font-weight: 700;
+}
+.new-form fieldset label {
+	top: 2px; width: 110px; text-align: right; padding-right: 0.5em; clear: left; font-weight: 700; float: left; display: block; position: relative;
+}
+.new-form label {
+	color: rgb(102, 102, 102);
+}
+.new-form .contact-info {
+	width: 44%; float: left;
+}
+.new-form .text-input {
+	padding: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 180px; font-size: 14px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.new-form .small.text-input {
+	width: 100px;
+}
+.new-form .medium.text-input {
+	width: 155px;
+}
+.new-form textarea {
+	overflow: auto; font-size: 14px;
+}
+.Bdy .new-form .questions {
+	width: 44%; float: right;
+}
+.Bdy .new-form .questions p {
+	margin: 0px;
+}
+.new-form .comments {
+	padding: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 300px; height: 288px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+.new-form .secondary {
+	background: rgb(249, 249, 249); padding: 1.25em; border: 1px solid rgb(238, 238, 238); border-image: none; overflow: auto; margin-bottom: 1.25em;
+}
+.new-form .secondary h3 {
+	padding-top: 0px; margin-top: 0px;
+}
+.new-form .secondary h4 {
+	padding-top: 0px; margin-top: 0px;
+}
+.Bdy .new-form p {
+	margin: 5px 0px;
+}
+.new-form .row {
+	overflow: auto; margin-bottom: 1em; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.new-form .row.third {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.new-form a {
+	font-size: 11px; text-decoration: none;
+}
+.new-form a:visited {
+	font-size: 11px; text-decoration: none;
+}
+.new-form .secondary fieldset {
+	border-color: rgb(221, 221, 221);
+}
+.new-form .first fieldset {
+	padding: 10px 5px; width: 30%; height: 7em; margin-right: 15px; float: left;
+}
+.new-form .second fieldset {
+	padding: 10px 5px; width: 30%; height: 7em; margin-right: 15px; float: left;
+}
+.new-form .third fieldset {
+	padding: 10px 5px; width: 30%; height: 7em; margin-right: 15px; float: left;
+}
+.new-form .third fieldset {
+	height: auto; min-height: 5em;
+}
+.new-form .third fieldset.wide {
+	width: 64%;
+}
+.new-form fieldset.last {
+	margin-right: 0px;
+}
+select#product {
+	width: 185px; margin-bottom: 5px;
+}
+select#state {
+	width: 185px; margin-bottom: 5px;
+}
+.Bdy form .submit {
+	padding-right: 10px; padding-left: 10px; font-size: 24px; margin-right: 10px;
+}
+.placeholder:focus {
+	color: rgb(0, 0, 0);
+}
+div.Bdy .fix-layout form table tr td.FormC {
+	position: relative;
+}
+div.Bdy .fix-layout form table tr td.FormC b {
+	left: -130px; position: relative; z-index: 2; -ms-zoom: 1;
+}
+div.Bdy .fix-layout form table tr td.FormC b::after {
+	content: ":";
+}
+div.Bdy .fix-layout form table tr td.FormC textarea {
+	left: 55px; top: -20px; position: relative; z-index: 2; -ms-zoom: 1;
+}
+div.Bdy form table tr td.FormR {
+	width: 260px;
+}
+div.Bdy form table tr td.FormL {
+	width: 410px; text-align: left;
+}
+blockquote.manuals {
+	padding-left: 0px; margin-left: 0px;
+}
+.left-col {
+	width: 48%; margin-bottom: 20px;
+}
+.right-col {
+	width: 48%; margin-bottom: 20px;
+}
+.left-col {
+	float: left;
+}
+.right-col {
+	float: right;
+}
+.manuals .toc {
+	overflow: hidden; clear: both; margin-bottom: 3px; display: block;
+}
+.manuals .toc span.ss-book {
+	top: 2px; color: purple; float: left; position: relative;
+}
+.manuals .toc a {
+	width: auto; text-decoration: none; margin-left: 5px; float: left; display: inline-block;
+}
+.manuals .toc a:visited {
+	width: auto; text-decoration: none; margin-left: 5px; float: left; display: inline-block;
+}
+.book-nav {
+	margin-left: 10px; float: right;
+}
+.book-nav a {
+	text-decoration: none; margin-left: 10px;
+}
+.book-nav a:visited {
+	text-decoration: none; margin-left: 10px;
+}
+.book-nav a.disabled {
+	color: rgb(204, 204, 204); cursor: default;
+}
+.book-nav a.disabled:hover {
+	color: rgb(204, 204, 204); cursor: default;
+}
+.scroller {
+	background: rgb(249, 249, 249); padding: 15px 10px; border: 1px solid rgb(238, 238, 238); border-image: none; width: auto; height: auto; text-align: center; overflow: hidden; clear: left; font-size: 11px; margin-bottom: 20px;
+}
+div.Bdy .scroller ul {
+	margin: 0px auto; overflow: hidden;
+}
+.scroller a {
+	background: rgb(243, 243, 243); padding: 10px 5px; border: currentColor; border-image: none; color: rgb(0, 0, 0); text-decoration: none; display: block; box-sizing: border-box;
+}
+.scroller .thumbnail {
+	border: 2px solid rgb(255, 255, 255); border-image: none; width: 150px; height: 84px;
+}
+.scroller a:hover .thumbnail {
+	border-color: rgb(0, 171, 222);
+}
+.video-link {
+	font-size: 14px; margin-bottom: 5px; display: block;
+}
+.video-link .ss-video {
+	top: 2px; color: rgb(0, 102, 153); position: relative;
+}
+table {
+	border-collapse: collapse;
+}
+table.new-product-table {
+	margin: 3px; width: 100%;
+}
+div.Bdy form table.Form {
+	margin: 0px 0px 20px; padding: 0px; border: currentColor; border-image: none; width: 100%; border-collapse: collapse; border-spacing: 0; background-color: rgb(238, 238, 238);
+}
+div.Bdy form table.Form input[type=text] {
+	padding: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; font-size: 12px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+div.Bdy form table.Form textarea {
+	padding: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; font-size: 12px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+div.Bdy form table.Form tr th {
+	padding: 10px; border: currentColor; border-image: none; color: rgb(255, 255, 255); font-size: 1.12em; background-color: rgb(0, 51, 102);
+}
+div.Bdy form table.Form tr hr {
+	width: 100%; height: 10px; background-color: rgb(255, 255, 255);
+}
+div.Bdy form table.Form tr td {
+	padding: 5px; background-color: rgb(250, 250, 250);
+}
+div.Bdy form table tr td.BAR {
+	background: rgb(238, 238, 238); border: currentColor; border-image: none;
+}
+div.Bdy form table tr td.BAR input[type=submit] {
+	padding: 7px 18px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; color: rgb(255, 255, 255); font-size: 14px; font-weight: 700; text-decoration: none; display: inline-block; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+div.Bdy form table.Form tr td span.form-section-divider {
+	padding: 0px; height: 4px; margin-top: 5px; margin-bottom: 5px; display: block; background-color: rgb(255, 255, 255);
+}
+div.Bdy form table.Form tr td.FTR {
+	padding: 10px; border: currentColor; border-image: none; background-color: rgb(238, 238, 238);
+}
+div.Bdy table.Form td.FTR input {
+	font-size: larger;
+}
+div.Bdy table.Tab {
+	border: 1px solid rgb(238, 238, 238); border-image: none; width: 100%;
+}
+div.Bdy table.News {
+	border: 1px solid rgb(238, 238, 238); border-image: none; width: 100%;
+}
+div.Bdy table.Tab tr th {
+	background: rgb(0, 51, 102); padding: 3px; border: 1px solid rgb(0, 51, 102); border-image: none; color: rgb(255, 255, 255); font-size: 14px;
+}
+div.Bdy table.News tr th {
+	background: rgb(0, 51, 102); padding: 3px; border: 1px solid rgb(0, 51, 102); border-image: none; color: rgb(255, 255, 255); font-size: 14px;
+}
+div.Bdy table.Tab tr th a {
+	color: rgb(255, 255, 255);
+}
+div.Bdy table.Tab tr th a:visited {
+	color: rgb(255, 255, 255);
+}
+div.Bdy table.News tr th a {
+	color: rgb(255, 255, 255);
+}
+div.Bdy table.News tr th a:visited {
+	color: rgb(255, 255, 255);
+}
+div.Bdy table.Tab tr td.hdr {
+	background: rgb(229, 242, 246); color: rgb(0, 132, 171); border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.News tr td.hdr {
+	background: rgb(229, 242, 246); color: rgb(0, 132, 171); border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.Tab tr td {
+	padding: 5px; font-family: "Helvetica Neue",Helvetica,Verdana,sans-serif; font-size: 12px; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.Tab tr.p3 td {
+	padding: 5px; font-family: "Helvetica Neue",Helvetica,Verdana,sans-serif; font-size: 12px; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.News tr td {
+	padding: 5px; font-family: "Helvetica Neue",Helvetica,Verdana,sans-serif; font-size: 12px; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.News tr.p3 td {
+	padding: 5px; font-family: "Helvetica Neue",Helvetica,Verdana,sans-serif; font-size: 12px; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.Tab tr td.title_e {
+	background: rgb(250, 250, 250); padding-left: 5px;
+}
+div.Bdy table.Tab tr td.title_o {
+	padding-left: 5px;
+}
+div.Bdy table.Tab tr td.parms_e {
+	background: rgb(250, 250, 250); border-color: rgb(238, 238, 238);
+}
+div.Bdy table.Tab tr td.parms_o {
+	border-color: rgb(238, 238, 238);
+}
+table .ss-check {
+	color: green;
+}
+div.Bdy table.Tab tr td.oddh20c {
+	background: rgb(255, 255, 255); height: auto; text-align: center; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.evenh20c {
+	background: rgb(250, 250, 250); height: auto; text-align: center; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.hdr {
+	border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+div.Bdy div.bm table {
+	border: 1px solid rgb(238, 238, 238); border-image: none; margin-top: 5px; border-collapse: collapse;
+}
+div.Bdy div.bm table th {
+	background: rgb(0, 51, 102); font: bold 12px/normal Verdana; height: 30px; text-align: left; color: rgb(255, 255, 255); border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.bm table td {
+	font: 12px/normal "Helvetica Neue", Helvetica, Verdana, sans-serif; padding: 5px; border-right-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.bm table .right {
+	text-align: right;
+}
+div.Bdy .bm table tr:nth-of-type(2n) {
+	background: rgb(243, 243, 243);
+}
+div.Bdy table.Tab tr:nth-of-type(2n) {
+	background: rgb(243, 243, 243);
+}
+div.Bdy table.News tr:nth-of-type(2n) {
+	background: rgb(243, 243, 243);
+}
+table.Box {
+	width: 100%; border-collapse: separate; border-spacing: 10px;
+}
+table.Box tr td {
+	background: rgb(249, 249, 249); border: 1px solid rgb(238, 238, 238); border-image: none; width: 50%; height: 60px; text-align: center; color: rgb(0, 0, 0);
+}
+table.Box tr td a {
+	display: block;
+}
+table.Box tr td a b {
+	font-size: 2em;
+}
+div.Bdy form table.search {
+	background: rgb(250, 250, 250); border: currentColor; border-image: none;
+}
+div.Bdy form table.search td.title {
+	background: rgb(229, 242, 246);
+}
+div.Bdy form table.search td.title .FormField {
+	padding: 7px 18px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; color: rgb(255, 255, 255); font-size: 14px; font-weight: 700; text-decoration: none; float: right; display: inline-block; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+div.Bdy form table.search table {
+	background: none;
+}
+div.Bdy form table td.title {
+	padding: 5px;
+}
+div.Bdy form table td.input {
+	padding: 5px;
+}
+tr.hover-block:hover {
+	background-color: rgb(250, 250, 250);
+}
+tr.hover-block h1 {
+	font-size: 24px; display: inline;
+}
+td.image-block {
+	padding: 10px; width: 10%; vertical-align: middle;
+}
+td.text-link-block {
+	padding: 10px; vertical-align: middle;
+}
+td.text-link-block a {
+	color: rgb(0, 51, 102); text-decoration: none;
+}
+td.text-link-block a:visited {
+	color: rgb(0, 51, 102); text-decoration: none;
+}
+div.Bdy table.thd tr th.nfo {
+	background: rgb(0, 51, 102); color: rgb(255, 255, 255);
+}
+div.Bdy table.thd tr th.bod {
+	background: rgb(0, 51, 102); color: rgb(255, 255, 255); border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;
+}
+div.Bdy table.thd tr td.nfo {
+	background: rgb(250, 250, 250); border: 1px solid rgb(204, 204, 204); border-image: none; width: 200px; color: rgb(0, 0, 0); font-size: 12px; vertical-align: top; white-space: nowrap;
+}
+div.Bdy table.thd tr td.nfo div.spc {
+	margin: 6px 0px;
+}
+div.Bdy table.thd tr td.nfo div.rpl .but {
+	font: bold 18px/normal "Helvetica Neue", Helvetica, verdana, arial; padding: 7px 18px; border-radius: 3px; border: 1px solid rgb(0, 77, 100); border-image: none; color: rgb(255, 255, 255); text-decoration: none; display: inline-block; font-size-adjust: none; font-stretch: normal; box-shadow: inset 0px 1px 0px 0px #0abaee; text-shadow: 0px 1px 0px #003d4f; background-image: linear-gradient(rgb(0, 132, 171), rgb(0, 89, 115)); background-clip: padding-box; background-color: rgb(0, 132, 171);
+}
+div.Bdy table.thd tr td.bod {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0); vertical-align: top; border-top-color: rgb(204, 204, 204); border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.thd tr td.bod div.ttl {
+	font-weight: 700; margin-bottom: 6px;
+}
+div.Bdy table.thd tr td.bod pre {
+	background: rgb(243, 243, 243); font: 12px/120% courier new, courier, monospace; margin: 8px 0px; padding: 10px; width: 700px; color: rgb(0, 0, 0); overflow: auto; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.thd tr td.bod code {
+	background: rgb(243, 243, 243); font: 12px/120% courier new, courier, monospace; margin: 8px 0px; padding: 10px; width: 700px; color: rgb(0, 0, 0); overflow: auto; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.thd tr td.bod tt {
+	background: rgb(243, 243, 243); font: 12px/120% courier new, courier, monospace; margin: 8px 0px; padding: 10px; width: 700px; color: rgb(0, 0, 0); overflow: auto; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy pre {
+	background: rgb(243, 243, 243); font: 12px/120% courier new, courier, monospace; margin: 8px 0px; padding: 10px; width: 700px; color: rgb(0, 0, 0); overflow: auto; border-top-color: rgb(204, 204, 204); border-bottom-color: rgb(204, 204, 204); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.thd tr td.blk {
+	height: 3px;
+}
+div.Bdy div.thd {
+	margin: 0px; padding: 0px; width: 720px;
+}
+div.Bdy div.thd div.msg {
+	margin: 0px 0px 6px;
+}
+div.Bdy div.thd div.msg div.hdr {
+	background: rgb(229, 242, 246); font: 14px/normal "Helvetica Neue", Helvetica, verdana; padding: 10px; color: rgb(0, 0, 0); border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.hdr div.ttl {
+	font: bold 18px/normal "Helvetica Neue", Helvetica, verdana; margin-bottom: 5px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.hdr div.rpl {
+	clear: right; float: right; position: relative;
+}
+div.Bdy div.thd div.msg div.hdr div.rpl .but {
+	font: 18px/normal "Helvetica Neue", Helvetica, verdana, arial; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.hdr div.nfo {
+	font: 12px/normal "Helvetica Neue", Helvetica, verdana, arial; padding: 0px 6px 0px 0px; overflow: hidden; float: left; white-space: nowrap; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.bod {
+	background: rgb(255, 255, 255); font: 14px/normal "Helvetica Neue", Helvetica, verdana; padding: 5px 0px; color: rgb(0, 0, 0); border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.bod p {
+	margin: 0px 0px 8px;
+}
+div.Bdy div.thd div.msg div.bod pre {
+	background: rgb(250, 250, 250); font: 12px/120% courier new, courier; margin: 8px 0px; padding: 10px; color: rgb(0, 0, 0); overflow: auto; border-top-color: rgb(238, 238, 238); border-bottom-color: rgb(238, 238, 238); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd span.spc {
+	padding-right: 16px;
+}
+div.Bdy div.thd span.hdr {
+	font: bold 14px/normal "Helvetica Neue", Helvetica, verdana; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd span.nfo {
+	font: 12px/normal "Helvetica Neue", Helvetica, verdana; font-size-adjust: none; font-stretch: normal;
+}
+.nfo .rpl {
+	margin-bottom: 10px;
+}
+div.Bdy table.Bro tr td {
+	background: rgb(250, 250, 250); font: 12px/normal "Helvetica Neue", Helvetica, verdana, arial; text-align: justify; color: rgb(0, 0, 0); vertical-align: top; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.Bro tr td.ttl {
+	background: rgb(0, 51, 102); font: 14px/normal "Helvetica Neue", Helvetica, verdana, arial; text-align: center; color: rgb(255, 255, 255); vertical-align: middle; font-size-adjust: none; font-stretch: normal;
+}
+.Bdy div.dds ul {
+	margin: 0px; list-style-type: none;
+}
+.Bdy div.dds li {
+	line-height: 2; padding-bottom: 5px; font-size: 10px; margin-bottom: 5px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.Bdy div.dds .vn {
+	color: rgb(0, 51, 102); font-size: 14px; font-weight: 700;
+}
+.Bdy span.dds {
+	background: rgb(255, 255, 255); color: rgb(0, 51, 102); font-weight: 700;
+}
+div.Bdy div.alist li a {
+	font-size: 14px; text-decoration: none;
+}
+div.Bdy div.hbox {
+	background: rgb(255, 255, 255); margin: 12px auto; border: currentColor; border-image: none; color: rgb(0, 0, 0);
+}
+div.Bdy div.hbox p.top {
+	margin: 0px; padding: 5px; text-align: right; font-size: 12px;
+}
+div.Bdy div.hbox p.bot {
+	margin: 0px; padding: 5px; text-align: center; font-size: 13px;
+}
+div.Bdy span.score {
+	color: rgb(102, 102, 102); font-size: 12px;
+}
+div.Bdy span.descr {
+	color: rgb(0, 0, 0); font-size: 14px;
+}
+div.Bdy span.close {
+	color: rgb(0, 153, 51); font-size: 13px;
+}
+div.Bdy div.bbets {
+	background: rgb(240, 240, 240); margin: 10px 0px; width: 100%; color: rgb(0, 0, 0);
+}
+div.Bdy div.bbets div.title {
+	font: bold 13px/normal "Helvetica Neue", Helvetica, Arial, verdana, sans-serif; margin: 3px; text-align: right; color: rgb(0, 51, 102); clear: right; float: right; position: relative; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.bbets p {
+	margin: 5px; padding: 5px 2px; text-align: left; font-size: 13px;
+}
+div.Bdy div.hbox p.bot a {
+	margin: 0px 3px;
+}
+#player-container {
+	border: 1px solid rgb(0, 0, 0); border-image: none; width: 630px; height: 385px; float: left;
+}
+#description-shadow-container {
+	width: auto; clear: both; margin-top: 0px;
+}
+#description-container {
+	background: rgb(255, 255, 255); padding: 20px 0px 0px;
+}
+#related-links {
+	background: rgb(255, 255, 255); padding-top: 20px;
+}
+#related-links a {
+	padding-left: 10px; display: block;
+}
+#video-summary {
+	background: rgb(250, 250, 250); padding: 10px; border: 1px solid rgb(238, 238, 238); border-image: none; top: 50px; width: 250px; right: 0px; position: absolute;
+}
+#video-summary .info {
+	clear: both; float: none;
+}
+#video-summary hr {
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(0, 0, 0) currentColor currentColor; border-image: none; height: 1px; margin-top: 10px; margin-bottom: 10px;
+}
+#video-summary #presenters {
+	padding-top: 10px; margin-top: 10px; border-top-color: rgb(211, 211, 211); border-top-width: 1px; border-top-style: solid; position: relative;
+}
+#video-summary .presenter {
+	overflow: auto; padding-bottom: 10px;
+}
+#video-summary .presenter .photo {
+	width: 50px; margin-right: 15px; float: left;
+}
+.info .runtime {
+	color: gray;
+}
+.added {
+	color: gray;
+}
+.info {
+	padding-top: 10px; clear: left; border-top-color: rgb(211, 211, 211); border-top-width: 1px; border-top-style: solid; float: left;
+}
+.info div {
+	margin: auto 10px auto auto; width: auto; font-size: 0.9em; float: left;
+}
+#video-summary .summary {
+	line-height: 1.6; clear: both; margin-top: 20px;
+}
+div.Bdy div.nsec {
+	background: rgb(255, 255, 255); padding: 0px; width: 100%; overflow: hidden; clear: both; margin-bottom: 10px;
+}
+div.Bdy div.nsec div.newsletter {
+	border: 2px solid rgb(255, 255, 255); border-image: none; width: 32%; color: rgb(0, 0, 0); padding-bottom: 1000px; margin-bottom: -1000px; float: left;
+}
+div.Bdy div.nsec div.newsletter p {
+	margin: 0px; padding: 12px 6px; font-size: 12px;
+}
+div.Bdy div.nsec div.blank {
+	background: rgb(255, 255, 255);
+}
+div.Bdy div.dlfile {
+	background: rgb(250, 250, 250); font: 12px/normal "Helvetica Neue", Helvetica, Arial, verdana, sans-serif; margin: 10px auto 20px; padding: 10px 0px; border: 1px solid rgb(238, 238, 238); border-image: none; width: auto; text-align: center; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.TBList {
+	background: rgb(240, 240, 240); margin: 8px 0px; border: 1px solid rgb(221, 221, 221); border-image: none; color: rgb(0, 0, 0);
+}
+div.Bdy table.TBList td {
+	padding: 10px;
+}
+.mapwrapper {
+	margin-bottom: 20px; margin-left: 20px; float: right;
+}
+.ui-state-default {
+	background-image: none; background-color: rgb(255, 255, 255);
+}
+.ui-widget-content .ui-state-default {
+	background-image: none; background-color: rgb(255, 255, 255);
+}
+.ui-widget-header .ui-state-default {
+	background-image: none; background-color: rgb(255, 255, 255);
+}
+.ui-state-hover {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-widget-content .ui-state-hover {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-widget-header .ui-state-hover {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-state-focus {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-widget-content .ui-state-focus {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-widget-header .ui-state-focus {
+	border-color: rgb(221, 221, 221); border-radius: 0px; background-image: none; background-color: rgb(238, 238, 238);
+}
+.ui-widget-header {
+	border-radius: 0px; background-image: none; background-color: rgb(221, 221, 221);
+}
+.breadcrumb {
+	color: rgb(102, 102, 102); padding-bottom: 5px; font-size: 12px; margin-top: 5px; margin-bottom: 10px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid;
+}
+sup {
+	top: -0.5em; line-height: 0; font-size: 75%; vertical-align: baseline; position: relative;
+}
+.Bdy div.note {
+	padding: 5px; border: 1px solid rgb(238, 238, 238); border-image: none; color: rgb(0, 0, 0); clear: both; margin-top: 32px; background-color: rgb(250, 250, 250);
+}
+.Bdy div.note p {
+	margin-bottom: 0px;
+}
+hr {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(221, 221, 221); margin: 10px auto; border-image: none; height: 0px; box-sizing: content-box;
+}
+div.productquotebar {
+	overflow: hidden; padding-bottom: 10px;
+}
+div.productquotebar .button {
+	margin-right: 10px;
+}
+div.Bdy div.kblist {
+	padding-left: 0px;
+}
+div.Bdy div.kblist a {
+	text-decoration: none; margin-bottom: 0.5em; vertical-align: auto; display: inline; -ms-zoom: 1;
+}
+div.Bdy .c {
+	margin-bottom: 1em;
+}
+div.Bdy div.bp {
+	background: rgb(250, 250, 250); border-color: rgb(238, 238, 238); line-height: 1.6; font-size: 14px;
+}
+table.Main td.fullwidth.Bdy {
+	width: 100%; height: 100%; padding-right: 25px; padding-left: 25px;
+}
+div.Bdy div.scroller ul li {
+	list-style: none; margin: 0px 8px; width: 164px; text-align: center; float: left; position: relative;
+}
+.assistance {
+	margin-top: 5px; margin-left: 10px; float: right;
+}
+div.Bdy a:hover {
+	color: rgb(0, 171, 222);
+}
+div.Bdy a:hover:visited {
+	color: rgb(0, 171, 222);
+}
+td.Bdy a:hover {
+	color: rgb(0, 171, 222);
+}
+td.Bdy a:hover:visited {
+	color: rgb(0, 171, 222);
+}
+tr.Menu a:hover {
+	color: rgb(0, 171, 222);
+}
+tr.Menu a:hover:visited {
+	color: rgb(0, 171, 222);
+}
+div.Bdy table.Tab tr th a:hover {
+	color: rgb(0, 171, 222);
+}
+div.Bdy table.Tab tr th a:hover:visited {
+	color: rgb(0, 171, 222);
+}
+.Bot .boilerplate td a:hover {
+	color: rgb(0, 171, 222);
+}
+.Bot .boilerplate td a:hover:visited {
+	color: rgb(0, 171, 222);
+}
+.video-link:hover .ss-video {
+	color: rgb(0, 171, 222);
+}
+div.Bdy table tr th {
+	font-size: 18px;
+}
+.Bdy table tr th {
+	font-size: 18px;
+}
+div.Bdy div.dlfile a {
+	font-size: 18px;
+}
+div.Bdy div.hmdescr p {
+	font-size: 14px;
+}
+div.Bdy pre {
+	font-size: 14px;
+}
+div.Bdy ul {
+	font-size: 14px;
+}
+div.Bdy ol {
+	font-size: 14px;
+}
+div.Bdy p {
+	font-size: 14px;
+}
+div.Bdy blockquote {
+	font-size: 14px;
+}
+div.Bdy table tr td {
+	font-size: 14px;
+}
+div.Bdy legend {
+	font-size: 14px;
+}
+div.Bdy .new-form label {
+	font-size: 14px;
+}
+div.Bdy .ui-widget {
+	font-size: 14px;
+}
+div.Bdy form select {
+	font-size: 14px;
+}
+div.Bdy form textarea {
+	font-size: 14px;
+}
+div.Bdy div.rbar p {
+	font-size: 14px;
+}
+div.Bdy div.rbar p a {
+	font-size: 14px;
+}
+div.Bdy ul li {
+	font-size: 14px;
+}
+div.Bdy form table tr td {
+	font-size: 14px;
+}
+.Bdy div.hmdescr p {
+	font-size: 14px;
+}
+.Bdy pre {
+	font-size: 14px;
+}
+.Bdy ul {
+	font-size: 14px;
+}
+.Bdy ol {
+	font-size: 14px;
+}
+.Bdy p {
+	font-size: 14px;
+}
+.Bdy blockquote {
+	font-size: 14px;
+}
+.Bdy table tr td {
+	font-size: 14px;
+}
+.Bdy legend {
+	font-size: 14px;
+}
+.Bdy .new-form label {
+	font-size: 14px;
+}
+.Bdy .ui-widget {
+	font-size: 14px;
+}
+.Bdy form select {
+	font-size: 14px;
+}
+.Bdy form textarea {
+	font-size: 14px;
+}
+.Bdy div.rbar p {
+	font-size: 14px;
+}
+.Bdy div.rbar p a {
+	font-size: 14px;
+}
+.Bdy ul li {
+	font-size: 14px;
+}
+.Bdy form table tr td {
+	font-size: 14px;
+}
+div.Bdy div.dds .vn {
+	font-size: 14px;
+}
+.Bdy div.dds .vn {
+	font-size: 14px;
+}
+table .ss-check {
+	font-size: 14px;
+}
+table .ss-delete {
+	font-size: 14px;
+}
+div.Bdy table.Bro tr td div.c {
+	font-size: 14px;
+}
+div.Bdy div.nsec div.newsletter p.c {
+	font-size: 14px;
+}
+div.Bdy div.rbar ul li {
+	font-size: 12px;
+}
+div.Bdy div.rbar ul li a {
+	font-size: 12px;
+}
+div.Bdy ul li ul {
+	font-size: 12px;
+}
+div.Bdy ol li ul {
+	font-size: 12px;
+}
+div.Bdy div.Bdy div.dds li {
+	font-size: 12px;
+}
+.Bdy div.rbar ul li {
+	font-size: 12px;
+}
+.Bdy div.rbar ul li a {
+	font-size: 12px;
+}
+.Bdy ul li ul {
+	font-size: 12px;
+}
+.Bdy ol li ul {
+	font-size: 12px;
+}
+.Bdy div.Bdy div.dds li {
+	font-size: 12px;
+}
+div.Bdy table.Tab tr td {
+	font-size: 12px;
+}
+div.Bdy table.Tab tr.thl td {
+	font-size: 12px;
+}
+.Bdy table.Tab tr td {
+	font-size: 12px;
+}
+.Bdy table.Tab tr.thl td {
+	font-size: 12px;
+}
+div.note ul li {
+	font-size: 12px;
+}
+.ui-multiselect-checkboxes li {
+	font-size: 12px;
+}
+.ui-multiselect-header ul {
+	font-size: 12px;
+}
+div.Bdy span.pt8 {
+	font-size: 12px;
+}
+div.Bdy span.pt8 ul {
+	font-size: 12px;
+}
+div.Bdy span.pt8 ol {
+	font-size: 12px;
+}
+.Bdy form select {
+	font-size: 12px;
+}
+div.Bdy div.rbar ul li span.note {
+	font-size: 11px;
+}
+.Bdy div.rbar ul li span.note {
+	font-size: 11px;
+}
+div.Bdy span.pt7 {
+	font-size: 11px;
+}
+div.Bdy span.pt7 ul {
+	font-size: 11px;
+}
+div.Bdy span.pt7 ol {
+	font-size: 11px;
+}
+div.Bdy p.TabNotes {
+	font-size: 11px;
+}
+.tags {
+	font-size: 11px;
+}
+.ss-home span {
+	display: none;
+}
+.manuals br {
+	display: none;
+}
+.breadcrumb span {
+	display: none;
+}
+.new-product-table a {
+	text-decoration: none;
+}
+.new-product-table a:visited {
+	text-decoration: none;
+}
+.rbar a {
+	text-decoration: none;
+}
+.video-link a {
+	text-decoration: none;
+}
+.video-link a:visited {
+	text-decoration: none;
+}
+.Bdy div.dds a {
+	text-decoration: none;
+}
+.tags a {
+	text-decoration: none;
+}
+.breadcrumb a {
+	text-decoration: none;
+}
+.breadcrumb a:visited {
+	text-decoration: none;
+}
+.breadcrumb a:hover {
+	text-decoration: none;
+}
+.breadcrumb a:hover:visited {
+	text-decoration: none;
+}
+.Bot .Menu li a {
+	font-weight: 400;
+}
+.new-form label.optional {
+	font-weight: 400;
+}
+div.Bdy table.Tab tr th.tool {
+	font-weight: 400;
+}
+div.Bdy table.News tr th.tool {
+	font-weight: 400;
+}
+.Bot .boilerplate td img {
+	margin-top: 5px;
+}
+div.Bdy form table.Form textarea {
+	margin-top: 5px;
+}
+div.Bdy a:disabled.button {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy a:disabled.button:visited {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy a:disabled.download.button {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy a:disabled.features.button {
+	cursor: not-allowed; opacity: 0.5;
+}
+.Bdy form :disabled.button {
+	cursor: not-allowed; opacity: 0.5;
+}
+.Bdy form :disabled.submit {
+	cursor: not-allowed; opacity: 0.5;
+}
+.Bdy form input[type=reset]:disabled {
+	cursor: not-allowed; opacity: 0.5;
+}
+#keilsrchfm :disabled.button {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy form table tr td.BAR input[type=submit]:disabled {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy form table.search td.title :disabled.FormField {
+	cursor: not-allowed; opacity: 0.5;
+}
+div.Bdy table.thd tr td.nfo div.rpl :disabled.but {
+	cursor: not-allowed; opacity: 0.5;
+}
+.Bdy form :not(:disabled).button:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+.Bdy form :not(:disabled).submit:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+#keilsrchfm :not(:disabled).button:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+div.Bdy form table tr td.BAR input[type=submit]:not(:disabled):hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+div.Bdy form table.search td.title :not(:disabled).FormField:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+div.Bdy table.thd tr td.nfo div.rpl :not(:disabled).but:hover {
+	cursor: pointer; box-shadow: inset 0px 1px 0px 0px #0794be; background-image: linear-gradient(rgb(3, 111, 143), rgb(0, 77, 100)); background-color: rgb(3, 111, 143);
+}
+.Bdy form :not(:disabled).button:active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+.Bdy form :not(:disabled).submit:active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+#keilsrchfm :not(:disabled).button:active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+div.Bdy form table tr td.BAR input[type=submit]:not(:disabled):active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+div.Bdy form table.search td.title :not(:disabled).FormField:active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+div.Bdy table.thd tr td.nfo div.rpl :not(:disabled).but:active {
+	border: 1px solid rgb(0, 77, 100); border-image: none; box-shadow: inset 0px 0px 8px 4px #004154, inset 0px 0px 8px 4px #004154, 0px 1px 1px 0px #eee;
+}
+.new-form label.error {
+	color: red;
+}
+table .ss-delete {
+	color: red;
+}
+.new-form .text-input {
+	margin-bottom: 5px;
+}
+.new-form #state {
+	margin-bottom: 5px;
+}
+.new-form #countrycode {
+	margin-bottom: 5px;
+}
+.nfo .trunc {
+	margin-bottom: 5px;
+}
+.vendors {
+	clear: both;
+}
+div.shadow {
+	clear: both;
+}
+div.Bdy table.Tab tr td.oddh20 {
+	height: auto; text-align: left; padding-left: 5px; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.oddh20in {
+	height: auto; text-align: left; padding-left: 5px; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.evenh20 {
+	background: rgb(250, 250, 250); height: auto; text-align: left; padding-left: 5px; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.evenh20in {
+	background: rgb(250, 250, 250); height: auto; text-align: left; padding-left: 5px; border-left-color: rgb(238, 238, 238); border-left-width: 1px; border-left-style: solid;
+}
+div.Bdy table.thd tr td.newmsg {
+	background: rgb(229, 242, 246); color: rgb(0, 0, 0);
+}
+div.Bdy div.thd div.msg div.newmsg {
+	background: rgb(229, 242, 246); color: rgb(0, 0, 0);
+}
+div.Bdy table.thd tr td.bod pre b {
+	background: rgb(250, 250, 250); font: 14px/120% courier new, courier, monospace; color: red; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.bod pre b {
+	background: rgb(250, 250, 250); font: 14px/120% courier new, courier, monospace; color: red; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.thd tr td.bod p.ed {
+	font: 12px/normal "Helvetica Neue", Helvetica, verdana, arial; color: rgb(102, 102, 102); margin-top: 24px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.thd div.msg div.bod p.ed {
+	font: 12px/normal "Helvetica Neue", Helvetica, verdana, arial; color: rgb(102, 102, 102); margin-top: 24px; font-size-adjust: none; font-stretch: normal;
+}
+.Bdy div.dds a.vn {
+	text-decoration: underline;
+}
+div.Bdy div.alist li a:hover {
+	text-decoration: underline;
+}
+@media only screen
+{
+a.button {
+	transition:background-color 300ms ease-out; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.5); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset; -webkit-transition: background-color 300ms ease-out; -moz-transition: background-color 300ms ease-out;
+}
+}
+.sm-r1c1 {
+	background-position: -10px -10px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r1c2 {
+	background-position: -10px -63px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r1c3 {
+	background-position: -10px -133px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r1c4 {
+	background-position: -10px -203px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r2c1 {
+	background-position: -10px -273px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r2c2 {
+	background-position: -10px -343px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r2c3 {
+	background-position: -10px -413px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r2c4 {
+	background-position: -10px -483px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r3c1 {
+	background-position: -10px -553px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r3c2 {
+	background-position: -10px -623px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r3c3 {
+	background-position: -10px -693px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+.sm-r3c4 {
+	background-position: -10px -763px; width: 150px; height: 50px; display: block; background-image: url("/Content/images/keilsprite.png");
+}
+#search {
+	background-position: -10px -833px; background-image: url("/Content/images/keilsprite.png");
+}
+div.device-link-box {
+	padding: 10px; border-radius: 4px; border: 1px solid rgb(225, 225, 232); border-image: none; margin-bottom: 10px; background-color: rgb(247, 247, 249);
+}
+div.device-link-box span.ss-link {
+	color: rgb(153, 153, 153); font-size: 13pt;
+}
+div.device-link-box a {
+	line-height: 1.6em; display: block;
+}
+div.device-link-box > .device-box-header {
+	margin-left: 8px; vertical-align: text-bottom;
+}
+.box-template {
+	width: 200px; float: right;
+}
+.device-box-header {
+	color: rgb(0, 51, 102); font-size: 13pt; font-weight: bold;
+}
+.settings-box {
+	margin-top: 20px; margin-bottom: 30px;
+}
+.settings-box > h2 {
+	margin-top: 50px;
+}
+.radio-box {
+	width: 45%;
+}
+.radio-box > label {
+	width: 90px; font-weight: bold; display: inline-block;
+}
+.settings-row {
+	clear: right;
+}
+:not(:last-child).settings-row {
+	margin-bottom: 40px;
+}
+.options-box {
+	width: 50%; float: right;
+}
+div.options-box ul {
+	list-style-type: none;
+}
+div.options-box ul li::before {
+	margin: 0px 5px 0px -15px; color: rgb(0, 132, 171); font-family: SS-Standard; font-weight: bold; content: "?";
+}
+div.lower-row p {
+	color: rgb(0, 51, 102); font-weight: bold;
+}
+.shade-description-ticks::before {
+	color: rgb(221, 221, 221) !important;
+}
