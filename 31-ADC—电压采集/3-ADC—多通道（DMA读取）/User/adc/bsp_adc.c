@@ -15,12 +15,12 @@ static void ADCx_GPIO_Config(void)
 	ADC_GPIO_APBxClock_FUN ( ADC_GPIO_CLK, ENABLE );
 	
 	// 配置 ADC IO 引脚模式
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN1;
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN2;
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN3;
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN4;
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN5;
-	GPIO_InitStructure.GPIO_Pin = ADC_PIN6;
+	GPIO_InitStructure.GPIO_Pin = 	ADC_PIN1|
+																		ADC_PIN2|
+																		ADC_PIN3|
+																		ADC_PIN4|
+																		ADC_PIN5|
+																		ADC_PIN6;
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
 	
 	// 初始化 ADC IO
