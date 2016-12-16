@@ -30,14 +30,14 @@
 Ò°»ğSTM32-ISO¿ª·¢°åÀı³ÌGIT²Ö¿âµØÖ·£º
 http://git.oschina.net/wildfireteam/wildfire_stm32_iso.git
 
-ÂÛÌ³    :http://www.chuxue123.com
-ÌÔ±¦    :http://firestm32.taobao.com
+ÂÛÌ³    :http://www.firebbs.cn
+ÌÔ±¦    :https://fire-stm32.taobao.com
 ÓÊÏä	:wildfireteam@163.com
 
 
 
 Wildfire STM32 ISO development board program. 
 
-forum    :http://www.chuxue123.com
-shop	 :http://firestm32.taobao.com
+forum    :http://www.firebbs.cn
+shop	 :https://fire-stm32.taobao.com
 email	 :wildfireteam@163.com
