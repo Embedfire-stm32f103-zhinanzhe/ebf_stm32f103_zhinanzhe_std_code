@@ -22,6 +22,9 @@
 /* 秒中断标志，进入秒中断时置1，当时间被刷新之后清0 */
 __IO uint32_t TimeDisplay = 0;
 
+/*闹钟响铃标志，在中断中闹钟事件致1*/
+__IO uint32_t TimeAlarm = 0;
+
 /*星期，生肖用文字ASCII码*/
 char const *WEEK_STR[] = {"日", "一", "二", "三", "四", "五", "六"};
 char const *zodiac_sign[] = {"猪", "鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗"};
@@ -78,6 +81,13 @@ void RTC_CheckAndConfig(struct rtc_time *tm)
 	}
 	else
 	{
+		
+		/* 使能 PWR 和 Backup 时钟 */
+	  RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
+	
+		/* 允许访问 Backup 区域 */
+	  PWR_BackupAccessCmd(ENABLE);
+
 	  /*LSE启动无需设置新时钟*/
 		
 #ifdef RTC_CLOCK_SOURCE_LSI		
@@ -106,18 +116,13 @@ void RTC_CheckAndConfig(struct rtc_time *tm)
 		RTC_WaitForSynchro();
 		
 		/*允许RTC秒中断*/
-		RTC_ITConfig(RTC_IT_SEC, ENABLE);
+		RTC_ITConfig(RTC_IT_SEC|RTC_IT_ALR, ENABLE);
 		
 		/*等待上次RTC寄存器写操作完成*/
 		RTC_WaitForLastTask();
 	}
 	   /*定义了时钟输出宏，则配置校正时钟输出到PC13*/
 	#ifdef RTCClockOutput_Enable
-	/* 使能 PWR 和 Backup 时钟 */
-	  RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR | RCC_APB1Periph_BKP, ENABLE);
-	
-	/* 允许访问 Backup 区域 */
-	  PWR_BackupAccessCmd(ENABLE);
 	
 	  /* 禁止 Tamper 引脚 */
 	  /* 要输出 RTCCLK/64 到 Tamper 引脚,  tamper 功能必须禁止 */	
@@ -178,7 +183,7 @@ void RTC_Configuration(void)
 	RTC_WaitForLastTask();
 	
 	/* 使能 RTC 秒中断 */
-	RTC_ITConfig(RTC_IT_SEC, ENABLE);
+	RTC_ITConfig(RTC_IT_SEC|RTC_IT_ALR, ENABLE);
 	
 	/* 确保上一次 RTC 的操作完成 */
 	RTC_WaitForLastTask();
@@ -214,7 +219,7 @@ void RTC_Configuration(void)
 	RTC_WaitForLastTask();
 	
 	/* 使能 RTC 秒中断 */
-	RTC_ITConfig(RTC_IT_SEC, ENABLE);
+	RTC_ITConfig(RTC_IT_SEC|RTC_IT_ALR, ENABLE);
 	
 	/* 确保上一次 RTC 的操作完成 */
 	RTC_WaitForLastTask();
@@ -416,26 +421,26 @@ void Time_Show(struct rtc_time *tm)
 /*
  * 函数名：Time_Adjust
  * 描述  ：时间调节
- * 输入  ：用于读取RTC时间的结构体指针
+ * 输入  ：用于读取RTC时间的结构体指针（北京时间）
  * 输出  ：无
  * 调用  ：外部调用
  */
 void Time_Adjust(struct rtc_time *tm)
 {
 	
-			/* RTC Configuration */
+			/* RTC 配置 */
 		RTC_Configuration();
 
-	  /* Wait until last write operation on RTC registers has finished */
+	  /* 等待确保上一次操作完成 */
 	  RTC_WaitForLastTask();
 		  
-	  /* Get wday */
+	  /* 计算星期 */
 	  GregorianDay(tm);
 
-	  /* 修改当前RTC计数寄存器内容 */
-	  RTC_SetCounter(mktimev(tm));
+	  /* 由日期计算时间戳并写入到RTC计数寄存器 */
+	  RTC_SetCounter(mktimev(tm)-TIME_ZOOM);
 
-	  /* Wait until last write operation on RTC registers has finished */
+	  /* 等待确保上一次操作完成 */
 	  RTC_WaitForLastTask();
 }
 
@@ -453,7 +458,7 @@ void Time_Display(uint32_t TimeVar,struct rtc_time *tm)
 	   uint8_t str[200]; // 字符串暂存  	
 
 	   /*  把标准时间转换为北京时间*/
-	   BJ_TimeVar =TimeVar + 8*60*60;
+	   BJ_TimeVar =TimeVar + TIME_ZOOM;
 
 	   to_tm(BJ_TimeVar, tm);/*把定时器的值转换为北京时间*/	
 	

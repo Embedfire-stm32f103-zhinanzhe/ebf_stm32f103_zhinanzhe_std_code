@@ -38,7 +38,7 @@ struct rtc_time clocktime=
 };
 
 extern __IO uint32_t TimeDisplay ;
-
+extern __IO uint32_t TimeAlarm ;
 
 
 //【*】注意事项：
@@ -86,8 +86,10 @@ int main()
 	  RTC_NVIC_Config();
 	  RTC_CheckAndConfig(&systmtime);
 	
-		clock_timestamp = mktimev(&clocktime);
-	
+		/*设置闹钟寄存器*/
+		clock_timestamp = mktimev(&clocktime)-TIME_ZOOM;
+		RTC_SetAlarm(clock_timestamp);
+		
 	  while (1)
 	  {
 	    /* 每过1s 更新一次时间*/
@@ -96,13 +98,7 @@ int main()
 				/* 当前时间 */
 				current_timestamp = RTC_GetCounter();
 	      Time_Display( current_timestamp,&systmtime); 
-				
-				//响铃
-				if( current_timestamp == clock_timestamp)
-				{
-					BEEP(ON);
-				}
-				
+								
 	      TimeDisplay = 0;
 	    }
 			
@@ -119,12 +115,19 @@ int main()
 				//向备份寄存器写入标志
 				BKP_WriteBackupRegister(RTC_BKP_DRX, RTC_BKP_DATA);
 
-			} 
+			} 	
+			
+			//响铃
+			if( TimeAlarm == 1)
+			{
+				BEEP(ON);
+			}
 
 			//按下按键，关闭蜂鸣器
 			if( Key_Scan(KEY2_GPIO_PORT,KEY2_GPIO_PIN) == KEY_ON  )
 			{
 				BEEP(OFF);
+				TimeAlarm = 0;
 			}
 	  }
 }

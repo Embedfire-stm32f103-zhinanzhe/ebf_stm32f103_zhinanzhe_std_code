@@ -73,9 +73,7 @@ void GregorianDay(struct rtc_time * tm)
  * WARNING: this function will overflow on 2106-02-07 06:28:16 on
  * machines were long is 32-bit! (However, as time_t is signed, we
  * will already get problems at other places on 2038-01-19 03:14:08)
-
- *ADD by fire：本函数在工程中的输入参数为北京时间，
- 所以在转换成时间戳时最后要从北京时间转换为标准时间的时间戳
+ *
  */
 u32 mktimev(struct rtc_time *tm)
 {
@@ -89,10 +87,7 @@ u32 mktimev(struct rtc_time *tm)
 			tm->tm_year*365 - 719499
 	    )*24 + tm->tm_hour /* now have hours */
 	  )*60 + tm->tm_min /* now have minutes */
-	)*60 + tm->tm_sec-8*60*60; /* finally seconds */
-	/*Add by fire: -8*60*60 把输入的北京时间转换为标准时间，
-	再写入计时器中，确保计时器的数据为标准的UNIX时间戳*/ 
-	 
+	)*60 + tm->tm_sec; /* finally seconds */	 
 }
 
 

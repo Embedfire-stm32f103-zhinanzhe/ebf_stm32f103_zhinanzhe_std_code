@@ -22,6 +22,9 @@
 // 写入到备份寄存器的数据宏定义
 #define RTC_BKP_DATA         0xA5A5
 
+//北京时间的时区秒数差
+#define TIME_ZOOM						(8*60*60)
+
 
 /* 如果定义了下面这个宏的话,PC13就会输出频率为RTC Clock/64的时钟 */   
 //#define RTCClockOutput_Enable  /* RTC Clock/64 is output on tamper pin(PC.13) */

@@ -27,7 +27,7 @@
 
 
 extern uint32_t TimeDisplay;
-
+extern uint32_t TimeAlarm;
 
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
@@ -159,6 +159,13 @@ void RTC_IRQHandler(void)
 	    /* Wait until last write operation on RTC registers has finished */
 	    RTC_WaitForLastTask();
 	  }
+		/*ƒ÷÷”*/
+	  if (RTC_GetITStatus(RTC_IT_ALR) != RESET)
+		{
+			TimeAlarm  = 1 ;
+		}
+		
+		RTC_ClearITPendingBit(RTC_IT_ALR|RTC_IT_SEC);
 }
 
 
