@@ -4,7 +4,7 @@
   * @author  fire
   * @version V1.0
   * @date    2013-xx-xx
-  * @brief   I2C EEPROM(AT24C02)测试，测试信息通过USART1打印在电脑的超级终端
+  * @brief   I2C EEPROM(AT24C02)测试，存储小数
   ******************************************************************************
   * @attention
   *
@@ -30,7 +30,7 @@ long double double_buffer[7] = {0};
 int int_bufffer[7] = {0};
 
 #define DOUBLE_ADDR       10
-#define LONGINT_ADDR      60
+#define LONGINT_ADDR      70
 
 /**
   * @brief  主函数
