@@ -1031,7 +1031,7 @@ SD_Error SD_GetCardInfo(SD_CardInfo *cardinfo)
     /*!< Byte 10 */
     tmp = (uint8_t)((CSD_Tab[2] & 0x0000FF00) >> 8);
     
-    cardinfo->CardCapacity = (cardinfo->SD_csd.DeviceSize + 1) * 512 * 1024;
+    cardinfo->CardCapacity = (uint64_t)(cardinfo->SD_csd.DeviceSize + 1) * 512 * 1024;
     cardinfo->CardBlockSize = 512;    
   }
 
@@ -1334,7 +1334,7 @@ SD_Error SD_SelectDeselect(uint32_t addr)
   * @param  BlockSize: the SD card Data block size. The Block size should be 512.
   * @retval SD_Error: SD Card Error code.
   */
-SD_Error SD_ReadBlock(uint8_t *readbuff, uint32_t ReadAddr, uint16_t BlockSize)
+SD_Error SD_ReadBlock(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize)
 {
   SD_Error errorstatus = SD_OK;
 #if defined (SD_POLLING_MODE) 
@@ -1467,7 +1467,7 @@ SD_Error SD_ReadBlock(uint8_t *readbuff, uint32_t ReadAddr, uint16_t BlockSize)
   * @param  NumberOfBlocks: number of blocks to be read.
   * @retval SD_Error: SD Card Error code.
   */
-SD_Error SD_ReadMultiBlocks(uint8_t *readbuff, uint32_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)
+SD_Error SD_ReadMultiBlocks(uint8_t *readbuff, uint64_t ReadAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)
 {
   SD_Error errorstatus = SD_OK;
   TransferError = SD_OK;
@@ -1564,7 +1564,7 @@ SD_Error SD_WaitReadOperation(void)
   * @param  BlockSize: the SD card Data block size. The Block size should be 512.
   * @retval SD_Error: SD Card Error code.
   */
-SD_Error SD_WriteBlock(uint8_t *writebuff, uint32_t WriteAddr, uint16_t BlockSize)
+SD_Error SD_WriteBlock(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize)
 {
   SD_Error errorstatus = SD_OK;
 
@@ -1718,7 +1718,7 @@ SD_Error SD_WriteBlock(uint8_t *writebuff, uint32_t WriteAddr, uint16_t BlockSiz
 		  * @param  NumberOfBlocks: number of blocks to be written.
  *  ‰≥ˆ  £∫SD¥ÌŒÛ¿‡–Õ
  */
-SD_Error SD_WriteMultiBlocks(uint8_t *writebuff, uint32_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)
+SD_Error SD_WriteMultiBlocks(uint8_t *writebuff, uint64_t WriteAddr, uint16_t BlockSize, uint32_t NumberOfBlocks)
 {
   SD_Error errorstatus = SD_OK;
   __IO uint32_t count = 0;
@@ -2888,7 +2888,7 @@ DRESULT TM_FATFS_SD_SDIO_disk_read(BYTE *buff, DWORD sector, UINT count)
 		return res;
 	}
 
-	Status = SD_ReadMultiBlocks(buff, sector << 9, BLOCK_SIZE, count);
+	Status = SD_ReadMultiBlocks(buff, (uint64_t)sector << 9, BLOCK_SIZE, count);
 
 	if (Status == SD_OK) {
 		SDTransferState State;
@@ -2937,7 +2937,7 @@ DRESULT TM_FATFS_SD_SDIO_disk_write(BYTE *buff, DWORD sector, UINT count)
 		return(res);
 	}
 
-	Status = SD_WriteMultiBlocks((uint8_t *)buff, sector << 9, BLOCK_SIZE, count); // 4GB Compliant
+	Status = SD_WriteMultiBlocks((uint8_t *)buff, (uint64_t)sector << 9, BLOCK_SIZE, count); // 4GB Compliant
 
 	if (Status == SD_OK) {
 		SDTransferState State;
@@ -2964,7 +2964,7 @@ DRESULT TM_FATFS_SD_SDIO_disk_ioctl(BYTE cmd, char *buff)
 			*(WORD * )buff = 512;
 		break;
 		case GET_BLOCK_SIZE :      // Get erase block size in unit of sector (DWORD)
-			*(DWORD * )buff = SDCardInfo.CardBlockSize;
+			*(DWORD * )buff = 1;
 		break;
 
 		case GET_SECTOR_COUNT:
