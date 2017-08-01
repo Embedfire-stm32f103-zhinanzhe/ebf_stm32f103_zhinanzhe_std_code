@@ -32,7 +32,7 @@ UINT fnum;            					  /* 文件成功读写数量 */
 BYTE ReadBuffer[1024]={0};        /* 读缓冲区 */
 BYTE WriteBuffer[] =              /* 写缓冲区*/
 "欢迎使用野火STM32 开发板 今天是个好日子，新建文件系统测试文件\r\n";  
-
+extern  SD_CardInfo SDCardInfo;
 /**
   * @brief  主函数
   * @param  无
@@ -51,6 +51,7 @@ int main(void)
 	//在外部SPI Flash挂载文件系统，文件系统挂载时会对SPI设备初始化
 	res_sd = f_mount(&fs,"0:",1);
 	
+//	printf("容量=%lld",SDCardInfo.CardCapacity/1024/1024);
 /*----------------------- 格式化测试 ---------------------------*/  
 	/* 如果没有文件系统就格式化创建创建文件系统 */
 	if(res_sd == FR_NO_FILESYSTEM)
