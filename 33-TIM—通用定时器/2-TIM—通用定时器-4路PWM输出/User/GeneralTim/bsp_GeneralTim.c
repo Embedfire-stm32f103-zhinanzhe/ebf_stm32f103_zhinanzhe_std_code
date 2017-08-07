@@ -28,10 +28,10 @@ static void GENERAL_TIM_GPIO_Config(void)
 	
 	// 输出比较通道4 GPIO 初始化
 	RCC_APB2PeriphClockCmd(GENERAL_TIM_CH3_GPIO_CLK, ENABLE);
-  GPIO_InitStructure.GPIO_Pin =  GENERAL_TIM_CH3_PIN;
+  GPIO_InitStructure.GPIO_Pin =  GENERAL_TIM_CH4_PIN;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_Init(GENERAL_TIM_CH3_PORT, &GPIO_InitStructure);
+  GPIO_Init(GENERAL_TIM_CH4_PORT, &GPIO_InitStructure);
 }
 
 
