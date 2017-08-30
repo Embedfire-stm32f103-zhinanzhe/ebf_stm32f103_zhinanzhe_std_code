@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火STM32 F103-指南者 开发板  
+  * 实验平台:秉火STM32 F103-霸道 开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -90,6 +90,7 @@ void USART_Config(void)
 	
 	// 使能串口接收中断
 	USART_ITConfig(DEBUG_USARTx, USART_IT_RXNE, ENABLE);	
+	USART_ITConfig ( DEBUG_USARTx, USART_IT_IDLE, ENABLE ); //使能串口总线空闲中断 	
 	
 	// 使能串口
 	USART_Cmd(DEBUG_USARTx, ENABLE);	    
