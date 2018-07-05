@@ -22,7 +22,7 @@ int main(void)
 	/* 定时器初始化 */
 	GENERAL_TIM_Init();
 	
-	printf ( "\r\n秉火 STM32 输入捕获实验\r\n" );
+	printf ( "\r\n野火 STM32 输入捕获实验\r\n" );
 	printf ( "\r\n按下K1，测试K1按下的时间\r\n" );
 	
 	while ( 1 )

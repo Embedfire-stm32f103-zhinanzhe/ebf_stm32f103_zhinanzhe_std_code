@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32 开发板 
+  * 实验平台:野火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -43,8 +43,8 @@ int main(void)
 	/*初始化按键，不需要中断,仅初始化KEY2即可，只用于唤醒的PA0引脚不需要这样初始化*/
 	Key_GPIO_Config();   
 	
-	printf("\r\n 欢迎使用秉火  STM32  开发板。\r\n");
-  printf("\r\n 秉火STM32 待机模式例程\r\n");
+	printf("\r\n 欢迎使用野火  STM32  开发板。\r\n");
+  printf("\r\n 野火STM32 待机模式例程\r\n");
 	
 	printf("\r\n 实验说明：\r\n");
 

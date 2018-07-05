@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32  开发板  
+  * 实验平台:野火 F103-指南者 STM32  开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -45,7 +45,7 @@ void HSE_SetSysClock(uint32_t pllmul)
 	// 把RCC外设初始化成复位状态
   RCC_DeInit();
 
-  //使能HSE，开启外部晶振，秉火开发板用的是8M
+  //使能HSE，开启外部晶振，野火开发板用的是8M
   RCC_HSEConfig(RCC_HSE_ON);
 
   // 等待 HSE 启动稳定

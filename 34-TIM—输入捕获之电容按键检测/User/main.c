@@ -22,7 +22,7 @@ int main(void)
 
 	/* 串口初始化 */
 	USART_Config();
-	printf ( "\r\n秉火STM32 输入捕获电容按键检测实验\r\n" );
+	printf ( "\r\n野火STM32 输入捕获电容按键检测实验\r\n" );
 	printf ( "\r\n触摸电容按键，蜂鸣器则会响\r\n" );
 	
 //	TPAD_TIM_Init();

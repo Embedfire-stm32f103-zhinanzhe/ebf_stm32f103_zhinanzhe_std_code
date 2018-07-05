@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32  开发板  
+  * 实验平台:野火 F103-指南者 STM32  开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -34,7 +34,7 @@ int main(void)
 	my_mem_init(SRAMEX);		//初始化外部内存池
 
 	 
-	printf ( "\r\n秉火内存管理\r\n" );
+	printf ( "\r\n野火内存管理\r\n" );
 
 	 
 	printf ( "\r\n分配内存\r\n" );

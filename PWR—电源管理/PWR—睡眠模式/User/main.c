@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火  STM32 指南者 开发板 
+  * 实验平台:野火  STM32 指南者 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -39,8 +39,8 @@ int main(void)
 	/* 初始化按键为中断模式，按下中断后会进入中断服务函数	*/
 	EXTI_Key_Config(); 
 	
-	printf("\r\n 欢迎使用秉火  STM32  开发板。\r\n");
-  printf("\r\n 秉火STM32 睡眠模式例程\r\n");
+	printf("\r\n 欢迎使用野火  STM32  开发板。\r\n");
+  printf("\r\n 野火STM32 睡眠模式例程\r\n");
 	
 	printf("\r\n 实验说明：\r\n");
 

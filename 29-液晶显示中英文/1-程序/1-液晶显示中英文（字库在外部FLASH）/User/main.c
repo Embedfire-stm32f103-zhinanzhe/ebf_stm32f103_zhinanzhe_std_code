@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32 开发板 
+  * 实验平台:野火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -68,7 +68,7 @@ void LCD_Test(void)
 
   ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
 	/********显示字符串示例*******/ 
-  ILI9341_DispStringLine_EN_CH(LINE(0),"秉火3.2寸LCD参数：");
+  ILI9341_DispStringLine_EN_CH(LINE(0),"野火3.2寸LCD参数：");
   ILI9341_DispStringLine_EN_CH(LINE(1),"分辨率：240x320 px");
   ILI9341_DispStringLine_EN_CH(LINE(2),"ILI9341液晶驱动");
   ILI9341_DispStringLine_EN_CH(LINE(3),"XPT2046触摸屏驱动");

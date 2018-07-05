@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32  开发板  
+  * 实验平台:野火 F103-指南者 STM32  开发板  
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -41,7 +41,7 @@ uint8_t testValue __attribute__((at(Bank1_SRAM3_ADDR)));
   //初始化外部SRAM  
   FSMC_SRAM_Init();			     
 	 
-	printf ( "\r\n秉火外部 SRAM 测试\r\n" );
+	printf ( "\r\n野火外部 SRAM 测试\r\n" );
 	  	
   
   /*蓝灯亮，表示正在读写SRAM测试*/

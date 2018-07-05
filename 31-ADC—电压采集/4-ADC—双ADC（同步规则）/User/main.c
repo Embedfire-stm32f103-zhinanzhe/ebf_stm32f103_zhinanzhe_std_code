@@ -31,7 +31,7 @@ int main(void)
 	ADCx_Init();
 	
 	printf("\r\n ----这是一个双ADC规则同步采集实验----\r\n");
-	printf("欢迎使用秉火STM32开发板\n");
+	printf("欢迎使用野火STM32开发板\n");
 	
 	while (1)
 	{	

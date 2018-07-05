@@ -42,7 +42,7 @@ void HSE_SetSysClock(uint32_t pllmul)
 	// 把RCC外设初始化成复位状态，这句是必须的
   RCC_DeInit();
 
-  //使能HSE，开启外部晶振，秉火开发板用的是8M
+  //使能HSE，开启外部晶振，野火开发板用的是8M
   RCC_HSEConfig(RCC_HSE_ON);
 
   // 等待 HSE 启动稳定

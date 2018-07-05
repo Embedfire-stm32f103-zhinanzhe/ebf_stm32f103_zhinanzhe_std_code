@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32 开发板 
+  * 实验平台:野火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -35,7 +35,7 @@ int main(void)
 	LED_GPIO_Config();
  
 	LED_BLUE;
-	printf("\r\n 欢迎使用秉火  STM32  开发板。\r\n");	
+	printf("\r\n 欢迎使用野火  STM32  开发板。\r\n");	
 	printf("正在进行读写内部FLASH实验，请耐心等待\r\n");
 	
 	if(InternalFlash_Test()== PASSED)

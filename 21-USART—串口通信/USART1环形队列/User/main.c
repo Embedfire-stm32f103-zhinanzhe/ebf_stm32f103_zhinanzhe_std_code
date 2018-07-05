@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:秉火 F103-指南者 STM32 开发板 
+  * 实验平台:野火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -34,7 +34,7 @@ int main(void)
 	
 	/* 发送一个字符串 */
 	Usart_SendString( DEBUG_USARTx,"这是一个串口中断接收回显实验\n");
-	printf("欢迎使用秉火STM32开发板\n\n\n\n");
+	printf("欢迎使用野火STM32开发板\n\n\n\n");
 
   while(1)
 	{	
