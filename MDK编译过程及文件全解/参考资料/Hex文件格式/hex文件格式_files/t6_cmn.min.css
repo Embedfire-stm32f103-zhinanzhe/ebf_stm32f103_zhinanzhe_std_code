@@ -1,0 +1,417 @@
+div.Bdy {
+	font: 10pt/normal verdana, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h1 {
+	font: bold 16pt/normal verdana, sans-serif; padding-top: 6px; margin-top: 0px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h2 {
+	font: bold 14pt/normal verdana, sans-serif; padding-top: 15px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h3 {
+	font: bold 13pt/normal verdana, sans-serif; padding-top: 15px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h4 {
+	font: bold 12pt/normal verdana, sans-serif; padding-top: 15px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h5 {
+	font: bold 10pt/normal verdana, sans-serif; padding-top: 15px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy h6 {
+	font: bold 10pt/normal verdana, sans-serif; padding-top: 15px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy pre {
+	font: 10pt/120% Courier, monospace; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy pre.code {
+	background: rgb(240, 224, 160); color: rgb(0, 0, 0);
+}
+div.Bdy pre strong {
+	font-family: inherit; font-weight: bold;
+}
+div.Bdy pre b {
+	font-family: inherit; font-weight: bold;
+}
+div.Bdy ul {
+	margin: 6px 0px 16px 28px; padding: 0px; font-size: 10pt; list-style-type: square;
+}
+div.Bdy ul li {
+	margin: 0px; padding: 2px 0px;
+}
+div.Bdy ul li ul {
+	margin: 3px 0px 0px 16px; padding: 3px 0px; font-size: 8pt;
+}
+div.Bdy ol {
+	font-size: 10pt; margin-top: 6px; margin-bottom: 6px;
+}
+div.Bdy ol li {
+	padding: 4px 0px;
+}
+div.Bdy ol li ul {
+	margin: 0px 0px 0px 16px; padding: 0px; font-size: 8pt;
+}
+div.Bdy p {
+	margin: 16px 0px; padding: 0px; font-size: 10pt;
+}
+div.Bdy blockquote {
+	font: 10pt/normal verdana, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table tr th {
+	font: 10pt/normal verdana, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table tr td {
+	font: 10pt/normal verdana, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy .clear {
+	clear: both;
+}
+div.Bdy .hidden {
+	display: none;
+}
+div.Bdy .nospaft {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+div.Bdy .error {
+	color: red;
+}
+div.Bdy .TinyButton {
+	margin: 0px; padding: 0px; font-family: verdana,sans-serif; font-size: 8pt;
+}
+div.Bdy .vat {
+	vertical-align: top;
+}
+div.Bdy .vam {
+	vertical-align: middle;
+}
+div.Bdy .vatt {
+	vertical-align: text-top;
+}
+div.Bdy .vatb {
+	vertical-align: text-bottom;
+}
+div.Bdy div.trunc {
+	overflow: hidden; white-space: nowrap;
+}
+div.Bdy span.pt7 {
+	font-size: 7pt;
+}
+div.Bdy span.pt7 ul {
+	margin: 6px 0px 6px 12px; padding: 0px; font-size: 7pt;
+}
+div.Bdy span.pt7 ul li {
+	padding: 0px 0px 1px;
+}
+div.Bdy span.pt7 ol {
+	margin: 6px 0px 6px 12px; padding: 0px; font-size: 7pt;
+}
+div.Bdy span.pt7 ol li {
+	padding: 0px 0px 1px;
+}
+div.Bdy span.pt8 {
+	font-size: 8pt;
+}
+div.Bdy span.pt8 ul {
+	margin: 6px 0px 6px 12px; padding: 0px; font-size: 8pt;
+}
+div.Bdy span.pt8 ul li {
+	padding: 0px 0px 1px;
+}
+div.Bdy span.pt8 ol {
+	margin: 6px 0px 6px 12px; padding: 0px; font-size: 8pt;
+}
+div.Bdy span.pt8 ol li {
+	padding: 0px 0px 1px;
+}
+div.Bdy div.sbt h1 {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+h2 {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+h3 {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+h4 {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+h5 {
+	padding-bottom: 0px; margin-bottom: 0px;
+}
+div.Bdy div.sbt p {
+	padding-top: 0px; margin-top: 0px;
+}
+div.note {
+	padding: 6px; border: 1px solid rgb(153, 153, 153); border-image: none; color: rgb(0, 0, 0); clear: both; margin-top: 32px; background-color: rgb(240, 240, 240);
+}
+div.note p {
+	margin: 0px; padding: 0px;
+}
+div.note ul {
+	margin: 3px 0px 3px 18px;
+}
+div.note ul li {
+	padding: 2px 0px; font-size: 8pt;
+}
+div.Bdy a {
+	color: rgb(0, 102, 153);
+}
+div.Bdy a:hover {
+	color: red;
+}
+div.Bdy a:visited {
+	color: rgb(102, 0, 102);
+}
+div.Bdy div.hmtitle {
+	overflow: hidden; font-weight: bold; white-space: nowrap;
+}
+div.Bdy div.hmdescr p {
+	font-size: 8pt; margin-top: 3px;
+}
+div.Bdy div.rbar {
+	background: rgb(255, 255, 255); margin: 0px 0px 5px 18px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 180px; color: rgb(0, 0, 0); clear: right; float: right; border-collapse: collapse; position: relative;
+}
+div.Bdy div.rbar p {
+	font: bold 10pt/normal verdana, sans-serif; margin: 4px; color: rgb(0, 0, 0); padding-bottom: 6px; padding-left: 4px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbar p a {
+	font: bold 10pt/normal verdana, sans-serif; text-decoration: none; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbar ul {
+	margin: 4px; padding: 0px 0px 0px 20px; color: rgb(153, 153, 153); list-style-type: square;
+}
+div.Bdy div.rbar ul li {
+	font: 8pt/120% verdana, sans-serif; padding-top: 0px; padding-bottom: 9px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbar ul li span.note {
+	font: 7pt/normal verdana, sans-serif; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbar ul li a {
+	font: 8pt/normal verdana, sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbarquote {
+	background: rgb(255, 255, 255); margin: 0px 0px 5px 18px; border: 1px solid rgb(153, 153, 153); border-image: none; width: 180px; color: rgb(0, 0, 0); clear: right; float: right; border-collapse: collapse; position: relative;
+}
+div.Bdy div.rbarquote p {
+	font: bold 10pt/normal verdana, sans-serif; margin: 4px; color: rgb(0, 0, 0); padding-bottom: 6px; padding-left: 4px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbarquote p a {
+	font: bold 10pt/normal verdana, sans-serif; text-decoration: none; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbarquote ul {
+	margin: 4px; padding: 0px 0px 0px 20px; color: rgb(153, 153, 153); list-style-type: square;
+}
+div.Bdy div.rbarquote ul li {
+	font: 8pt/18px verdana, sans-serif; padding-top: 0px; padding-bottom: 0px; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbarquote ul li span.note {
+	font: 7pt/normal verdana, sans-serif; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.rbarquote ul li a {
+	font: 8pt/normal verdana, sans-serif; padding-left: 5px; font-size-adjust: none; font-stretch: normal;
+}
+div.rbarquote img.right {
+	margin-left: 0px !important; vertical-align: bottom; float: none !important;
+}
+div.productquotebar {
+	width: 100%; height: 40px; padding-top: 10px;
+}
+div.Bdy div.productquotebar img.right {
+	padding-left: 5px;
+}
+div.Bdy div.productquotebar img {
+	float: left;
+}
+div.Bdy img {
+	border: currentColor; border-image: none; text-decoration: none;
+}
+div.Bdy img.left {
+	margin-right: 10px; float: left;
+}
+div.Bdy img.right {
+	margin-left: 10px; float: right;
+}
+div.Bdy div.bp {
+	background: rgb(232, 232, 232); margin: 0px 0px 18px; padding: 10px; border: 1px solid rgb(102, 102, 102); border-image: none; color: rgb(0, 0, 0); font-size: 10pt;
+}
+div.Bdy .c {
+	text-align: center;
+}
+div.Bdy table.Tab {
+	border: 1px solid rgb(0, 0, 0); border-image: none; border-collapse: collapse;
+}
+div.Bdy table.Tab tr th {
+	background: rgb(153, 71, 0); font: bold 8pt/normal verdana, sans-serif; margin: 20px 0px 2px 2px; padding: 0px 3px; text-align: left; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.Tab tr.h30 th {
+	height: 30px;
+}
+div.Bdy table.Tab tr.h42 th {
+	height: 42px;
+}
+div.Bdy table.Tab tr.h60 th {
+	height: 60px;
+}
+div.Bdy table.Tab tr th.c {
+	text-align: center;
+}
+div.Bdy table.Tab tr th.r {
+	text-align: right;
+}
+div.Bdy table.Tab tr th a {
+	color: rgb(255, 255, 255);
+}
+div.Bdy table.Tab tr th a:hover {
+	color: rgb(240, 224, 160);
+}
+div.Bdy table.Tab tr th a:visited {
+	color: rgb(240, 224, 160);
+}
+div.Bdy table.Tab tr td.sec {
+	background: rgb(204, 204, 204); margin: 0px 0px 0px 10px; padding: 0px 3px; text-align: center; color: rgb(51, 51, 51); font-weight: bold; border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy table.Tab tr td.sec a {
+	color: rgb(51, 51, 51);
+}
+div.Bdy table.Tab tr td {
+	font: 8pt/normal verdana, sans-serif; margin: 0px 0px 0px 10px; padding: 0px 3px; border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy table.Tab tr td.nobord {
+	border-top-color: currentColor; border-bottom-color: currentColor; border-top-width: medium; border-bottom-width: medium; border-top-style: none; border-bottom-style: none;
+}
+div.Bdy table.Tab tr.h16 td {
+	height: 16px;
+}
+div.Bdy table.Tab tr.h20 td {
+	height: 20px;
+}
+div.Bdy table.Tab tr.h24 td {
+	height: 24px;
+}
+div.Bdy table.Tab tr.h30 td {
+	height: 30px;
+}
+div.Bdy table.Tab tr.p3 td {
+	padding-top: 3px; padding-bottom: 3px;
+}
+div.Bdy table.Tab tr.p6 td {
+	padding-top: 6px; padding-bottom: 6px;
+}
+div.Bdy table.Tab tr.p9 td {
+	padding-top: 9px; padding-bottom: 9px;
+}
+div.Bdy table.Tab tr td.c {
+	text-align: center;
+}
+div.Bdy table.Tab tr td.r {
+	text-align: right;
+}
+div.Bdy table.Tab tr td.l {
+	text-align: left;
+}
+div.Bdy table.Tab tr td.odd {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.oddc {
+	background: rgb(255, 255, 255); text-align: center; color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.even {
+	background: rgb(240, 224, 160); color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.evenc {
+	background: rgb(240, 224, 160); text-align: center; color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.odd2 {
+	background: rgb(255, 255, 255); color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.even2 {
+	background: rgb(238, 238, 238); color: rgb(0, 0, 0);
+}
+div.Bdy table.Tab tr td.oddh20 {
+	background: rgb(255, 255, 255); height: 20px; text-align: center; color: rgb(0, 0, 0); border-bottom-color: currentColor; border-left-color: rgb(153, 153, 153); border-bottom-width: medium; border-left-width: 1px; border-bottom-style: none; border-left-style: solid;
+}
+div.Bdy table.Tab tr td.evenh20 {
+	background: rgb(240, 240, 240); height: 20px; text-align: center; color: rgb(0, 0, 0); border-bottom-color: currentColor; border-left-color: rgb(153, 153, 153); border-bottom-width: medium; border-left-width: 1px; border-bottom-style: none; border-left-style: solid;
+}
+div.Bdy p.TabNotes {
+	text-align: center; font-size: 7pt; margin-top: 6px;
+}
+div.Bdy form table.Form {
+	background: rgb(240, 224, 160); border: 1px solid rgb(0, 0, 0); border-image: none; width: 100%; color: rgb(0, 0, 0); border-collapse: collapse;
+}
+div.Bdy form table tr th {
+	background: rgb(153, 71, 0); font: bold 10pt/normal verdana, sans-serif; padding: 8px 2px; color: rgb(255, 255, 255); border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy form table tr td {
+	font: 10pt/normal verdana, sans-serif; padding: 0px 3px; vertical-align: top; font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy form table tr td.FormC {
+	text-align: center; white-space: nowrap;
+}
+div.Bdy form table tr td.FormL {
+	white-space: nowrap;
+}
+div.Bdy form table tr td.FormR {
+	text-align: right; padding-right: 6px; white-space: nowrap;
+}
+div.Bdy form table tr td.sec {
+	background: rgb(204, 153, 51); height: 24px; color: rgb(255, 255, 255); font-weight: bold; vertical-align: middle; border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy form table tr td.BAR {
+	background: rgb(153, 71, 0); margin: 12px 0px; height: 24px; text-align: center; color: rgb(255, 255, 255); font-weight: bold; vertical-align: middle; border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+div.Bdy form table tr td.FTR {
+	background: rgb(153, 71, 0); padding: 5px 2px; text-align: center; color: rgb(255, 255, 255); border-top-color: rgb(0, 0, 0); border-top-width: 1px; border-top-style: solid;
+}
+div.Bdy form table tr td.FTR input {
+	margin: 2px;
+}
+div.Bdy form table table.dmg {
+	width: 100%;
+}
+div.Bdy form table table.dmg td {
+	overflow: hidden; font-size: 8pt; white-space: nowrap;
+}
+div.Bdy form textarea {
+	margin: 1px; padding: 0px; font-size: 8pt;
+}
+div.Bdy form select {
+	margin: 1px; padding: 0px; font-size: 8pt;
+}
+div.Bdy form input {
+	margin: 1px; padding: 0px; font-size: 8pt;
+}
+div.Bdy form button {
+	margin: 1px; padding: 0px; font-size: 8pt;
+}
+div.Bdy form input.BTN {
+	width: 80px; height: 24px;
+}
+div.Bdy form input.smlBTN {
+	width: 20px; height: 20px;
+}
+div.Bdy span.new1 {
+	color: red; padding-right: 6px; font-weight: bold;
+}
+div.Bdy span.new2 {
+	color: maroon; padding-right: 6px; font-weight: bold;
+}
+div.Bdy div.dlfile {
+	background: rgb(240, 224, 160); font: 8pt/normal verdana, sans-serif; margin: 10px auto 20px; padding: 10px 0px; border: 1px solid rgb(0, 0, 0); border-image: none; text-align: center; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+div.Bdy div.kblist {
+	padding-left: 24px;
+}
+div.Bdy div.dds li {
+	font-size: 7pt;
+}
+div.Bdy div.dds .vn {
+	color: rgb(0, 51, 102); font-size: 10pt; font-weight: bold;
+}
+div.Bdy span.dds {
+	background: rgb(255, 255, 255); color: rgb(0, 51, 102); font-weight: bold;
+}
+div.Bdy div.rpx {
+	text-align: center; clear: right; font-size: 7pt; font-weight: normal; float: right; position: relative;
+}
+div.Bdy div.rpx img {
+	border: 1px solid rgb(0, 0, 0); border-image: none;
+}

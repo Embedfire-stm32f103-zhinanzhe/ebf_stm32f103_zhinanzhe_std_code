@@ -1,0 +1,13 @@
+matlab脚本：
+安装matlab工具，直接使用matlab运行sinWave.m文件即可。
+______________________________________________________
+
+python脚本:
+
+1.安装：python3.x
+
+2.安装库：matplotlib1.5.3numpy1.11.2
+
+3.在sinWave.py文件所在目录运行cmd命令：
+
+	python sinWave.py

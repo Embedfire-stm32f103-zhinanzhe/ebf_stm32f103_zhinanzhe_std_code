@@ -1,0 +1,1080 @@
+@font-face {
+	font-family: SSStandard;
+	src: url(ss-standard.eot?#iefix) format("embedded-opentype"), url(ss-standard.woff) format("woff"), url(ss-standard.ttf) format("truetype"), url(ss-standard.svg#SSStandard) format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.ss-icon {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+.ss-standard.ss-icon {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class^='ss-']::before {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class*=' ss-']::before {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class^='ss-'].ss-standard::before {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class*=' ss-'].ss-standard::before {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class^='ss-'].right::after {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class*=' ss-'].right::after {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class^='ss-'].right.ss-standard::after {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class*=' ss-'].right.ss-standard::after {
+	font-family: "SSStandard"; font-style: normal; font-weight: normal; text-decoration: none; white-space: nowrap; font-feature-settings: "liga" 1; text-rendering: optimizeLegibility; -webkit-font-feature-settings: "liga"; -moz-font-feature-settings: "liga"; -o-font-feature-settings: "liga"; -webkit-font-smoothing: antialiased;
+}
+[class^='ss-'].right::before {
+	display: none; content: "";
+}
+[class*=' ss-'].right.ss-standard::before {
+	display: none; content: "";
+}
+.ss-cursor::before {
+	content: "ª¢";
+}
+.right.ss-cursor::after {
+	content: "ª¢";
+}
+.ss-crosshair::before {
+	content: "?";
+}
+.right.ss-crosshair::after {
+	content: "?";
+}
+.ss-search::before {
+	content: "??";
+}
+.right.ss-search::after {
+	content: "??";
+}
+.ss-zoomin::before {
+	content: "ª£";
+}
+.right.ss-zoomin::after {
+	content: "ª£";
+}
+.ss-zoomout::before {
+	content: "ª¤";
+}
+.right.ss-zoomout::after {
+	content: "ª¤";
+}
+.ss-view::before {
+	content: "??";
+}
+.right.ss-view::after {
+	content: "??";
+}
+.ss-attach::before {
+	content: "??";
+}
+.right.ss-attach::after {
+	content: "??";
+}
+.ss-link::before {
+	content: "??";
+}
+.right.ss-link::after {
+	content: "??";
+}
+.ss-move::before {
+	content: "«³";
+}
+.right.ss-move::after {
+	content: "«³";
+}
+.ss-write::before {
+	content: "?";
+}
+.right.ss-write::after {
+	content: "?";
+}
+.ss-writingdisabled::before {
+	content: "«´";
+}
+.right.ss-writingdisabled::after {
+	content: "«´";
+}
+.ss-erase::before {
+	content: "?";
+}
+.right.ss-erase::after {
+	content: "?";
+}
+.ss-compose::before {
+	content: "??";
+}
+.right.ss-compose::after {
+	content: "??";
+}
+.ss-lock::before {
+	content: "??";
+}
+.right.ss-lock::after {
+	content: "??";
+}
+.ss-unlock::before {
+	content: "??";
+}
+.right.ss-unlock::after {
+	content: "??";
+}
+.ss-key::before {
+	content: "??";
+}
+.right.ss-key::after {
+	content: "??";
+}
+.ss-backspace::before {
+	content: "?";
+}
+.right.ss-backspace::after {
+	content: "?";
+}
+.ss-ban::before {
+	content: "??";
+}
+.right.ss-ban::after {
+	content: "??";
+}
+.ss-trash::before {
+	content: "¬µ";
+}
+.right.ss-trash::after {
+	content: "¬µ";
+}
+.ss-target::before {
+	content: "¡ò";
+}
+.right.ss-target::after {
+	content: "¡ò";
+}
+.ss-tag::before {
+	content: "¬å";
+}
+.right.ss-tag::after {
+	content: "¬å";
+}
+.ss-bookmark::before {
+	content: "??";
+}
+.right.ss-bookmark::after {
+	content: "??";
+}
+.ss-flag::before {
+	content: "?";
+}
+.right.ss-flag::after {
+	content: "?";
+}
+.ss-like::before {
+	content: "??";
+}
+.right.ss-like::after {
+	content: "??";
+}
+.ss-dislike::before {
+	content: "??";
+}
+.right.ss-dislike::after {
+	content: "??";
+}
+.ss-heart::before {
+	content: "?";
+}
+.right.ss-heart::after {
+	content: "?";
+}
+.ss-halfheart::before {
+	content: "®É";
+}
+.right.ss-halfheart::after {
+	content: "®É";
+}
+.ss-star::before {
+	content: "?";
+}
+.right.ss-star::after {
+	content: "?";
+}
+.ss-halfstar::before {
+	content: "®Ê";
+}
+.right.ss-halfstar::after {
+	content: "®Ê";
+}
+.ss-sample::before {
+	content: "¯Ë";
+}
+.right.ss-sample::after {
+	content: "¯Ë";
+}
+.ss-crop::before {
+	content: "¯Ì";
+}
+.right.ss-crop::after {
+	content: "¯Ì";
+}
+.ss-layers::before {
+	content: "¯Í";
+}
+.right.ss-layers::after {
+	content: "¯Í";
+}
+.ss-phone::before {
+	content: "??";
+}
+.right.ss-phone::after {
+	content: "??";
+}
+.ss-phonedisabled::before {
+	content: "ú±";
+}
+.right.ss-phonedisabled::after {
+	content: "ú±";
+}
+.ss-rss::before {
+	content: "úÁ";
+}
+.right.ss-rss::after {
+	content: "úÁ";
+}
+.ss-facetime::before {
+	content: "úÑ";
+}
+.right.ss-facetime::after {
+	content: "úÑ";
+}
+.ss-reply::before {
+	content: "?";
+}
+.right.ss-reply::after {
+	content: "?";
+}
+.ss-send::before {
+	content: "û£";
+}
+.right.ss-send::after {
+	content: "û£";
+}
+.ss-mail::before {
+	content: "?";
+}
+.right.ss-mail::after {
+	content: "?";
+}
+.ss-inbox::before {
+	content: "??";
+}
+.right.ss-inbox::after {
+	content: "??";
+}
+.ss-chat::before {
+	content: "??";
+}
+.right.ss-chat::after {
+	content: "??";
+}
+.ss-user::before {
+	content: "??";
+}
+.right.ss-user::after {
+	content: "??";
+}
+.ss-femaleuser::before {
+	content: "??";
+}
+.right.ss-femaleuser::after {
+	content: "??";
+}
+.ss-users::before {
+	content: "??";
+}
+.right.ss-users::after {
+	content: "??";
+}
+.ss-cart::before {
+	content: "¡z";
+}
+.right.ss-cart::after {
+	content: "¡z";
+}
+.ss-creditcard::before {
+	content: "??";
+}
+.right.ss-creditcard::after {
+	content: "??";
+}
+.ss-dollarsign::before {
+	content: "??";
+}
+.right.ss-dollarsign::after {
+	content: "??";
+}
+.ss-barchart::before {
+	content: "??";
+}
+.right.ss-barchart::after {
+	content: "??";
+}
+.ss-piechart::before {
+	content: "¢‹";
+}
+.right.ss-piechart::after {
+	content: "¢‹";
+}
+.ss-box::before {
+	content: "??";
+}
+.right.ss-box::after {
+	content: "??";
+}
+.ss-home::before {
+	content: "?";
+}
+.right.ss-home::after {
+	content: "?";
+}
+.ss-globe::before {
+	content: "??";
+}
+.right.ss-globe::after {
+	content: "??";
+}
+.ss-navigate::before {
+	content: "¥j";
+}
+.right.ss-navigate::after {
+	content: "¥j";
+}
+.ss-compass::before {
+	content: "¥k";
+}
+.right.ss-compass::after {
+	content: "¥k";
+}
+.ss-signpost::before {
+	content: "¥l";
+}
+.right.ss-signpost::after {
+	content: "¥l";
+}
+.ss-map::before {
+	content: "¥m";
+}
+.right.ss-map::after {
+	content: "¥m";
+}
+.ss-location::before {
+	content: "¦j";
+}
+.right.ss-location::after {
+	content: "¦j";
+}
+.ss-pin::before {
+	content: "??";
+}
+.right.ss-pin::after {
+	content: "??";
+}
+.ss-database::before {
+	content: "§Â";
+}
+.right.ss-database::after {
+	content: "§Â";
+}
+.ss-hdd::before {
+	content: "§ó";
+}
+.right.ss-hdd::after {
+	content: "§ó";
+}
+.ss-music::before {
+	content: "?";
+}
+.right.ss-music::after {
+	content: "?";
+}
+.ss-mic::before {
+	content: "??";
+}
+.right.ss-mic::after {
+	content: "??";
+}
+.ss-volume::before {
+	content: "??";
+}
+.right.ss-volume::after {
+	content: "??";
+}
+.ss-lowvolume::before {
+	content: "??";
+}
+.right.ss-lowvolume::after {
+	content: "??";
+}
+.ss-highvolume::before {
+	content: "??";
+}
+.right.ss-highvolume::after {
+	content: "??";
+}
+.ss-airplay::before {
+	content: "©£";
+}
+.right.ss-airplay::after {
+	content: "©£";
+}
+.ss-camera::before {
+	content: "??";
+}
+.right.ss-camera::after {
+	content: "??";
+}
+.ss-picture::before {
+	content: "??";
+}
+.right.ss-picture::after {
+	content: "??";
+}
+.ss-video::before {
+	content: "??";
+}
+.right.ss-video::after {
+	content: "??";
+}
+.ss-play::before {
+	content: "?";
+}
+.right.ss-play::after {
+	content: "?";
+}
+.ss-pause::before {
+	content: "?";
+}
+.right.ss-pause::after {
+	content: "?";
+}
+.ss-stop::before {
+	content: "¡ö";
+}
+.right.ss-stop::after {
+	content: "¡ö";
+}
+.ss-record::before {
+	content: "¡ñ";
+}
+.right.ss-record::after {
+	content: "¡ñ";
+}
+.ss-rewind::before {
+	content: "?";
+}
+.right.ss-rewind::after {
+	content: "?";
+}
+.ss-fastforward::before {
+	content: "?";
+}
+.right.ss-fastforward::after {
+	content: "?";
+}
+.ss-skipback::before {
+	content: "?";
+}
+.right.ss-skipback::after {
+	content: "?";
+}
+.ss-skipforward::before {
+	content: "?";
+}
+.right.ss-skipforward::after {
+	content: "?";
+}
+.ss-eject::before {
+	content: "?";
+}
+.right.ss-eject::after {
+	content: "?";
+}
+.ss-repeat::before {
+	content: "??";
+}
+.right.ss-repeat::after {
+	content: "??";
+}
+.ss-replay::before {
+	content: "?";
+}
+.right.ss-replay::after {
+	content: "?";
+}
+.ss-shuffle::before {
+	content: "??";
+}
+.right.ss-shuffle::after {
+	content: "??";
+}
+.ss-book::before {
+	content: "??";
+}
+.right.ss-book::after {
+	content: "??";
+}
+.ss-openbook::before {
+	content: "??";
+}
+.right.ss-openbook::after {
+	content: "??";
+}
+.ss-notebook::before {
+	content: "??";
+}
+.right.ss-notebook::after {
+	content: "??";
+}
+.ss-grid::before {
+	content: "?";
+}
+.right.ss-grid::after {
+	content: "?";
+}
+.ss-rows::before {
+	content: "?";
+}
+.right.ss-rows::after {
+	content: "?";
+}
+.ss-columns::before {
+	content: "?";
+}
+.right.ss-columns::after {
+	content: "?";
+}
+.ss-thumbnails::before {
+	content: "?";
+}
+.right.ss-thumbnails::after {
+	content: "?";
+}
+.ss-desktop::before {
+	content: "??";
+}
+.right.ss-desktop::after {
+	content: "??";
+}
+.ss-laptop::before {
+	content: "?";
+}
+.right.ss-laptop::after {
+	content: "?";
+}
+.ss-tablet::before {
+	content: "?";
+}
+.right.ss-tablet::after {
+	content: "?";
+}
+.ss-cell::before {
+	content: "??";
+}
+.right.ss-cell::after {
+	content: "??";
+}
+.ss-battery::before {
+	content: "??";
+}
+.right.ss-battery::after {
+	content: "??";
+}
+.ss-highbattery::before {
+	content: "?";
+}
+.right.ss-highbattery::after {
+	content: "?";
+}
+.ss-mediumbattery::before {
+	content: "?";
+}
+.right.ss-mediumbattery::after {
+	content: "?";
+}
+.ss-lowbattery::before {
+	content: "?";
+}
+.right.ss-lowbattery::after {
+	content: "?";
+}
+.ss-emptybattery::before {
+	content: "?";
+}
+.right.ss-emptybattery::after {
+	content: "?";
+}
+.ss-downloadcloud::before {
+	content: "?";
+}
+.right.ss-downloadcloud::after {
+	content: "?";
+}
+.ss-download::before {
+	content: "?";
+}
+.right.ss-download::after {
+	content: "?";
+}
+.ss-uploadcloud::before {
+	content: "?";
+}
+.right.ss-uploadcloud::after {
+	content: "?";
+}
+.ss-upload::before {
+	content: "?";
+}
+.right.ss-upload::after {
+	content: "?";
+}
+.ss-fork::before {
+	content: "?";
+}
+.right.ss-fork::after {
+	content: "?";
+}
+.ss-merge::before {
+	content: "?";
+}
+.right.ss-merge::after {
+	content: "?";
+}
+.ss-refresh::before {
+	content: "?";
+}
+.right.ss-refresh::after {
+	content: "?";
+}
+.ss-sync::before {
+	content: "?";
+}
+.right.ss-sync::after {
+	content: "?";
+}
+.ss-loading::before {
+	content: "?";
+}
+.right.ss-loading::after {
+	content: "?";
+}
+.ss-wifi::before {
+	content: "?";
+}
+.right.ss-wifi::after {
+	content: "?";
+}
+.ss-connection::before {
+	content: "?";
+}
+.right.ss-connection::after {
+	content: "?";
+}
+.ss-file::before {
+	content: "??";
+}
+.right.ss-file::after {
+	content: "??";
+}
+.ss-folder::before {
+	content: "??";
+}
+.right.ss-folder::after {
+	content: "??";
+}
+.ss-quote::before {
+	content: "¡°";
+}
+.right.ss-quote::after {
+	content: "¡°";
+}
+.ss-text::before {
+	content: "?";
+}
+.right.ss-text::after {
+	content: "?";
+}
+.ss-font::before {
+	content: "?";
+}
+.right.ss-font::after {
+	content: "?";
+}
+.ss-print::before {
+	content: "?";
+}
+.right.ss-print::after {
+	content: "?";
+}
+.ss-fax::before {
+	content: "??";
+}
+.right.ss-fax::after {
+	content: "??";
+}
+.ss-list::before {
+	content: "?";
+}
+.right.ss-list::after {
+	content: "?";
+}
+.ss-layout::before {
+	content: "?";
+}
+.right.ss-layout::after {
+	content: "?";
+}
+.ss-action::before {
+	content: "?";
+}
+.right.ss-action::after {
+	content: "?";
+}
+.ss-redirect::before {
+	content: "?";
+}
+.right.ss-redirect::after {
+	content: "?";
+}
+.ss-expand::before {
+	content: "?";
+}
+.right.ss-expand::after {
+	content: "?";
+}
+.ss-contract::before {
+	content: "?";
+}
+.right.ss-contract::after {
+	content: "?";
+}
+.ss-help::before {
+	content: "?";
+}
+.right.ss-help::after {
+	content: "?";
+}
+.ss-info::before {
+	content: "?";
+}
+.right.ss-info::after {
+	content: "?";
+}
+.ss-alert::before {
+	content: "?";
+}
+.right.ss-alert::after {
+	content: "?";
+}
+.ss-caution::before {
+	content: "?";
+}
+.right.ss-caution::after {
+	content: "?";
+}
+.ss-logout::before {
+	content: "?";
+}
+.right.ss-logout::after {
+	content: "?";
+}
+.ss-plus::before {
+	content: "+";
+}
+.right.ss-plus::after {
+	content: "+";
+}
+.ss-hyphen::before {
+	content: "-";
+}
+.right.ss-hyphen::after {
+	content: "-";
+}
+.ss-check::before {
+	content: "?";
+}
+.right.ss-check::after {
+	content: "?";
+}
+.ss-delete::before {
+	content: "?";
+}
+.right.ss-delete::after {
+	content: "?";
+}
+.ss-settings::before {
+	content: "?";
+}
+.right.ss-settings::after {
+	content: "?";
+}
+.ss-dashboard::before {
+	content: "?";
+}
+.right.ss-dashboard::after {
+	content: "?";
+}
+.ss-notifications::before {
+	content: "??";
+}
+.right.ss-notifications::after {
+	content: "??";
+}
+.ss-notificationsdisabled::before {
+	content: "??";
+}
+.right.ss-notificationsdisabled::after {
+	content: "??";
+}
+.ss-clock::before {
+	content: "?";
+}
+.right.ss-clock::after {
+	content: "?";
+}
+.ss-stopwatch::before {
+	content: "?";
+}
+.right.ss-stopwatch::after {
+	content: "?";
+}
+.ss-calendar::before {
+	content: "??";
+}
+.right.ss-calendar::after {
+	content: "??";
+}
+.ss-addcalendar::before {
+	content: "?";
+}
+.right.ss-addcalendar::after {
+	content: "?";
+}
+.ss-removecalendar::before {
+	content: "?";
+}
+.right.ss-removecalendar::after {
+	content: "?";
+}
+.ss-checkcalendar::before {
+	content: "?";
+}
+.right.ss-checkcalendar::after {
+	content: "?";
+}
+.ss-deletecalendar::before {
+	content: "?";
+}
+.right.ss-deletecalendar::after {
+	content: "?";
+}
+.ss-briefcase::before {
+	content: "??";
+}
+.right.ss-briefcase::after {
+	content: "??";
+}
+.ss-cloud::before {
+	content: "?";
+}
+.right.ss-cloud::after {
+	content: "?";
+}
+.ss-droplet::before {
+	content: "??";
+}
+.right.ss-droplet::after {
+	content: "??";
+}
+.ss-up::before {
+	content: "?";
+}
+.right.ss-up::after {
+	content: "?";
+}
+.ss-upright::before {
+	content: "?";
+}
+.right.ss-upright::after {
+	content: "?";
+}
+.ss-right::before {
+	content: "?";
+}
+.right.ss-right::after {
+	content: "?";
+}
+.ss-downright::before {
+	content: "?";
+}
+.right.ss-downright::after {
+	content: "?";
+}
+.ss-down::before {
+	content: "?";
+}
+.right.ss-down::after {
+	content: "?";
+}
+.ss-downleft::before {
+	content: "?";
+}
+.right.ss-downleft::after {
+	content: "?";
+}
+.ss-left::before {
+	content: "?";
+}
+.right.ss-left::after {
+	content: "?";
+}
+.ss-upleft::before {
+	content: "?";
+}
+.right.ss-upleft::after {
+	content: "?";
+}
+.ss-navigateup::before {
+	content: "?";
+}
+.right.ss-navigateup::after {
+	content: "?";
+}
+.ss-navigateright::before {
+	content: "?";
+}
+.right.ss-navigateright::after {
+	content: "?";
+}
+.ss-navigatedown::before {
+	content: "?";
+}
+.right.ss-navigatedown::after {
+	content: "?";
+}
+.ss-navigateleft::before {
+	content: "?";
+}
+.right.ss-navigateleft::after {
+	content: "?";
+}
+.ss-directup::before {
+	content: "?";
+}
+.right.ss-directup::after {
+	content: "?";
+}
+.ss-directright::before {
+	content: "?";
+}
+.right.ss-directright::after {
+	content: "?";
+}
+.ss-dropdown::before {
+	content: "?";
+}
+.right.ss-dropdown::after {
+	content: "?";
+}
+.ss-directleft::before {
+	content: "?";
+}
+.right.ss-directleft::after {
+	content: "?";
+}
+.ss-retweet::before {
+	content: "?";
+}
+.right.ss-retweet::after {
+	content: "?";
+}
+.ss-volumelow::before {
+	content: "??";
+}
+.right.ss-volumelow::after {
+	content: "??";
+}
+.ss-volumehigh::before {
+	content: "??";
+}
+.right.ss-volumehigh::after {
+	content: "??";
+}
+.ss-batteryhigh::before {
+	content: "?";
+}
+.right.ss-batteryhigh::after {
+	content: "?";
+}
+.ss-batterymedium::before {
+	content: "?";
+}
+.right.ss-batterymedium::after {
+	content: "?";
+}
+.ss-batterylow::before {
+	content: "?";
+}
+.right.ss-batterylow::after {
+	content: "?";
+}
+.ss-batteryempty::before {
+	content: "?";
+}
+.right.ss-batteryempty::after {
+	content: "?";
+}
+.ss-clouddownload::before {
+	content: "?";
+}
+.right.ss-clouddownload::after {
+	content: "?";
+}
+.ss-cloudupload::before {
+	content: "?";
+}
+.right.ss-cloudupload::after {
+	content: "?";
+}
+.ss-calendaradd::before {
+	content: "?";
+}
+.right.ss-calendaradd::after {
+	content: "?";
+}
+.ss-calendarremove::before {
+	content: "?";
+}
+.right.ss-calendarremove::after {
+	content: "?";
+}
+.ss-calendarcheck::before {
+	content: "?";
+}
+.right.ss-calendarcheck::after {
+	content: "?";
+}
+.ss-calendardelete::before {
+	content: "?";
+}
+.right.ss-calendardelete::after {
+	content: "?";
+}

@@ -1,0 +1,63 @@
+#cookiemodule {
+	border-radius: 5px; left: 10px; bottom: 10px; display: none; position: fixed; z-index: 9999;
+}
+.modouter {
+	padding: 1px; border-radius: 5px; width: 225px; position: relative; z-index: 1; opacity: 0.9; box-shadow: 2px 3px 5px rgba(72,72,72,0.8); background-color: rgb(5, 82, 100);
+}
+.modinner {
+	border-radius: 5px; position: relative; z-index: 2; background-color: rgb(29, 33, 34);
+}
+.modcontent {
+	padding: 5px;
+}
+.modouter .modinner h5 {
+	margin: 0px; padding: 10px 3px 3px; text-align: center; color: rgb(250, 166, 26); font-size: 0.8em; font-weight: bold;
+}
+.modouter .modinner p {
+	margin: 5px; padding: 0px; color: rgb(255, 255, 255); line-height: normal; font-size: 12px;
+}
+.modinner div.intro {
+	left: 0px; top: 0px; padding-left: 5px; margin-bottom: 10px; position: relative;
+}
+.modinner div.modopen {
+	margin: 20px 0px 10px; padding-left: 5px; display: none;
+}
+.modinner a {
+	color: rgb(250, 166, 26); text-decoration: none; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.modinner a:visited {
+	color: rgb(250, 166, 26); text-decoration: none; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.modinner a:hover {
+	color: rgb(102, 255, 255);
+}
+.modinner a:active {
+	color: rgb(102, 255, 255);
+}
+.modinner button {
+	padding: 3px; border-radius: 3px; border: 1px solid rgb(102, 102, 102); border-image: none; text-align: center; color: rgb(45, 9, 58); line-height: normal; font-size: 1em; font-weight: bold; text-decoration: none; display: block; cursor: pointer; box-shadow: inset 0px 0px 2px #fff; text-shadow: none; background-color: rgb(250, 166, 26);
+}
+button.close {
+	background: url("/images/site/cookie_close.png") no-repeat left top; border: currentColor; border-image: none; top: 5px; width: 16px; height: 16px; right: 5px; text-indent: -999em; position: absolute; box-shadow: none;
+}
+button.close:hover {
+	background: url("/images/site/cookie_close.png") no-repeat left bottom;
+}
+.modinner p {
+	text-align: center;
+}
+.modinner a.change-settings {
+	color: rgb(250, 166, 26); font-size: 12px;
+}
+.modinner button.readmore {
+	background: none; margin: 5px 0px; border: currentColor; border-image: none; color: rgb(250, 166, 26); padding-left: 10px; font-size: 12px; font-weight: normal; z-index: 1; box-shadow: none;
+}
+.modinner button.readmore:hover {
+	color: rgb(102, 255, 255);
+}
+.modinner button.accept {
+	font: bold 12px/normal arial, helvetica, sans-serif; margin: 5px auto; padding: 5px; border-radius: 5px; width: 95%; color: rgb(45, 9, 58); font-size-adjust: none; font-stretch: normal; background-color: rgb(250, 166, 26);
+}
+.modinner button.accept:hover {
+	color: rgb(255, 229, 193);
+}

@@ -1,0 +1,117 @@
+html {
+	height: 100%;
+}
+body {
+	background: rgb(255, 255, 255); font: 10pt/normal verdana, sans-serif; margin: 1px; padding: 0px; height: 100%; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+table.Main {
+	margin: auto; padding: 0px; border: 1px solid rgb(0, 0, 0); border-image: none; width: 980px; height: 100%; border-collapse: collapse; border-spacing: 0;
+}
+table.Main td.Top {
+	margin: 0px; padding: 0px; vertical-align: top;
+}
+table.Main td.Top table {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none; width: 100%; height: 84px; border-collapse: collapse; border-spacing: 0;
+}
+table.Main td.Top table tr.Titl td img {
+	border: currentColor; border-image: none; float: right;
+}
+table.Main td.Top table tr.Titl td div.Titl {
+	margin: auto 0px; padding: 0px; width: 590px; color: rgb(0, 51, 102); overflow: hidden; white-space: nowrap;
+}
+table.Main td.Top table tr.Titl td div.Titl p {
+	font: bold 20pt/normal verdana, sans-serif; margin: 0px; padding: 0px; font-size-adjust: none; font-stretch: normal;
+}
+table.Main td.Top table tr.Titl td div.Titl p.s {
+	bottom: 8px; color: red; font-size: 13pt; position: relative;
+}
+table.Main td.Top table tr.Titl td {
+	margin: 0px; padding: 0px 10px; height: 60px; text-align: left; text-indent: 0px; vertical-align: middle;
+}
+table.Main td.Bar {
+	background: rgb(238, 238, 238); margin: 0px; padding: 12px 6px; height: 100%; color: rgb(0, 0, 0); vertical-align: top; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-top-style: solid; border-right-style: solid; white-space: nowrap; border-collapse: collapse;
+}
+table.Main td.Bdy {
+	padding: 0px 6px; width: 710px; height: 100%; vertical-align: top; border-top-color: rgb(0, 0, 0); border-top-width: 1px; border-top-style: solid;
+}
+table.Main td.Bot {
+	margin: 0px; padding: 0px; vertical-align: bottom;
+}
+table.Main td.Bot table {
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(0, 0, 0) currentColor currentColor; margin: 0px; padding: 0px; border-image: none; width: 100%; height: 24px; border-collapse: collapse; border-spacing: 0;
+}
+p.st {
+	margin: 0px; padding: 0px; color: red; font-size: 13pt;
+}
+table.Main td table tr.Menu {
+	background: rgb(0, 51, 102); color: rgb(255, 255, 255);
+}
+table.Main td table tr.Menu td {
+	font: 8pt/normal verdana, sans-serif; height: 24px; overflow: hidden; vertical-align: middle; border-top-color: rgb(0, 0, 0); border-top-width: 1px; border-top-style: solid; white-space: nowrap; font-size-adjust: none; font-stretch: normal;
+}
+table.Main td table tr.Menu td.LMenu {
+	text-align: left; padding-left: 10px;
+}
+table.Main td table tr.Menu td.RMenu {
+	text-align: right; padding-right: 10px;
+}
+table.Main td table tr.Menu td form {
+	margin: 0px; padding: 0px;
+}
+table.Main td table tr.Menu td form input.button {
+	border-width: 1px; font: 8pt/normal verdana; margin: 0px; padding: 1px 0px; width: 30px; font-size-adjust: none; font-stretch: normal;
+}
+table.Forum {
+	border-width: 1px medium medium; border-style: solid none none; border-color: rgb(0, 0, 0) currentColor currentColor; margin: 0px; padding: 0px; border-image: none; width: 100%; height: 24px; border-collapse: collapse; border-spacing: 0;
+}
+table.Forum tr.Menu {
+	background: rgb(0, 51, 102); color: rgb(255, 255, 255);
+}
+table.Forum tr.Menu td.LMenu {
+	font: 8pt/normal verdana, sans-serif; height: 24px; text-align: left; overflow: hidden; padding-left: 10px; vertical-align: middle; white-space: nowrap; font-size-adjust: none; font-stretch: normal;
+}
+table.Forum tr.Menu td.RMenu {
+	font: 8pt/normal verdana, sans-serif; height: 24px; text-align: right; overflow: hidden; padding-right: 10px; vertical-align: middle; white-space: nowrap; font-size-adjust: none; font-stretch: normal;
+}
+tr.Menu a {
+	background: rgb(0, 51, 102); padding: 0px 5px; color: rgb(255, 255, 255); font-weight: bold; text-decoration: none;
+}
+tr.Menu a:hover {
+	background: rgb(0, 51, 102); color: rgb(255, 153, 0);
+}
+table.Main td.Bdy div.Bdy {
+	margin: 6px 0px 20px;
+}
+#vm {
+	background: rgb(238, 238, 238); padding: 2px; color: rgb(0, 0, 0); overflow: hidden; margin-bottom: 4px; border-bottom-color: rgb(102, 102, 102); border-bottom-width: 1px; border-bottom-style: solid; white-space: nowrap;
+}
+#vm p {
+	background: rgb(238, 238, 238); font: bold 10pt/normal verdana, sans-serif; margin: 3px 0px 2px; padding: 0px; color: rgb(0, 51, 102); overflow: hidden; border-top-color: rgb(102, 102, 102); border-top-width: 1px; border-top-style: solid; white-space: nowrap; font-size-adjust: none; font-stretch: normal;
+}
+#vm ul {
+	margin: 0px; padding: 0px 1px; list-style-type: none;
+}
+#vm li {
+	font: 8pt/normal verdana, sans-serif; margin: 0px; font-size-adjust: none; font-stretch: normal;
+}
+#vm li ul {
+	padding: 0px;
+}
+#vm a {
+	background: rgb(238, 238, 238); padding: 1px 5px 1px 10px; border: 1px solid rgb(238, 238, 238); border-image: none; color: rgb(0, 0, 0); overflow: hidden; text-decoration: none; display: block; white-space: nowrap;
+}
+#vm a:hover {
+	background: rgb(204, 204, 204); border: 1px solid rgb(170, 170, 170); border-image: none; color: rgb(0, 0, 0);
+}
+#vm ul li ul li a {
+	padding: 1px 5px 1px 20px; width: 187px; font-size: 7pt;
+}
+#vm ul li ul li ul li a {
+	padding: 1px 5px 1px 30px; width: 177px; font-size: 7pt;
+}
+#vm a#va {
+	font-weight: bold;
+}
+#vm a#va:hover {
+	font-weight: bold;
+}
