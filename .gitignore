@@ -30,6 +30,7 @@ tmp/
 *.uvguix.*
 *.TMP
 *.scvd
+*.dbgconf
 
 *.plg
 *.map
