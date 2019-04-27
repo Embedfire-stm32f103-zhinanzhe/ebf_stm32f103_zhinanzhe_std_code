@@ -34,6 +34,7 @@ typedef enum
     AUX_HZLIB, 
 		AUX_GB2312,
     AUX_UNIGBK, 
+    AUX_GB2312_32_32,
     AUX_FILE_SYSTEM,      //FLASH文件系统
   
     AUX_MAX_NUM,

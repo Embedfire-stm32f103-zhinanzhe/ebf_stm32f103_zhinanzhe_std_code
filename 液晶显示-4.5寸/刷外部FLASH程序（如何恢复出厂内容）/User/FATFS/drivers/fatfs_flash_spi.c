@@ -632,7 +632,7 @@ DRESULT TM_FATFS_FLASH_SPI_disk_ioctl(BYTE cmd, char *buff)
 	  FLASH_DEBUG_FUNC();
 	switch (cmd) {
 		case GET_SECTOR_COUNT:
-			*(DWORD * )buff = 1536;		//sector数量   
+			*(DWORD * )buff = 1280;		//sector数量   
 		break;
 		case GET_SECTOR_SIZE :     // Get R/W sector size (WORD)
 
@@ -655,7 +655,7 @@ DRESULT TM_FATFS_FLASH_SPI_disk_read(BYTE *buff, DWORD sector, UINT count)
 	{
 		return RES_NOTRDY;
 	}
-	sector+=512;//扇区偏移，外部Flash文件系统空间放在外部Flash后面6M空间
+	sector+=770;//扇区偏移，外部Flash文件系统空间放在外部Flash后面6M空间
 	SPI_FLASH_BufferRead(buff, sector <<12, count<<12);
 	return RES_OK;
 }
@@ -664,7 +664,7 @@ DRESULT TM_FATFS_FLASH_SPI_disk_write(BYTE *buff, DWORD sector, UINT count)
 {
 	uint32_t write_addr;  
 	FLASH_DEBUG_FUNC();
-	sector+=512;//扇区偏移，外部Flash文件系统空间放在外部Flash后面4M空间
+	sector+=770;//扇区偏移，外部Flash文件系统空间放在外部Flash后面4M空间
 	write_addr = sector<<12;    
 	SPI_FLASH_SectorErase(write_addr);
 	SPI_FLASH_BufferWrite(buff,write_addr,4096);

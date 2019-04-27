@@ -73,13 +73,22 @@ Aux_Data_Typedef  burn_data[] =
     .start_addr         =   465*4096 ,
     .length             =   43*4096,
     .burn_option      =  UPDATE,      
-  },      
+  },     
+
+   [AUX_GB2312_32_32] = 
+  {
+    .filename           =   "0:/srcdata/GB2312_H3232.FON",
+    .description        =   "GB2312字库（4.5寸用）",
+    .start_addr         =   512*4096 ,
+    .length             =   256*4096, 
+    .burn_option      =  UPDATE,
+  },  
   
   [AUX_FILE_SYSTEM] =
   {
     .filename           =   "",
     .description        =   "FATFS文件系统",
-    .start_addr         =   512*4096 ,
+    .start_addr         =   770*4096 ,
     .length             =   1536*4096, 
     .burn_option      =  DO_NOT_UPDATE,
   }
