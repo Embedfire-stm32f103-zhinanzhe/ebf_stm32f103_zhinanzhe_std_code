@@ -22,30 +22,28 @@ RAM基地址 = 0X6D00 0000 = 0X6C00 0000+2^0*2 = 0X6800 0000 + 0X2 = 0X6800 0002
 
 /******************************* ILI9806G 显示屏的 FSMC 参数定义 ***************************/
 //FSMC_Bank1_NORSRAM用于LCD命令操作的地址
-#define      FSMC_Addr_ILI9806G_CMD         ( ( uint32_t ) 0x6C000000 )
+#define      FSMC_Addr_ILI9806G_CMD         ( ( uint32_t ) 0x60000000 )
 
 //FSMC_Bank1_NORSRAM用于LCD数据操作的地址      
-#define      FSMC_Addr_ILI9806G_DATA        ( ( uint32_t ) 0x6D000002 )
+#define      FSMC_Addr_ILI9806G_DATA        ( ( uint32_t ) 0x60020000 )
 
 //由片选引脚决定的NOR/SRAM块
-#define      FSMC_Bank1_NORSRAMx           FSMC_Bank1_NORSRAM4
+#define      FSMC_Bank1_NORSRAMx           FSMC_Bank1_NORSRAM1
 
 
 /******************************* ILI9806G 显示屏8080通讯引脚定义 ***************************/
-/******控制信号线******/
-#define      FSMC_AF                       GPIO_AF_FSMC
 //片选，选择NOR/SRAM块
-#define      ILI9806G_CS_CLK                RCC_APB2Periph_GPIOG  
-#define      ILI9806G_CS_PORT               GPIOG
-#define      ILI9806G_CS_PIN                GPIO_Pin_12
-#define      ILI9806G_CS_PinSource          GPIO_PinSource12
+#define      ILI9806G_CS_CLK                RCC_APB2Periph_GPIOD  
+#define      ILI9806G_CS_PORT               GPIOD
+#define      ILI9806G_CS_PIN                GPIO_Pin_7
+#define      ILI9806G_CS_PinSource          GPIO_PinSource7
 
 //DC引脚，使用FSMC的地址信号控制，本引脚决定了访问LCD时使用的地址
-//PF0为FSMC_A0
-#define      ILI9806G_DC_CLK                RCC_APB2Periph_GPIOE  
-#define      ILI9806G_DC_PORT               GPIOE
-#define      ILI9806G_DC_PIN                GPIO_Pin_2
-#define      ILI9806G_DC_PinSource          GPIO_PinSource2
+
+#define      ILI9806G_DC_CLK                RCC_APB2Periph_GPIOD 
+#define      ILI9806G_DC_PORT               GPIOD
+#define      ILI9806G_DC_PIN                GPIO_Pin_11
+#define      ILI9806G_DC_PinSource          GPIO_PinSource11
 
 //写使能
 #define      ILI9806G_WR_CLK                RCC_APB2Periph_GPIOD   
@@ -60,14 +58,14 @@ RAM基地址 = 0X6D00 0000 = 0X6C00 0000+2^0*2 = 0X6800 0000 + 0X2 = 0X6800 0002
 #define      ILI9806G_RD_PinSource          GPIO_PinSource4
 
 //复位引脚
-#define      ILI9806G_RST_CLK               RCC_APB2Periph_GPIOG 
-#define      ILI9806G_RST_PORT              GPIOG
-#define      ILI9806G_RST_PIN               GPIO_Pin_11
+#define      ILI9806G_RST_CLK               RCC_APB2Periph_GPIOE
+#define      ILI9806G_RST_PORT              GPIOE
+#define      ILI9806G_RST_PIN               GPIO_Pin_1
 
 //背光引脚
-#define      ILI9806G_BK_CLK                RCC_APB2Periph_GPIOG   
-#define      ILI9806G_BK_PORT               GPIOG
-#define      ILI9806G_BK_PIN                GPIO_Pin_6
+#define      ILI9806G_BK_CLK                RCC_APB2Periph_GPIOD 
+#define      ILI9806G_BK_PORT               GPIOD
+#define      ILI9806G_BK_PIN                GPIO_Pin_12
 
 /********数据信号线***************/
 #define      ILI9806G_D0_CLK                RCC_APB2Periph_GPIOD   

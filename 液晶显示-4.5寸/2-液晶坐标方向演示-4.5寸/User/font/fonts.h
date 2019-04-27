@@ -19,8 +19,9 @@ typedef struct _tFont
   
 } sFONT;
 
-extern sFONT Font24x32;
-extern sFONT Font16x24;
+
+extern sFONT Font24x48;
+extern sFONT Font16x32;
 extern sFONT Font8x16;
 
 //要支持中文需要实现本函数，可参考“液晶显示中英文（字库在外部FLASH）”例程
