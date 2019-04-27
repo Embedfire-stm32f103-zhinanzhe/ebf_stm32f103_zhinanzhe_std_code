@@ -3,12 +3,12 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2013-xx-xx
+  * @date    2019-xx-xx
   * @brief   LCD显示英文
   ******************************************************************************
   * @attention
   *
-  * 实验平台:野火 F103-霸道 STM32 开发板 
+  * 实验平台:野火 F103-指南者 STM32 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -69,7 +69,7 @@ void LCD_Test(void)
 
   ILI9806G_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
 	/********显示字符串示例*******/
-  ILI9806G_DispStringLine_EN(LINE(0),"BH 4.5 inch LCD");
+  ILI9806G_DispStringLine_EN(LINE(0),"YH 4.5 inch LCD");
   ILI9806G_DispStringLine_EN(LINE(2),"resolution:480x854px");
   ILI9806G_DispStringLine_EN(LINE(3),"LCD driver:ILI9806G");
   ILI9806G_DispStringLine_EN(LINE(4),"Touch driver:GT5688");
