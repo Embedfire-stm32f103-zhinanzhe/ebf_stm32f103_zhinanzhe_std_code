@@ -3,22 +3,21 @@
   * @file    main.c
   * @author  fire
   * @version V1.0
-  * @date    2013-xx-xx
-  * @brief   液晶显示汉字实验（任意大小）
+  * @date    2015-xx-xx
+  * @brief   液晶显示例程
   ******************************************************************************
   * @attention
   *
-  * 实验平台:野火 F103-指南者 STM32 开发板 
+  * 实验平台:野火  STM32 F407 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
   ******************************************************************************
-  */ 
- 
+  */
+  
 #include "stm32f10x.h"
-#include "./usart/bsp_usart.h"	
-#include "./lcd/bsp_ili9341_lcd.h"
-#include "./flash/bsp_spi_flash.h"
+#include "./usart/bsp_usart.h" 
+#include "./lcd/bsp_ili9806g_lcd.h"
 
 static void LCD_Test(void);	
 static void Delay ( __IO uint32_t nCount );
@@ -29,18 +28,19 @@ void Printf_Charater(void)   ;
 int main(void)
 {	
 	//LCD 初始化
-	ILI9341_Init ();         
+	ILI9806G_Init ();         
 
 	/* USART config */
-	USART_Config();  
+	USART_Config();		
+
 	
-	printf("\r\n ********** 液晶屏中文显示程序（任意大小）*********** \r\n"); 
+	printf("\r\n ********** 液晶屏中文显示程序（字库在外部FLASH）*********** \r\n"); 
 	printf("\r\n 若汉字显示不正常，请阅读工程中的readme.txt文件说明，根据要求给FLASH重刷字模数据\r\n"); 
-	
+
  //其中0、3、5、6 模式适合从左至右显示文字，
  //不推荐使用其它模式显示文字	其它模式显示文字会有镜像效果			
  //其中 6 模式为大部分液晶例程的默认显示方向  
-	ILI9341_GramScan ( 6 );
+	ILI9806G_GramScan ( 6 );
 	
 	Printf_Charater();
 	
@@ -48,7 +48,8 @@ int main(void)
 	{
 		LCD_Test();
 	}
-		
+	
+	
 }
 
 
@@ -62,89 +63,91 @@ void LCD_Test(void)
 	
 	testCNT++;	
 	
-	LCD_SetFont(&Font8x16);
+	LCD_SetFont(&Font16x32);
 	LCD_SetColors(RED,BLACK);
 
-  ILI9341_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
+  ILI9806G_Clear(0,0,LCD_X_LENGTH,LCD_Y_LENGTH);	/* 清屏，显示全黑 */
+
 	/********显示字符串示例*******/ 
-  ILI9341_DispStringLine_EN_CH(LINE(0),"野火BH");
+  ILI9806G_DispStringLine_EN_CH(LINE(0),"野火BH");
 	//显示指定大小的字符 
-	ILI9341_DisplayStringEx(0,1*24,24,24,(uint8_t *)"野火BH",0);
-	ILI9341_DisplayStringEx(2*48,0*48,48,48,(uint8_t *)"野火BH",0);
+	ILI9806G_DisplayStringEx(0,1*48,48,48,(uint8_t *)"野火BH",0);
+	ILI9806G_DisplayStringEx(0,2*56,56,56,(uint8_t *)"野火BH",0);
 
 	/********显示变量示例*******/
 	LCD_SetTextColor(GREEN);
 
 	/*使用c标准库把变量转化成字符串*/
-	sprintf(dispBuff,"显示变量： %d ",testCNT);
-  LCD_ClearLine(LINE(5));	/* 清除单行文字 */
+	sprintf(dispBuff,"显示变量计数 : %d ",testCNT);
+  ILI9806G_ClearLine(LINE(7));	/* 清除单行文字 */
 	
 	/*然后显示该字符串即可，其它变量也是这样处理*/
-	ILI9341_DispStringLine_EN_CH(LINE(5),dispBuff);
+	ILI9806G_DispStringLine_EN(LINE(7),dispBuff);
 
 	/*******显示图形示例******/
   /* 画直线 */
   
-  LCD_ClearLine(LINE(7));/* 清除单行文字 */
+  ILI9806G_ClearLine(LINE(7));/* 清除单行文字 */
 	LCD_SetTextColor(BLUE);
 
-  ILI9341_DispStringLine_EN_CH(LINE(7),"画直线：");
+  ILI9806G_DispStringLine_EN_CH(LINE(7),"画直线:");
   
 	LCD_SetTextColor(RED);
-  ILI9341_DrawLine(50,170,210,230);  
-  ILI9341_DrawLine(50,200,210,240);
+  ILI9806G_DrawLine(50,270,420,275);  
+  ILI9806G_DrawLine(50,300,420,375);
   
 	LCD_SetTextColor(GREEN);
-  ILI9341_DrawLine(100,170,200,230);  
-  ILI9341_DrawLine(200,200,220,240);
+  ILI9806G_DrawLine(50,370,420,475);  
+  ILI9806G_DrawLine(50,400,420,475);
 	
 	LCD_SetTextColor(BLUE);
-  ILI9341_DrawLine(110,170,110,230);  
-  ILI9341_DrawLine(130,200,220,240);
+  ILI9806G_DrawLine(50,420,420,325);  
+  ILI9806G_DrawLine(50,450,420,395);
   
-  Delay(0xFFFFFF);
+  Delay(0x2FFFFFF);
   
-  ILI9341_Clear(0,16*8,LCD_X_LENGTH,LCD_Y_LENGTH-16*8);	/* 清屏，显示全黑 */
+  ILI9806G_Clear(0,32*7,LCD_X_LENGTH,LCD_Y_LENGTH-32*7);	/* 清屏，显示全黑 */
   
   
   /*画矩形*/
 
-  LCD_ClearLine(LINE(7));	/* 清除单行文字 */
+  ILI9806G_ClearLine(LINE(7));	/* 清除单行文字 */
 	LCD_SetTextColor(BLUE);
 
-  ILI9341_DispStringLine_EN_CH(LINE(7),"画矩形：");
+  ILI9806G_DispStringLine_EN_CH(LINE(7),"画矩形:");
 
 	LCD_SetTextColor(RED);
-  ILI9341_DrawRectangle(50,200,100,30,1);
+  ILI9806G_DrawRectangle(50,300,200,100,1);
 	
 	LCD_SetTextColor(GREEN);
-  ILI9341_DrawRectangle(160,200,20,40,0);
+  ILI9806G_DrawRectangle(100,300,200,120,0);
 	
 	LCD_SetTextColor(BLUE);
-  ILI9341_DrawRectangle(170,200,50,20,1);
+  ILI9806G_DrawRectangle(250,300,200,150,1);
   
-  Delay(0xFFFFFF);
+  
+  Delay(0x2FFFFFF);
 	
-	ILI9341_Clear(0,16*8,LCD_X_LENGTH,LCD_Y_LENGTH-16*8);	/* 清屏，显示全黑 */
+	ILI9806G_Clear(0,32*7,LCD_X_LENGTH,LCD_Y_LENGTH-32*7);	/* 清屏，显示全黑 */
 
   /* 画圆 */
-  LCD_ClearLine(LINE(7));	/* 清除单行文字 */
+  ILI9806G_ClearLine(LINE(7));	/* 清除单行文字 */
 	LCD_SetTextColor(BLUE);
 	
-  ILI9341_DispStringLine_EN_CH(LINE(7),"画圆");
-	
-	LCD_SetTextColor(RED);
-  ILI9341_DrawCircle(100,200,20,0);
-	
-	LCD_SetTextColor(GREEN);
-  ILI9341_DrawCircle(100,200,10,1);
-	
-	LCD_SetTextColor(BLUE);
-	ILI9341_DrawCircle(140,200,20,0);
+  ILI9806G_DispStringLine_EN_CH(LINE(7),"画圆:");
 
-  Delay(0xFFFFFF);
+	LCD_SetTextColor(RED);
+	ILI9806G_DrawCircle(150,400,60,1);
+
+	LCD_SetTextColor(GREEN);
+	ILI9806G_DrawCircle(250,400,60,0);
+
+	LCD_SetTextColor(BLUE);
+	ILI9806G_DrawCircle(350,400,60,1);
+
+  Delay(0x2FFFFFF);
   
-  ILI9341_Clear(0,16*8,LCD_X_LENGTH,LCD_Y_LENGTH-16*8);	/* 清屏，显示全黑 */
+  ILI9806G_Clear(0,32*7,LCD_X_LENGTH,LCD_Y_LENGTH-32*7);	/* 清屏，显示全黑 */
 
 }
 
@@ -218,6 +221,5 @@ void Printf_Charater(void)
 }   
 
 
-
-/* ------------------------------------------end of file---------------------------------------- */
+/*********************************************END OF FILE**********************/
 
