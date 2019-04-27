@@ -10,30 +10,30 @@
 #define I2CT_LONG_TIMEOUT         ((uint32_t)(10 * I2CT_FLAG_TIMEOUT))
 
 /*I2C引脚*/
-#define GTP_I2C_SCL_PIN                  GPIO_Pin_10                 
-#define GTP_I2C_SCL_GPIO_PORT            GPIOF                     
-#define GTP_I2C_SCL_GPIO_CLK             RCC_APB2Periph_GPIOF
-#define GTP_I2C_SCL_SOURCE               GPIO_PinSource10
+#define GTP_I2C_SCL_PIN                  GPIO_Pin_13                
+#define GTP_I2C_SCL_GPIO_PORT            GPIOD                    
+#define GTP_I2C_SCL_GPIO_CLK             RCC_APB2Periph_GPIOD
+#define GTP_I2C_SCL_SOURCE               GPIO_PinSource13
 
-#define GTP_I2C_SDA_PIN                  GPIO_Pin_6                 
-#define GTP_I2C_SDA_GPIO_PORT            GPIOF                    
-#define GTP_I2C_SDA_GPIO_CLK             RCC_APB2Periph_GPIOF
-#define GTP_I2C_SDA_SOURCE               GPIO_PinSource6
+#define GTP_I2C_SDA_PIN                  GPIO_Pin_3                 
+#define GTP_I2C_SDA_GPIO_PORT            GPIOE                    
+#define GTP_I2C_SDA_GPIO_CLK             RCC_APB2Periph_GPIOE
+#define GTP_I2C_SDA_SOURCE               GPIO_PinSource3
 
 /*复位引脚*/
-#define GTP_RST_GPIO_PORT                GPIOF
-#define GTP_RST_GPIO_CLK                 RCC_APB2Periph_GPIOF
-#define GTP_RST_GPIO_PIN                 GPIO_Pin_11
+#define GTP_RST_GPIO_PORT                GPIOE
+#define GTP_RST_GPIO_CLK                 RCC_APB2Periph_GPIOE
+#define GTP_RST_GPIO_PIN                 GPIO_Pin_2
 /*中断引脚*/
-#define GTP_INT_GPIO_PORT                GPIOF
-#define GTP_INT_GPIO_CLK                 RCC_APB2Periph_GPIOF
-#define GTP_INT_GPIO_PIN                 GPIO_Pin_9
-#define GTP_INT_EXTI_PORTSOURCE          GPIO_PortSourceGPIOF
-#define GTP_INT_EXTI_PINSOURCE           GPIO_PinSource9
-#define GTP_INT_EXTI_LINE                EXTI_Line9
-#define GTP_INT_EXTI_IRQ                 EXTI9_5_IRQn
+#define GTP_INT_GPIO_PORT                GPIOE
+#define GTP_INT_GPIO_CLK                 RCC_APB2Periph_GPIOE
+#define GTP_INT_GPIO_PIN                 GPIO_Pin_4
+#define GTP_INT_EXTI_PORTSOURCE          GPIO_PortSourceGPIOE
+#define GTP_INT_EXTI_PINSOURCE           GPIO_PinSource4
+#define GTP_INT_EXTI_LINE                EXTI_Line4
+#define GTP_INT_EXTI_IRQ                 EXTI4_IRQn
 /*中断服务函数*/
-#define GTP_IRQHandler                   EXTI9_5_IRQHandler
+#define GTP_IRQHandler                   EXTI4_IRQHandler
 
 
 //软件IIC使用的宏
