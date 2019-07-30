@@ -1,0 +1,26 @@
+
+MPU6050的官方上位机需要pyserial2 及 pygame包的支持
+
+
+1.安装python
+
+	到python官网下载python2.7、32位的解释器。
+	pygame 仅支持python2 32位的解释器，
+
+2.安装pygame
+
+	直接双击 pygame-1.9.2a0.win32-py2.7.msi 安装即可。
+
+
+3.安装pyserial
+
+	MPU6050的官方上位机仅支持pyserial2 ，不支持pyerial3
+	
+	解压下载的pyserial-2.6包
+	进入有setup.py 的目录 ，用windows的cmd
+	先执行 python setup.py build
+	然后执行 python setup.py install
+
+4.检查是否安装正常
+
+	执行 python pip freeze 查看pygame 和pyserial是否安装正常
