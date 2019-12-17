@@ -90,9 +90,25 @@ int main(void)
 		PBout(0)= 0;		
 		SOFT_Delay(0x0FFFFF);
 		
-		// PB1 = 1,熄灭LED		
+		// PB0 = 1,熄灭LED		
 		PBout(0)= 1;
 		SOFT_Delay(0x0FFFFF);		
+    
+    // PB1 = 0,点亮LED
+		PBout(1)= 0;		
+		SOFT_Delay(0x0FFFFF);
+		
+		// PB1 = 1,熄灭LED		
+		PBout(1)= 1;
+		SOFT_Delay(0x0FFFFF);	
+    
+    // PB5 = 0,点亮LED
+		PBout(5)= 0;		
+		SOFT_Delay(0x0FFFFF);
+		
+		// PB5 = 1,熄灭LED		
+		PBout(5)= 1;
+		SOFT_Delay(0x0FFFFF);	
 	}
 }
 
@@ -107,7 +123,7 @@ void LED_GPIO_Config(void)
 		RCC_APB2PeriphClockCmd( RCC_APB2Periph_GPIOB, ENABLE); 
 
 		// 选择要控制的IO口													   
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0;	
+		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_5|GPIO_Pin_1;	
 
 		// 设置引脚为推挽输出
 		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;   
@@ -120,6 +136,8 @@ void LED_GPIO_Config(void)
 
 		// 关闭LED
 		GPIO_SetBits(GPIOB, GPIO_Pin_0); 
+    GPIO_SetBits(GPIOB, GPIO_Pin_5); 
+    GPIO_SetBits(GPIOB, GPIO_Pin_1); 
 }
 
 // 简陋的软件延时函数
