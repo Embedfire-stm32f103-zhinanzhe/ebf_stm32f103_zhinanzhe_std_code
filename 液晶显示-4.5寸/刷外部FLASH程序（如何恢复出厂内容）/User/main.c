@@ -4,7 +4,7 @@
   * @author  fire
   * @version V1.0
   * @date    2013-xx-xx
-  * @brief   SPI FLASH文件系统常用功能演示
+  * @brief   SD卡文件系统例程
   ******************************************************************************
   * @attention
   *
@@ -14,93 +14,92 @@
   *
   ******************************************************************************
   */
-
 #include "stm32f10x.h"
+#include "./led/bsp_led.h" 
 #include "./usart/bsp_usart.h"
-#include "./led/bsp_led.h"
-#include "./key/bsp_key.h"
-#include "./fatfs/drivers/fatfs_flash_spi.h"
+#include "./spi_flash/bsp_flash_spi.h"
+#include "./key/bsp_key.h" 
+//#include "./delay/core_delay.h"  
+/* FatFs includes component */
 #include "ff.h"
-#include "string.h"
-#include "aux_data.h"
+#include "./res_mgr/RES_MGR.h"
 
 /**
   ******************************************************************************
   *                              定义变量
   ******************************************************************************
   */
-extern FATFS sd_fs;													/* Work area (file system object) for logical drives */
-extern FATFS flash_fs;
-
-//要复制的文件路径，到aux_data.c修改
+DIR dir; 
+FIL fnew;													/* 文件对象 */
+UINT fnum;            			  /* 文件成功读写数量 */
+BYTE ReadBuffer[1024]={0};        /* 读缓冲区 */
+BYTE WriteBuffer[] =              /* 写缓冲区*/
+"欢迎使用野火STM32 F103开发板 今天是个好日子，新建文件系统测试文件\r\n";  
+char SDPath[4]; /* SD逻辑驱动器路径 */
+extern FATFS sd_fs;	
+FRESULT res_sd;                /* 文件操作结果 */
 extern char src_dir[];
-extern char dst_dir[];
-
 /**
   * @brief  主函数
   * @param  无
   * @retval 无
   */
+uint8_t state = 0;
 int main(void)
-{    	
-	
-  FRESULT res = FR_OK;
+{
+    /* 系统时钟初始化成400MHz */
   
-	/* 初始化LED */
-  LED_GPIO_Config();
-  Key_GPIO_Config();
-
-  /* 初始化调试串口，一般为串口1 */
-  USART_Config();
-  TM_FATFS_FLASH_SPI_disk_initialize();
+    LED_GPIO_Config();
+    LED_BLUE;	
+    /* 初始化USART1 配置模式为 115200 8-N-1 */
+    USART_Config();	
   
-  res = FR_DISK_ERR;
-       
-  //挂载SD卡
-  res = f_mount(&sd_fs,SD_ROOT,1);
-
-  //如果文件系统挂载失败就退出
-  if(res != FR_OK)
-  {
-    BURN_ERROR("f_mount ERROR!请给开发板插入SD卡然后重新复位开发板!");
-    LED_RED;
-    while(1);
-  }    
-    
-  printf("\r\n 按一次KEY1开始烧写字库并复制文件到FLASH。 \r\n"); 
-  printf("\r\n 注意该操作会把FLASH的原内容会被删除！！ \r\n"); 
-
-  while(Key_Scan(KEY1_GPIO_PORT,KEY1_GPIO_PIN) != KEY_ON);
-
-  printf("\r\n 正在进行整片擦除，时间很长，请耐心等候...\r\n");
-  SPI_FLASH_BulkErase();   
-  //烧录数据到flash的非文件系统区域    
-  res = burn_file_sd2flash(burn_data,AUX_MAX_NUM); 
+    Key_GPIO_Config();
+    SPI_FLASH_Init();
   
-  if(res == FR_OK)
-  {
-    printf("\r\n\r\n\r\n"); 
-
-    //复制文件到FLASH的文件系统区域
-    copy_file_sd2flash(src_dir,dst_dir);
-    if(res == FR_OK)
+    //在外部SD卡挂载文件系统，文件系统挂载时会对SD卡初始化
+    res_sd = f_mount(&sd_fs,"0:",1);  
+  
+    if(res_sd != FR_OK)
     {
-      printf("\r\n 所有数据已成功复制到FLASH！！！ \r\n");  
-      LED_GREEN;
+      printf("f_mount ERROR!请给开发板插入SD卡然后重新复位开发板!");
+      LED_RED;
+      while(1);
+    }
+  
+#if 1    
+    printf("\r\n 按一次KEY1开始烧写字库并复制文件到FLASH。 \r\n"); 
+    printf("\r\n 注意该操作会把FLASH的原内容会被删除！！ \r\n"); 
+
+    while(Key_Scan(KEY1_GPIO_PORT, KEY1_GPIO_PIN) == KEY_OFF);
+    printf("\r\n 正在进行整片擦除，时间很长，请耐心等候...\r\n"); 
+    
+    SPI_FLASH_BulkErase();
+    /* 第一次执行Make_Catalog函数时删除旧的烧录信息文件 */
+    res_sd = f_unlink(BURN_INFO_NAME_FULL);
+    if ( res_sd == FR_OK )
+    {
+      printf("！！删除文件成功：(%d)\n",res_sd);
     }
     else
     {
-      printf("\r\n 复制文件到FLASH失败(文件系统部分)，请复位重试！！ \r\n"); 
+      printf("！！删除文件失败：(%d)\n",res_sd);
     }
-  }
-  else
-  {
-    printf("\r\n 拷贝数据到FLASH失败(非文件系统部分)，请复位重试！！ \r\n"); 
-  }
-  
-  
-  while(1);
+    
+    /* 生成烧录目录信息文件 */
+    Make_Catalog(src_dir,0);
 
+    /* 烧录 目录信息至FLASH*/
+    Burn_Catalog();
+     /* 根据 目录 烧录内容至FLASH*/
+    Burn_Content();
+    /* 校验烧录的内容 */
+    Check_Resource(); 
+#endif    
+    /* 操作完成，停机 */
+    while(1)
+    {
+    }
 }
+	  
 
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

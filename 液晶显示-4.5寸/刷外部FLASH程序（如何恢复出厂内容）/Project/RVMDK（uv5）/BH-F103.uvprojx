@@ -18,7 +18,7 @@
           <Vendor>STMicroelectronics</Vendor>
           <PackID>Keil.STM32F1xx_DFP.2.1.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
-          <Cpu>IROM(0x08000000,0x80000) IRAM(0x20000000,0x10000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
+          <Cpu>IRAM(0x20000000,0x10000) IROM(0x08000000,0x80000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
           <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000 -FP0($$Device:STM32F103VE$Flash\STM32F10x_512.FLM))</FlashDriverDll>
@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath>..\..\Listing\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -312,10 +312,10 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
-            <OneElfS>1</OneElfS>
+            <OneElfS>0</OneElfS>
             <Strict>0</Strict>
             <EnumInt>0</EnumInt>
             <PlainCh>0</PlainCh>
@@ -324,7 +324,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>1</uC99>
+            <uC99>0</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD, USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\User\FATFS;..\..\User\FATFS\option;..\..\User\Bsp</IncludePath>
+              <IncludePath>..\..\Libraries\CMSIS;..\..\User;..\..\Libraries\FWlib\inc;..\..\User\FATFS;..\..\User\FATFS\option</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -553,29 +553,39 @@
               <FilePath>..\..\User\stm32f10x_it.c</FilePath>
             </File>
             <File>
-              <FileName>aux_data.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\aux_data.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>BSP</GroupName>
-          <Files>
-            <File>
-              <FileName>bsp_key.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\Bsp\key\bsp_key.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\Bsp\led\bsp_led.c</FilePath>
+              <FilePath>..\..\User\led\bsp_led.c</FilePath>
             </File>
             <File>
               <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\User\Bsp\usart\bsp_usart.c</FilePath>
+              <FilePath>..\..\User\usart\bsp_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_sdio_sdcard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\sdio\bsp_sdio_sdcard.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_key.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\Key\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>res_reader.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\res_mgr\res_reader.c</FilePath>
+            </File>
+            <File>
+              <FileName>res_writer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\res_mgr\res_writer.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_flash_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\spi_flash\bsp_flash_spi.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -597,25 +607,15 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\FATFS\option\cc936.c</FilePath>
             </File>
-            <File>
-              <FileName>fatfs_flash_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\drivers\fatfs_flash_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>fatfs_sd_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\FATFS\drivers\fatfs_sd_sdio.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>DOC</GroupName>
           <Files>
             <File>
-              <FileName>必读说明.txt</FileName>
+              <FileName>readme.txt</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\必读说明.txt</FilePath>
+              <FilePath>..\..\Doc\readme.txt</FilePath>
             </File>
           </Files>
         </Group>

@@ -597,6 +597,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\dwt_delay\core_delay.c</FilePath>
             </File>
+            <File>
+              <FileName>resource_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\font\resource_port.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -1,94 +1,37 @@
 /*-----------------------------------------------------------------------*/
-/* Low level disk I/O module skeleton for FatFs     (C)ChaN, 2013        */
+/* Low level disk I/O module skeleton for FatFs     (C)ChaN, 2007        */
 /*-----------------------------------------------------------------------*/
-/* If a working storage control module is available, it should be        */
-/* attached to the FatFs via a glue function rather than modifying it.   */
-/* This is an example of glue functions to attach various exsisting      */
-/* storage control module to the FatFs module with a defined API.        */
+/* This is a stub disk I/O module that acts as front end of the existing */
+/* disk I/O modules and attach it to FatFs module with common interface. */
 /*-----------------------------------------------------------------------*/
+#include <string.h>
+#include "diskio.h"
+#include "stm32f10x.h"
+#include "./sdio/bsp_sdio_sdcard.h"
 
-#include "diskio.h"		/* FatFs lower layer API */
-#include "ff.h"
+/* 为每个设备定义一个物理编号 */
+#define ATA			           0     // SD卡
+#define SPI_FLASH		       1     // 预留外部SPI Flash使用
 
-#ifndef FATFS_FLASH_SPI
-	#define FATFS_FLASH_SPI				1
-#endif
+#define SD_BLOCKSIZE     512 
 
-#ifndef FATFS_USE_SDIO
-	#define FATFS_USE_SDIO			1
-#endif
-
-/* Set in defines.h file if you want it */
-#ifndef TM_FATFS_CUSTOM_FATTIME
-	#define TM_FATFS_CUSTOM_FATTIME		0
-#endif
-
-
-/* Include SD card files if is enabled */
-#if FATFS_USE_SDIO == 1
-	#include "./fatfs/drivers/fatfs_sd_sdio.h"
-#endif
-
-#if FATFS_FLASH_SPI == 1
-	#include "./fatfs/drivers/fatfs_flash_spi.h"
-#endif
-
-
-/* Definitions of physical drive number for each media */
-#define ATA			    0
-#define SPI_FLASH		1
+extern  SD_CardInfo SDCardInfo;
 
 /*-----------------------------------------------------------------------*/
-/* Inidialize a Drive                                                    */
+/* 获取设备状态                                                          */
 /*-----------------------------------------------------------------------*/
-
-DSTATUS disk_initialize (
-	BYTE pdrv				/* Physical drive nmuber (0..) */
-)
-{
-
-	DSTATUS status = STA_NOINIT;
-	switch (pdrv) {
-		case ATA:	/* SD CARD */
-			#if FATFS_USE_SDIO == 1
-				status = TM_FATFS_SD_SDIO_disk_initialize();	/* SDIO communication */
-			#endif
-			break;
-		case SPI_FLASH:
-			#if	FATFS_FLASH_SPI ==1
-			status = TM_FATFS_FLASH_SPI_disk_initialize();	/* SDIO communication */
-			#endif
-			break;
-
-		default:
-			status = STA_NOINIT;
-	}
-	return status;
-}
-
-
-
-/*-----------------------------------------------------------------------*/
-/* Get Disk Status                                                       */
-/*-----------------------------------------------------------------------*/
-
 DSTATUS disk_status (
-	BYTE pdrv		/* Physical drive nmuber (0..) */
+	BYTE pdrv		/* 物理编号 */
 )
 {
-
 	DSTATUS status = STA_NOINIT;
 	
 	switch (pdrv) {
 		case ATA:	/* SD CARD */
-			#if FATFS_USE_SDIO == 1
-				status = TM_FATFS_SD_SDIO_disk_status();	/* SDIO communication */
-			#endif
+			status &= ~STA_NOINIT;
 			break;
-		case SPI_FLASH:
-			#if	FATFS_FLASH_SPI ==1
-			status = TM_FATFS_FLASH_SPI_disk_status();	/* SDIO communication */
-			#endif
+    
+		case SPI_FLASH:        /* SPI Flash */   
 			break;
 
 		default:
@@ -97,31 +40,87 @@ DSTATUS disk_status (
 	return status;
 }
 
+/*-----------------------------------------------------------------------*/
+/* 设备初始化                                                            */
+/*-----------------------------------------------------------------------*/
+DSTATUS disk_initialize (
+	BYTE pdrv				/* 物理编号 */
+)
+{
+	DSTATUS status = STA_NOINIT;	
+	switch (pdrv) {
+		case ATA:	         /* SD CARD */
+			if(SD_Init()==SD_OK)
+			{
+				status &= ~STA_NOINIT;
+			}
+			else 
+			{
+				status = STA_NOINIT;
+			}
+		
+			break;
+    
+		case SPI_FLASH:    /* SPI Flash */ 
+			break;
+      
+		default:
+			status = STA_NOINIT;
+	}
+	return status;
+}
 
 
 /*-----------------------------------------------------------------------*/
-/* Read Sector(s)                                                        */
+/* 读扇区：读取扇区内容到指定存储区                                              */
 /*-----------------------------------------------------------------------*/
-
 DRESULT disk_read (
-	BYTE pdrv,		/* Physical drive nmuber (0..) */
-	BYTE *buff,		/* Data buffer to store read data */
-	DWORD sector,	/* Sector address (LBA) */
-	UINT count		/* Number of sectors to read (1..128) */
+	BYTE pdrv,		/* 设备物理编号(0..) */
+	BYTE *buff,		/* 数据缓存区 */
+	DWORD sector,	/* 扇区首地址 */
+	UINT count		/* 扇区个数(1..128) */
 )
 {
 	DRESULT status = RES_PARERR;
+	SD_Error SD_state = SD_OK;
+	
 	switch (pdrv) {
-		case ATA:	/* SD CARD */
-			#if FATFS_USE_SDIO == 1
-				status = TM_FATFS_SD_SDIO_disk_read(buff, sector, count);	/* SDIO communication */
-			#endif
-			break;
+		case ATA:	/* SD CARD */						
+		  if((DWORD)buff&3)
+			{
+				DRESULT res = RES_OK;
+				DWORD scratch[SD_BLOCKSIZE / 4];
+
+				while (count--) 
+				{
+					res = disk_read(ATA,(void *)scratch, sector++, 1);
+
+					if (res != RES_OK) 
+					{
+						break;
+					}
+					memcpy(buff, scratch, SD_BLOCKSIZE);
+					buff += SD_BLOCKSIZE;
+		    }
+		    return res;
+			}
+			
+			SD_state=SD_ReadMultiBlocks(buff,(uint64_t)sector*SD_BLOCKSIZE,SD_BLOCKSIZE,count);
+		  if(SD_state==SD_OK)
+			{
+				/* Check if the Transfer is finished */
+				SD_state=SD_WaitReadOperation();
+				while(SD_GetStatus() != SD_TRANSFER_OK);
+			}
+			if(SD_state!=SD_OK)
+				status = RES_PARERR;
+		  else
+			  status = RES_OK;	
+			break;   
+			
 		case SPI_FLASH:
-			#if	FATFS_FLASH_SPI ==1
-			status = TM_FATFS_FLASH_SPI_disk_read(buff, sector, count);	/* SDIO communication */
-			#endif
 		break;
+    
 		default:
 			status = RES_PARERR;
 	}
@@ -131,34 +130,61 @@ DRESULT disk_read (
 
 
 /*-----------------------------------------------------------------------*/
-/* Write Sector(s)                                                       */
+/* 写扇区：见数据写入指定扇区空间上                                      */
 /*-----------------------------------------------------------------------*/
-
 #if _USE_WRITE
 DRESULT disk_write (
-	BYTE pdrv,			/* Physical drive nmuber (0..) */
-	const BYTE *buff,	/* Data to be written */
-	DWORD sector,		/* Sector address (LBA) */
-	UINT count			/* Number of sectors to write (1..128) */
+	BYTE pdrv,			  /* 设备物理编号(0..) */
+	const BYTE *buff,	/* 欲写入数据的缓存区 */
+	DWORD sector,		  /* 扇区首地址 */
+	UINT count			  /* 扇区个数(1..128) */
 )
 {
 	DRESULT status = RES_PARERR;
+	SD_Error SD_state = SD_OK;
+	
 	if (!count) {
 		return RES_PARERR;		/* Check parameter */
 	}
-	
+
 	switch (pdrv) {
-		case ATA:	/* SD CARD */
-			#if FATFS_USE_SDIO == 1
-				status = TM_FATFS_SD_SDIO_disk_write((BYTE *)buff, sector, count);	/* SDIO communication */
-			#endif
+		case ATA:	/* SD CARD */  
+			if((DWORD)buff&3)
+			{
+				DRESULT res = RES_OK;
+				DWORD scratch[SD_BLOCKSIZE / 4];
+
+				while (count--) 
+				{
+					memcpy( scratch,buff,SD_BLOCKSIZE);
+					res = disk_write(ATA,(void *)scratch, sector++, 1);
+					if (res != RES_OK) 
+					{
+						break;
+					}					
+					buff += SD_BLOCKSIZE;
+		    }
+		    return res;
+			}		
+		
+			SD_state=SD_WriteMultiBlocks((uint8_t *)buff,(uint64_t)sector*SD_BLOCKSIZE,SD_BLOCKSIZE,count);
+			if(SD_state==SD_OK)
+			{
+				/* Check if the Transfer is finished */
+				SD_state=SD_WaitWriteOperation();
+
+				/* Wait until end of DMA transfer */
+				while(SD_GetStatus() != SD_TRANSFER_OK);			
+			}
+			if(SD_state!=SD_OK)
+				status = RES_PARERR;
+		  else
+			  status = RES_OK;	
 		break;
 
 		case SPI_FLASH:
-			#if	FATFS_FLASH_SPI ==1
-			status = TM_FATFS_FLASH_SPI_disk_write((BYTE *)buff, sector, count);	/* SDIO communication */
-			#endif
 		break;
+    
 		default:
 			status = RES_PARERR;
 	}
@@ -168,28 +194,42 @@ DRESULT disk_write (
 
 
 /*-----------------------------------------------------------------------*/
-/* Miscellaneous Functions                                               */
+/* 其他控制                                                              */
 /*-----------------------------------------------------------------------*/
 
 #if _USE_IOCTL
 DRESULT disk_ioctl (
-	BYTE pdrv,		/* Physical drive nmuber (0..) */
-	BYTE cmd,		/* Control code */
-	void *buff		/* Buffer to send/receive control data */
+	BYTE pdrv,		/* 物理编号 */
+	BYTE cmd,		  /* 控制指令 */
+	void *buff		/* 写入或者读取数据地址指针 */
 )
 {
 	DRESULT status = RES_PARERR;
 	switch (pdrv) {
 		case ATA:	/* SD CARD */
-			#if FATFS_USE_SDIO == 1
-				status = TM_FATFS_SD_SDIO_disk_ioctl(cmd, buff);					/* SDIO communication */
-			#endif
+			switch (cmd) 
+			{
+				// Get R/W sector size (WORD) 
+				case GET_SECTOR_SIZE :    
+					*(WORD * )buff = SD_BLOCKSIZE;
+				break;
+				// Get erase block size in unit of sector (DWORD)
+				case GET_BLOCK_SIZE :      
+					*(DWORD * )buff = 1;
+				break;
+
+				case GET_SECTOR_COUNT:
+					*(DWORD * )buff = SDCardInfo.CardCapacity/SDCardInfo.CardBlockSize;
+					break;
+				case CTRL_SYNC :
+				break;
+			}
+			status = RES_OK;
 			break;
-		case SPI_FLASH:
-			#if	FATFS_FLASH_SPI ==1
-			status = TM_FATFS_FLASH_SPI_disk_ioctl(cmd, buff);	/* SDIO communication */
-			#endif
+    
+		case SPI_FLASH:		      
 		break;
+    
 		default:
 			status = RES_PARERR;
 	}
@@ -197,14 +237,14 @@ DRESULT disk_ioctl (
 }
 #endif
 
+							 
 __weak DWORD get_fattime(void) {
-	/* Returns current time packed into a DWORD variable */
-	return	  ((DWORD)(2013 - 1980) << 25)	/* Year 2013 */
-			| ((DWORD)7 << 21)				/* Month 7 */
-			| ((DWORD)28 << 16)				/* Mday 28 */
+	/* 返回当前时间戳 */
+	return	  ((DWORD)(2015 - 1980) << 25)	/* Year 2015 */
+			| ((DWORD)1 << 21)				/* Month 1 */
+			| ((DWORD)1 << 16)				/* Mday 1 */
 			| ((DWORD)0 << 11)				/* Hour 0 */
-			| ((DWORD)0 << 5)				/* Min 0 */
+			| ((DWORD)0 << 5)				  /* Min 0 */
 			| ((DWORD)0 >> 1);				/* Sec 0 */
 }
-
 

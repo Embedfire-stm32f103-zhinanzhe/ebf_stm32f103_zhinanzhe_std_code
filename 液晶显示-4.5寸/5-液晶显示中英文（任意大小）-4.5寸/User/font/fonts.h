@@ -41,9 +41,9 @@ extern sFONT Font8x16;
 
 #if GBKCODE_FLASH
 	/*使用FLASH字模*/
-	/*中文字库存储在FLASH的起始地址*/
+	/*中文字库存储在FLASH的文件名*/
 	/*FLASH*/
-	#define GBKCODE_START_ADDRESS   512*4096
+  #define GBKCODE_FILE_NAME       "GB2312_H3232.FON"
 
 
 	/*获取字库的函数*/

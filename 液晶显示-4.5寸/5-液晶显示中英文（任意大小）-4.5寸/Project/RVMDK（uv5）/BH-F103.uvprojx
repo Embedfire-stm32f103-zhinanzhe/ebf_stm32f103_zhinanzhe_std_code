@@ -572,6 +572,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\User\font\fonts.c</FilePath>
             </File>
+            <File>
+              <FileName>resource_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\font\resource_port.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

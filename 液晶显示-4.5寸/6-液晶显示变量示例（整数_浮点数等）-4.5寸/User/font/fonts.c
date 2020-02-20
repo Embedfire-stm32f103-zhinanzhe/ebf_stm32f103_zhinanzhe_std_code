@@ -22,6 +22,7 @@
 #if GBKCODE_FLASH
 
 #include "./flash/bsp_spi_flash.h"
+#include "./font/resource_port.h"
 
 #else
 
@@ -1421,14 +1422,21 @@ int GetGBKCode_from_EXFlash( uint8_t * pBuffer, uint16_t c)
 { 
     unsigned char High8bit,Low8bit;
     unsigned int pos;
+    CatalogTypeDef dir;
 	
 		static uint8_t everRead=0;
+    static s32 gbk_start_address =0;
 		
 		/*第一次使用，初始化FLASH*/
 		if(everRead == 0)
 		{
 			SPI_FLASH_Init();
 			everRead = 1;
+      gbk_start_address = RES_GetInfo_AbsAddr(GBKCODE_FILE_NAME, &dir);    // 获取字库的地址
+      if (gbk_start_address == -1)
+      {
+        printf("没有找到字库,请使用刷外部FLASH程序（如何恢复出厂内容）工程将字库写入flash\n");
+      }
 		}
 	
 	  High8bit= c >> 8;     /* 取高8位数据 */
@@ -1436,7 +1444,7 @@ int GetGBKCode_from_EXFlash( uint8_t * pBuffer, uint16_t c)
 	  	
 		/*GB2312 公式*/
     pos = ((High8bit-0xa1)*94+Low8bit-0xa1)*WIDTH_CH_CHAR*HEIGHT_CH_CHAR/8; 
-		SPI_FLASH_BufferRead(pBuffer,GBKCODE_START_ADDRESS+pos,WIDTH_CH_CHAR*HEIGHT_CH_CHAR/8); //读取字库数据  
+		SPI_FLASH_BufferRead(pBuffer,gbk_start_address+pos,WIDTH_CH_CHAR*HEIGHT_CH_CHAR/8); //读取字库数据  
 //	  printf ( "%02x %02x %02x %02x\n", pBuffer[0],pBuffer[1],pBuffer[2],pBuffer[3]);
 	
 		return 0;  
