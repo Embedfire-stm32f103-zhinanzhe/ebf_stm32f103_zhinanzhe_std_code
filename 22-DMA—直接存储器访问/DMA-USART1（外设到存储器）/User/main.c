@@ -21,6 +21,8 @@ int main(void)
   /* 配置RGB彩色灯 */
   LED_GPIO_Config();
   
+  printf("\r\nDMA外设到存储器模式，用电脑向开发板串口发送数据，数据会返回到电脑。\r\n");
+  
   /* USART1 向 DMA发出RX请求 */
   USART_DMACmd(DEBUG_USARTx, USART_DMAReq_Rx, ENABLE);
  //用电脑向开发板串口发送数据，数据会返回到电脑。
