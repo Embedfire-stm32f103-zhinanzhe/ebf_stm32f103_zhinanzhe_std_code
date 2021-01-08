@@ -684,19 +684,20 @@ void ILI9341_SetPointPixel ( uint16_t usX, uint16_t usY )
  */
 static uint16_t ILI9341_Read_PixelData ( void )	
 {	
-	uint16_t usR=0, usG=0, usB=0 ;
+	uint16_t us_RG=0, usB=0 ;
 
 	
-	ILI9341_Write_Cmd ( 0x2E );   /* 读数据 */
+	ILI9341_Write_Cmd ( 0x2E00 );   /* 读数据 */
+	//前读取三次结果去掉
+	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
+	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
+	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
 	
-	usR = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
-	
-	usR = ILI9341_Read_Data ();  	/*READ OUT RED DATA  */
-	usB = ILI9341_Read_Data ();  	/*READ OUT BLUE DATA*/
-	usG = ILI9341_Read_Data ();  	/*READ OUT GREEN DATA*/	
-	
-  return ( ( ( usR >> 11 ) << 11 ) | ( ( usG >> 10 ) << 5 ) | ( usB >> 11 ) );
-	
+	//获取红色通道与绿色通道的值
+	us_RG = ILI9341_Read_Data ();  	/*READ OUT RED AND GREEN DATA  */
+	usB = ILI9341_Read_Data ();  		/*READ OUT BLUE DATA*/
+
+  return   (us_RG&0xF800)| ((us_RG<<3)&0x7E0) | (usB>>11) ;
 }
 
 
