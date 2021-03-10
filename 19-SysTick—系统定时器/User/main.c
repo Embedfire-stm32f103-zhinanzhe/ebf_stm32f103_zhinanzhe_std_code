@@ -22,26 +22,26 @@ int main(void)
 
 	/* 配置SysTick 为10us中断一次 */
 	SysTick_Init();
-#if 0 
-	for(;;)
-	{
 
-		LED1( ON ); 
-	    Delay_us(100000);    	// 100000 * 10us = 1000ms
-		//Delay_ms(100);
-		LED1( OFF );
-	  
-		LED2( ON );
-	    Delay_us(100000);		// 100000 * 10us = 1000ms
-		//Delay_ms(100);
-		LED2( OFF );
-	
-		LED3( ON );
-	    Delay_us(100000);		// 100000 * 10us = 1000ms
-		//Delay_ms(100);
-		LED3( OFF );
-	}     
-#else
+//	for(;;)
+//	{
+
+//		LED1( ON ); 
+//	    Delay_us(100000);    	// 100000 * 10us = 1000ms
+//		//Delay_ms(100);
+//		LED1( OFF );
+//	  
+//		LED2( ON );
+//	    Delay_us(100000);		// 100000 * 10us = 1000ms
+//		//Delay_ms(100);
+//		LED2( OFF );
+//	
+//		LED3( ON );
+//	    Delay_us(100000);		// 100000 * 10us = 1000ms
+//		//Delay_ms(100);
+//		LED3( OFF );
+//	}     
+
 	for(;;)
 	{
 
@@ -57,7 +57,7 @@ int main(void)
 		SysTick_Delay_Ms( 1000 );
 		LED3( OFF );
 	} 
-#endif	
+	
 }
 
 
