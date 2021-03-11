@@ -25,15 +25,7 @@
 
 
 
-/* 设置 系统时钟:SYSCLK, AHB总线时钟:HCLK, APB2总线时钟:PCLK2, APB1总线时钟:PCLK1
- * PCLK2 = HCLK = SYSCLK
- * PCLK1 = HCLK/2,最高只能是36M
- * 参数说明：pllmul是PLL的倍频因子，在调用的时候可以是：RCC_PLLMul_x , x:[2,3,...16]
- * 举例：HSE_SetSysClock(RCC_PLLMul_9);  则设置系统时钟为：8MHZ * 9 = 72MHZ
- *       HSE_SetSysClock(RCC_PLLMul_16); 则设置系统时钟为：8MHZ * 16 = 128MHZ，超频慎用
- *
- * HSE作为时钟来源，经过PLL倍频作为系统时钟，这是通常的做法
- */
+
  
 void HSE_SetSysClock(uint32_t pllmul)
 {
