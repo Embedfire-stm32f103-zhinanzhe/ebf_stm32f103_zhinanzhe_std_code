@@ -122,7 +122,7 @@ void HSE_SetSysClock(uint32_t pllmul)
  * PCLK2 = HCLK = SYSCLK
  * PCLK1 = HCLK/2,最高只能是36M
  * 参数说明：pllmul是PLL的倍频因子，在调用的时候可以是：RCC_PLLMul_x , x:[2,3,...16]
- * 举例：User_SetSysClock(RCC_PLLMul_9);  则设置系统时钟为：4MHZ * 9 = 72MHZ
+ * 举例：User_SetSysClock(RCC_PLLMul_9);  则设置系统时钟为：4MHZ * 9 = 36MHZ
  *       User_SetSysClock(RCC_PLLMul_16); 则设置系统时钟为：4MHZ * 16 = 64MHZ
  *
  * HSI作为时钟来源，经过PLL倍频作为系统时钟，这是在HSE故障的时候才使用的方法
