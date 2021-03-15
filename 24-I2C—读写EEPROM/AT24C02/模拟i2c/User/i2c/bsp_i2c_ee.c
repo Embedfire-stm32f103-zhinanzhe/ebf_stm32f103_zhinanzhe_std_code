@@ -132,7 +132,7 @@ uint8_t ee_WriteBytes(uint8_t *_pWriteBuf, uint16_t _usAddress, uint16_t _usSize
 	/* 
 		写串行EEPROM不像读操作可以连续读取很多字节，每次写操作只能在同一个page。
 		对于24xx02，page size = 8
-		简单的处理方法为：按字节写操作模式，没写1个字节，都发送地址
+		简单的处理方法为：按字节写操作模式，每写1个字节，都发送地址
 		为了提高连续写的效率: 本函数采用page wirte操作。
 	*/
 
