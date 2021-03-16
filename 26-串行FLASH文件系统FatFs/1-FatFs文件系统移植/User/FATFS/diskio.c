@@ -100,7 +100,7 @@ DRESULT disk_read (
 		case SPI_FLASH:
       /* 扇区偏移2MB，外部Flash文件系统空间放在SPI Flash后面6MB空间 */
       sector+=512;      
-      SPI_FLASH_BufferRead(buff, sector <<12, count<<12);
+      SPI_FLASH_BufferRead(buff, sector <<12, count<<12);  
       status = RES_OK;
 		break;
     
