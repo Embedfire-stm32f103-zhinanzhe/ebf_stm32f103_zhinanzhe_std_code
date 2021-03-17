@@ -151,7 +151,7 @@ extern uint8_t LCD_SCAN_MODE;
 /******************************* 定义 ILI934 显示屏常用颜色 ********************************/
 #define      BACKGROUND		                BLACK   //默认背景颜色
 
-#define      WHITE		 		                  0xFFFF	   //白色
+#define      WHITE		 		           0xFFFF	   //白色
 #define      BLACK                         0x0000	   //黑色 
 #define      GREY                          0xF7DE	   //灰色 
 #define      BLUE                          0x001F	   //蓝色 
@@ -170,7 +170,7 @@ extern uint8_t LCD_SCAN_MODE;
 /******************************* 定义 ILI934 常用命令 ********************************/
 #define      CMD_SetCoordinateX		 		    0x2A	     //设置X坐标
 #define      CMD_SetCoordinateY		 		    0x2B	     //设置Y坐标
-#define      CMD_SetPixel		 		          0x2C	     //填充像素
+#define      CMD_SetPixel		 		        0x2C	     //填充像素
 
 
 
@@ -190,7 +190,7 @@ void                     ILI9341_DrawCircle              ( uint16_t usX_Center, 
 void                     ILI9341_DispChar_EN             ( uint16_t usX, uint16_t usY, const char cChar );
 void                     ILI9341_DispStringLine_EN      ( uint16_t line, char * pStr );
 void                     ILI9341_DispString_EN      			( uint16_t usX, uint16_t usY, char * pStr );
-void 											ILI9341_DispString_EN_YDir 		(   uint16_t usX,uint16_t usY ,  char * pStr );
+void 					 ILI9341_DispString_EN_YDir 		(   uint16_t usX,uint16_t usY ,  char * pStr );
 
 void 											LCD_SetFont											(sFONT *fonts);
 sFONT 										*LCD_GetFont											(void);

@@ -176,7 +176,7 @@ static void ILI9341_GPIO_Config ( void )
 	 * FSMC_NOE   :LCD-RD
 	 * FSMC_NWE   :LCD-WR
 	 * FSMC_NE1   :LCD-CS
-	 * FSMC_A16  	:LCD-DC
+	 * FSMC_A16   :LCD-DC
 	 */
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_InitStructure.GPIO_Mode =  GPIO_Mode_AF_PP;
@@ -431,8 +431,8 @@ static void ILI9341_REG_Config ( void )
 }
 
 
-/**
- * @brief  ILI9341初始化函数，如果要用到lcd，一定要调用这个函数
+/**I
+ * @brief  LI9341初始化函数，如果要用到lcd，一定要调用这个函数
  * @param  无
  * @retval 无
  */
