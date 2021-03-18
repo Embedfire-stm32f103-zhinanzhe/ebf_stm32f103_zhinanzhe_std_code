@@ -92,7 +92,9 @@ FatFs移植，只是在SPI FLASH文件工程上添加了FatFs组件，并修改了main.c函数
 
 【*】 联系我们
 
--野火论坛    :http://www.firebbs.cn
--淘宝店铺    :https://fire-stm32.taobao.com
+-野火官网  :https://embedfire.com
+-野火论坛  :http://www.firebbs.cn
+-野火商城  :https://yehuosm.tmall.com/
+-野火资料下载中心：http://doc.embedfire.com/products/link
 
 /*********************************************************************************************/

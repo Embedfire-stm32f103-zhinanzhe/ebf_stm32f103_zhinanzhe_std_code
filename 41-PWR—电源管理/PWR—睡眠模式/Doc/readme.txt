@@ -58,7 +58,9 @@ RGB彩灯的三个阴极接到STM32三个引脚上，LED低电平亮。
 
 【*】 联系我们
 
--野火论坛    :http://www.firebbs.cn
--淘宝店铺    :https://fire-stm32.taobao.com
+-野火官网  :https://embedfire.com
+-野火论坛  :http://www.firebbs.cn
+-野火商城  :https://yehuosm.tmall.com/
+-野火资料下载中心：http://doc.embedfire.com/products/link
 
 /*********************************************************************************************/

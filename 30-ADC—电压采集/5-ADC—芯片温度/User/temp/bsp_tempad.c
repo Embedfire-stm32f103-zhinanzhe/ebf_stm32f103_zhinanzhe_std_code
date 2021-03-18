@@ -44,7 +44,7 @@ static void ADC1_GPIO_Config(void)
 
 
 /* 函数名：ADC1_Mode_Config
- * 描述  ：配置ADC1的工作模式为MDA模式
+ * 描述  ：配置ADC1的工作模式为DMA模式
  * 输入  : 无
  * 输出  ：无
  * 调用  ：内部调用

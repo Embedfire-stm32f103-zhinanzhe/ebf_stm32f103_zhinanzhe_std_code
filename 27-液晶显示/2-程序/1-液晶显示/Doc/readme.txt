@@ -30,9 +30,9 @@
 
 		/*液晶控制信号线*/
 		ILI9341_CS 	<--->	PD7      	//片选，选择NOR/SRAM块 BANK1_NOR/SRAM1
-		ILI9341_DC  <---> 	PD11		//PD11为FSMC_A16,本引脚决定了访问LCD时使用的地址
+		ILI9341_DC   	 <---> 	PD11		//PD11为FSMC_A16,本引脚决定了访问LCD时使用的地址
 		ILI9341_WR 	<---> 	PD5			//写使能
-		ILI9341_RD  <---> 	PD4			//读使能
+		ILI9341_RD 	 <---> 	PD4			//读使能
 		ILI9341_RST	<---> 	PE1			//复位引脚
 		ILI9341_BK 	<---> 	PD12 		//背光引脚
 		
@@ -90,7 +90,9 @@ CH340的收发引脚与STM32的发收引脚相连。
 
 【*】 联系我们
 
--野火论坛    :http://www.firebbs.cn
--淘宝店铺    :https://fire-stm32.taobao.com
+-野火官网  :https://embedfire.com
+-野火论坛  :http://www.firebbs.cn
+-野火商城  :https://yehuosm.tmall.com/
+-野火资料下载中心：http://doc.embedfire.com/products/link
 
 /*********************************************************************************************/

@@ -431,8 +431,8 @@ static void ILI9341_REG_Config ( void )
 }
 
 
-/**I
- * @brief  LI9341初始化函数，如果要用到lcd，一定要调用这个函数
+/**
+ * @brief  ILI9341初始化函数，如果要用到lcd，一定要调用这个函数
  * @param  无
  * @retval 无
  */
