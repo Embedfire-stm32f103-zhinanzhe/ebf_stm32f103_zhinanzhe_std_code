@@ -87,7 +87,7 @@ static void DAC_TIM_Config(void)
 	/* 使能TIM2时钟，TIM2CLK 为72M */
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 	
-  /* TIM2基本定时器配置 */
+  /* TIM2通用定时器配置 */
  // TIM_TimeBaseStructInit(&TIM_TimeBaseStructure); 
   TIM_TimeBaseStructure.TIM_Period = (20-1);       									//定时周期 20  
   TIM_TimeBaseStructure.TIM_Prescaler = 0x0;       							//预分频，不分频 72M / (0+1) = 72M

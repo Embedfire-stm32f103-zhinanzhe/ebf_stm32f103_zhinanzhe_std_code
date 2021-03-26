@@ -401,7 +401,7 @@ void SD_DMA_RxConfig(uint32_t *BufferDST, uint32_t BufferSize)
 }
 
  /*
- * 函数名：SD_DMA_RxConfig
+ * 函数名：SD_DMA_TxConfig
  * 描述  ：为SDIO发送数据配置DMA2的通道4的请求
  * 输入  ：BufferDST：装载了数据的变量指针
  		   BufferSize：	缓冲区大小

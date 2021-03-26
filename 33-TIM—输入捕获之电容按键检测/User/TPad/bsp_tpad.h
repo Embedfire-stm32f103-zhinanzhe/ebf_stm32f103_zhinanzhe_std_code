@@ -48,6 +48,8 @@ uint8_t TPAD_Scan(void);
 uint8_t TPAD_Scan0(void);
 
 
+
+
 #endif	/* __BSP_TPADTIME_H */
 
 

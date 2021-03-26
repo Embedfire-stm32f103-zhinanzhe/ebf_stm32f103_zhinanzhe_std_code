@@ -12,8 +12,8 @@
   * @retval нч
   */
 int main(void)
-{	
-	uint16_t temp;
+{
+	//uint16_t temp;
 	/* led ╤к©зеДжц */ 
 	LED_GPIO_Config();
 	
