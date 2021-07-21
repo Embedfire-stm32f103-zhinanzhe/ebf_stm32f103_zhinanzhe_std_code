@@ -19,7 +19,7 @@
 #include "./usart/bsp_usart.h"
 #include "./led/bsp_led.h"
 #include "./key/bsp_key.h"
-#include "./fatfs/drivers/fatfs_flash_spi.h"
+#include "./flash/bsp_spi_flash.h"
 #include "ff.h"
 #include "string.h"
 #include "aux_data.h"

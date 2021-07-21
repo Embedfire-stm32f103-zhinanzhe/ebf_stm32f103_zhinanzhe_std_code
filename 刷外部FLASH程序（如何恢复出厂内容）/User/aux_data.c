@@ -18,8 +18,8 @@
 
 #include "aux_data.h"
 #include "ff.h"
-#include "./fatfs/drivers/fatfs_flash_spi.h"
-#include "./Bsp/led/bsp_led.h" 
+#include "./flash/bsp_spi_flash.h"
+#include "./led/bsp_led.h" 
 
 
 /***************************************************************************************************************/

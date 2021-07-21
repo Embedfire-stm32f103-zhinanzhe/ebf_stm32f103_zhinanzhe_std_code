@@ -188,7 +188,7 @@
   * <h2><center>&copy; COPYRIGHT 2011 STMicroelectronics</center></h2>
   ******************************************************************************  
   */ 
-#include "./drivers/fatfs_sd_sdio.h"
+#include "./sdio/bsp_sdio_sdcard.h"
 #include <stdio.h>
 #include <string.h>
 
