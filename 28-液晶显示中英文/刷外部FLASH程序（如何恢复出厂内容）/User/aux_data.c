@@ -45,7 +45,7 @@ Aux_Data_Typedef  burn_data[] =
     .description        =   "XBF字库文件（emWin使用,新宋体.xbf）",
     .start_addr         =   60*4096 ,
     .length             =   317*4096, 
-    .burn_option      =  UPDATE,
+    .burn_option      =  DO_NOT_UPDATE,
   },
   
   [AUX_HZLIB] =
@@ -54,7 +54,7 @@ Aux_Data_Typedef  burn_data[] =
     .description        =   "裸机中文字库（旧版，为兼容而保留）",
     .start_addr         =   1*4096 ,
     .length             =   53*4096, 
-    .burn_option      =  UPDATE,
+    .burn_option      =  DO_NOT_UPDATE,
   },
 	
 	 [AUX_GB2312] = 
@@ -72,7 +72,7 @@ Aux_Data_Typedef  burn_data[] =
     .description        =   "文件系统中文支持字库(emWin使用,UNIGBK.BIN)",
     .start_addr         =   465*4096 ,
     .length             =   43*4096,
-    .burn_option      =  UPDATE,      
+    .burn_option      =  DO_NOT_UPDATE,      
   },      
   
   [AUX_FILE_SYSTEM] =
