@@ -8,7 +8,7 @@
   <Extensions>
     <cExt>*.c</cExt>
     <aExt>*.s*; *.src; *.a*</aExt>
-    <oExt>*.obj</oExt>
+    <oExt>*.obj; *.o</oExt>
     <lExt>*.lib</lExt>
     <tExt>*.txt; *.h; *.inc; *.md</tExt>
     <pExt>*.plm</pExt>
@@ -639,6 +639,30 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>36</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\Bsp\sdio\bsp_sdio_sdcard.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_sdio_sdcard.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>37</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\User\Bsp\flash\bsp_spi_flash.c</PathWithFileName>
+      <FilenameWithoutPath>bsp_spi_flash.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -649,7 +673,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>36</FileNumber>
+      <FileNumber>38</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -661,7 +685,7 @@
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>37</FileNumber>
+      <FileNumber>39</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -673,37 +697,13 @@
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>38</FileNumber>
+      <FileNumber>40</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\User\FATFS\option\cc936.c</PathWithFileName>
       <FilenameWithoutPath>cc936.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>6</GroupNumber>
-      <FileNumber>39</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\..\User\FATFS\drivers\fatfs_flash_spi.c</PathWithFileName>
-      <FilenameWithoutPath>fatfs_flash_spi.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>6</GroupNumber>
-      <FileNumber>40</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\..\User\FATFS\drivers\fatfs_sd_sdio.c</PathWithFileName>
-      <FilenameWithoutPath>fatfs_sd_sdio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

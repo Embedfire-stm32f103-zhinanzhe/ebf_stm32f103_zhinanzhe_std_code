@@ -15,7 +15,7 @@
   ******************************************************************************
   */
   
-#include "./drivers/fatfs_flash_spi.h"
+#include "./flash/bsp_spi_flash.h"
 
 static __IO uint32_t  SPITimeout = SPIT_LONG_TIMEOUT;    
 static uint16_t SPI_TIMEOUT_UserCallback(uint8_t errorCode);

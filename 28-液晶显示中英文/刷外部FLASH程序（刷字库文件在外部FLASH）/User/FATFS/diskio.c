@@ -26,11 +26,11 @@
 
 /* Include SD card files if is enabled */
 #if FATFS_USE_SDIO == 1
-	#include "./fatfs/drivers/fatfs_sd_sdio.h"
+	#include "./sdio/bsp_sdio_sdcard.h"
 #endif
 
 #if FATFS_FLASH_SPI == 1
-	#include "./fatfs/drivers/fatfs_flash_spi.h"
+	#include "./flash/bsp_spi_flash.h"
 #endif
 
 
