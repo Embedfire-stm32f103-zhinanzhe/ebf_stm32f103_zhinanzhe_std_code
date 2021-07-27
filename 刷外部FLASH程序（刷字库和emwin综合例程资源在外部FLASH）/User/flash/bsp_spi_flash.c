@@ -664,7 +664,7 @@ DRESULT TM_FATFS_FLASH_SPI_disk_write(BYTE *buff, DWORD sector, UINT count)
 {
 	uint32_t write_addr;  
 	FLASH_DEBUG_FUNC();
-	sector+=512;//扇区偏移，外部Flash文件系统空间放在外部Flash后面4M空间
+	sector+=512;//扇区偏移，外部Flash文件系统空间放在外部Flash后面6M空间
 	write_addr = sector<<12;    
 	SPI_FLASH_SectorErase(write_addr);
 	SPI_FLASH_BufferWrite(buff,write_addr,4096);
