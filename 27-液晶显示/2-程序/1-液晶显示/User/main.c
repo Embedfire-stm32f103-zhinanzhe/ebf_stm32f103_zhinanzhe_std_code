@@ -37,6 +37,7 @@ int main ( void )
 
 	USART_Config();		
 	
+  
 	printf("\r\n ********** 液晶屏英文显示程序*********** \r\n"); 
 	printf("\r\n 本程序不支持中文，显示中文的程序请学习下一章 \r\n"); 
 	
@@ -53,7 +54,7 @@ int main ( void )
 }
 
 
-
+extern uint16_t lcdid;
 
 /*用于测试各种液晶的函数*/
 void LCD_Test(void)
@@ -71,7 +72,14 @@ void LCD_Test(void)
 	/********显示字符串示例*******/
   ILI9341_DispStringLine_EN(LINE(0),"BH 3.2 inch LCD para:");
   ILI9341_DispStringLine_EN(LINE(1),"Image resolution:240x320 px");
-  ILI9341_DispStringLine_EN(LINE(2),"ILI9341 LCD driver");
+  if(lcdid == LCDID_ILI9341)
+  {
+    ILI9341_DispStringLine_EN(LINE(2),"ILI9341 LCD driver");
+  }
+  else if(lcdid == LCDID_ST7789V)
+  {
+    ILI9341_DispStringLine_EN(LINE(2),"ST7789V LCD driver");
+  }
   ILI9341_DispStringLine_EN(LINE(3),"XPT2046 Touch Pad driver");
   
 	/********显示变量示例*******/
