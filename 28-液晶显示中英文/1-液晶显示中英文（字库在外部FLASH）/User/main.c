@@ -53,6 +53,7 @@ int main(void)
 }
 
 
+extern uint16_t lcdid;
 
 /*用于测试各种液晶的函数*/
 void LCD_Test(void)
@@ -70,7 +71,14 @@ void LCD_Test(void)
 	/********显示字符串示例*******/ 
   ILI9341_DispStringLine_EN_CH(LINE(0),"野火3.2寸LCD参数：");
   ILI9341_DispStringLine_EN_CH(LINE(1),"分辨率：240x320 px");
-  ILI9341_DispStringLine_EN_CH(LINE(2),"ILI9341液晶驱动");
+  if(lcdid == LCDID_ILI9341)
+  {
+    ILI9341_DispStringLine_EN_CH(LINE(2),"ILI9341液晶驱动");
+  }
+  else if(lcdid == LCDID_ST7789V)
+  {
+    ILI9341_DispStringLine_EN_CH(LINE(2),"ST7789V液晶驱动");
+  }
   ILI9341_DispStringLine_EN_CH(LINE(3),"XPT2046触摸屏驱动");
 
 	/********显示变量示例*******/

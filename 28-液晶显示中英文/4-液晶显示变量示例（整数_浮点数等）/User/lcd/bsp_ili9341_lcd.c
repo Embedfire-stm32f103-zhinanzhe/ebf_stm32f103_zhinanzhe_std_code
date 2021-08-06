@@ -28,6 +28,8 @@ uint16_t LCD_Y_LENGTH = ILI9341_MORE_PIXEL;
 //LCD刚初始化完成时会使用本默认值
 uint8_t LCD_SCAN_MODE = 6;
 
+//保存液晶屏驱动ic的 ID
+uint16_t lcdid = LCDID_UNKNOWN;
 
 static sFONT *LCD_Currentfonts = &Font8x16;  //英文字体
 static uint16_t CurrentTextColor   = BLACK;//前景色
@@ -218,8 +220,8 @@ static void ILI9341_GPIO_Config ( void )
   */
 static void ILI9341_FSMC_Config ( void )
 {
-	FSMC_NORSRAMInitTypeDef  FSMC_NORSRAMInitStructure;
-	FSMC_NORSRAMTimingInitTypeDef  readWriteTiming; 	
+	FSMC_NORSRAMInitTypeDef  FSMC_NORSRAMInitStructure={0};
+	FSMC_NORSRAMTimingInitTypeDef  readWriteTiming={0}; 	
 	
 	/* 使能FSMC时钟*/
 	RCC_AHBPeriphClockCmd ( RCC_AHBPeriph_FSMC, ENABLE );
@@ -275,158 +277,322 @@ static void ILI9341_FSMC_Config ( void )
  */
 static void ILI9341_REG_Config ( void )
 {
-	/*  Power control B (CFh)  */
-	DEBUG_DELAY  ();
-	ILI9341_Write_Cmd ( 0xCF  );
-	ILI9341_Write_Data ( 0x00  );
-	ILI9341_Write_Data ( 0x81  );
-	ILI9341_Write_Data ( 0x30  );
+  lcdid = ILI9341_ReadID();
+  
+  if(lcdid == LCDID_ILI9341)
+  {
+    /*  Power control B (CFh)  */
+    DEBUG_DELAY  ();
+    ILI9341_Write_Cmd ( 0xCF  );
+    ILI9341_Write_Data ( 0x00  );
+    ILI9341_Write_Data ( 0x81  );
+    ILI9341_Write_Data ( 0x30  );
+    
+    /*  Power on sequence control (EDh) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xED );
+    ILI9341_Write_Data ( 0x64 );
+    ILI9341_Write_Data ( 0x03 );
+    ILI9341_Write_Data ( 0x12 );
+    ILI9341_Write_Data ( 0x81 );
+    
+    /*  Driver timing control A (E8h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xE8 );
+    ILI9341_Write_Data ( 0x85 );
+    ILI9341_Write_Data ( 0x10 );
+    ILI9341_Write_Data ( 0x78 );
+    
+    /*  Power control A (CBh) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xCB );
+    ILI9341_Write_Data ( 0x39 );
+    ILI9341_Write_Data ( 0x2C );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x34 );
+    ILI9341_Write_Data ( 0x02 );
+    
+    /* Pump ratio control (F7h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xF7 );
+    ILI9341_Write_Data ( 0x20 );
+    
+    /* Driver timing control B */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xEA );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x00 );
+    
+    /* Frame Rate Control (In Normal Mode/Full Colors) (B1h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xB1 );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x1B );
+    
+    /*  Display Function Control (B6h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xB6 );
+    ILI9341_Write_Data ( 0x0A );
+    ILI9341_Write_Data ( 0xA2 );
+    
+    /* Power Control 1 (C0h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xC0 );
+    ILI9341_Write_Data ( 0x35 );
+    
+    /* Power Control 2 (C1h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xC1 );
+    ILI9341_Write_Data ( 0x11 );
+    
+    /* VCOM Control 1 (C5h) */
+    ILI9341_Write_Cmd ( 0xC5 );
+    ILI9341_Write_Data ( 0x45 );
+    ILI9341_Write_Data ( 0x45 );
+    
+    /*  VCOM Control 2 (C7h)  */
+    ILI9341_Write_Cmd ( 0xC7 );
+    ILI9341_Write_Data ( 0xA2 );
+    
+    /* Enable 3G (F2h) */
+    ILI9341_Write_Cmd ( 0xF2 );
+    ILI9341_Write_Data ( 0x00 );
+    
+    /* Gamma Set (26h) */
+    ILI9341_Write_Cmd ( 0x26 );
+    ILI9341_Write_Data ( 0x01 );
+    DEBUG_DELAY ();
+    
+    /* Positive Gamma Correction */
+    ILI9341_Write_Cmd ( 0xE0 ); //Set Gamma
+    ILI9341_Write_Data ( 0x0F );
+    ILI9341_Write_Data ( 0x26 );
+    ILI9341_Write_Data ( 0x24 );
+    ILI9341_Write_Data ( 0x0B );
+    ILI9341_Write_Data ( 0x0E );
+    ILI9341_Write_Data ( 0x09 );
+    ILI9341_Write_Data ( 0x54 );
+    ILI9341_Write_Data ( 0xA8 );
+    ILI9341_Write_Data ( 0x46 );
+    ILI9341_Write_Data ( 0x0C );
+    ILI9341_Write_Data ( 0x17 );
+    ILI9341_Write_Data ( 0x09 );
+    ILI9341_Write_Data ( 0x0F );
+    ILI9341_Write_Data ( 0x07 );
+    ILI9341_Write_Data ( 0x00 );
+    
+    /* Negative Gamma Correction (E1h) */
+    ILI9341_Write_Cmd ( 0XE1 ); //Set Gamma
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x19 );
+    ILI9341_Write_Data ( 0x1B );
+    ILI9341_Write_Data ( 0x04 );
+    ILI9341_Write_Data ( 0x10 );
+    ILI9341_Write_Data ( 0x07 );
+    ILI9341_Write_Data ( 0x2A );
+    ILI9341_Write_Data ( 0x47 );
+    ILI9341_Write_Data ( 0x39 );
+    ILI9341_Write_Data ( 0x03 );
+    ILI9341_Write_Data ( 0x06 );
+    ILI9341_Write_Data ( 0x06 );
+    ILI9341_Write_Data ( 0x30 );
+    ILI9341_Write_Data ( 0x38 );
+    ILI9341_Write_Data ( 0x0F );
+    
+    /* memory access control set */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0x36 ); 	
+    ILI9341_Write_Data ( 0xC8 );    /*竖屏  左上角到 (起点)到右下角 (终点)扫描方式*/
+    DEBUG_DELAY ();
+    
+    /* column address control set */
+    ILI9341_Write_Cmd ( CMD_SetCoordinateX ); 
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0xEF );
+    
+    /* page address control set */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( CMD_SetCoordinateY ); 
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x01 );
+    ILI9341_Write_Data ( 0x3F );
+    
+    /*  Pixel Format Set (3Ah)  */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0x3a ); 
+    ILI9341_Write_Data ( 0x55 );
+    
+    /* Sleep Out (11h)  */
+    ILI9341_Write_Cmd ( 0x11 );	
+    ILI9341_Delay ( 0xAFFf<<2 );
+    DEBUG_DELAY ();
+    
+    /* Display ON (29h) */
+    ILI9341_Write_Cmd ( 0x29 ); 
+	}
+  
+  else if(lcdid == LCDID_ST7789V)
+  {
+    /*  Power control B (CFh)  */
+    DEBUG_DELAY  ();
+    ILI9341_Write_Cmd ( 0xCF  );
+    ILI9341_Write_Data ( 0x00  );
+    ILI9341_Write_Data ( 0xC1  );
+    ILI9341_Write_Data ( 0x30  );
+    
+    /*  Power on sequence control (EDh) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xED );
+    ILI9341_Write_Data ( 0x64 );
+    ILI9341_Write_Data ( 0x03 );
+    ILI9341_Write_Data ( 0x12 );
+    ILI9341_Write_Data ( 0x81 );
+    
+    /*  Driver timing control A (E8h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xE8 );
+    ILI9341_Write_Data ( 0x85 );
+    ILI9341_Write_Data ( 0x10 );
+    ILI9341_Write_Data ( 0x78 );
+    
+    /*  Power control A (CBh) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xCB );
+    ILI9341_Write_Data ( 0x39 );
+    ILI9341_Write_Data ( 0x2C );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x34 );
+    ILI9341_Write_Data ( 0x02 );
+    
+    /* Pump ratio control (F7h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xF7 );
+    ILI9341_Write_Data ( 0x20 );
+    
+    /* Driver timing control B */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xEA );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x00 );
+    
+    
+    /* Power Control 1 (C0h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xC0 );   //Power control
+    ILI9341_Write_Data ( 0x21 );  //VRH[5:0]
+    
+    /* Power Control 2 (C1h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xC1 );   //Power control
+    ILI9341_Write_Data ( 0x11 );  //SAP[2:0];BT[3:0]
+    
+    /* VCOM Control 1 (C5h) */
+    ILI9341_Write_Cmd ( 0xC5 );
+    ILI9341_Write_Data ( 0x2D );
+    ILI9341_Write_Data ( 0x33 );
+    
+    /*  VCOM Control 2 (C7h)  */
+//	ILI9341_Write_Cmd ( 0xC7 );
+//	ILI9341_Write_Data ( 0XC0 );
+    
+    /* memory access control set */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0x36 );   //Memory Access Control
+    ILI9341_Write_Data ( 0x00 );  /*竖屏  左上角到 (起点)到右下角 (终点)扫描方式*/
+    DEBUG_DELAY ();
+    
+    ILI9341_Write_Cmd(0x3A);   
+    ILI9341_Write_Data(0x55); 
+    
+      /* Frame Rate Control (In Normal Mode/Full Colors) (B1h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xB1 );
+    ILI9341_Write_Data ( 0x00 );
+    ILI9341_Write_Data ( 0x17 );
+    
+    /*  Display Function Control (B6h) */
+    DEBUG_DELAY ();
+    ILI9341_Write_Cmd ( 0xB6 );
+    ILI9341_Write_Data ( 0x0A );
+    ILI9341_Write_Data ( 0xA2 );
+    
+    ILI9341_Write_Cmd(0xF6);    			
+    ILI9341_Write_Data(0x01); 
+    ILI9341_Write_Data(0x30); 
+    
+    /* Enable 3G (F2h) */
+    ILI9341_Write_Cmd ( 0xF2 );
+    ILI9341_Write_Data ( 0x00 );
+    
+    /* Gamma Set (26h) */
+    ILI9341_Write_Cmd ( 0x26 );
+    ILI9341_Write_Data ( 0x01 );
+    DEBUG_DELAY ();
+    
+    /* Positive Gamma Correction */
+    ILI9341_Write_Cmd(0xe0); //Positive gamma
+    ILI9341_Write_Data(0xd0);         
+    ILI9341_Write_Data(0x00); 
+    ILI9341_Write_Data(0x02); 
+    ILI9341_Write_Data(0x07); 
+    ILI9341_Write_Data(0x0b); 
+    ILI9341_Write_Data(0x1a); 
+    ILI9341_Write_Data(0x31); 
+    ILI9341_Write_Data(0x54); 
+    ILI9341_Write_Data(0x40); 
+    ILI9341_Write_Data(0x29); 
+    ILI9341_Write_Data(0x12); 
+    ILI9341_Write_Data(0x12); 
+    ILI9341_Write_Data(0x12); 
+    ILI9341_Write_Data(0x17);
+
+    /* Negative Gamma Correction (E1h) */
+    ILI9341_Write_Cmd(0xe1); //Negative gamma
+    ILI9341_Write_Data(0xd0); 
+    ILI9341_Write_Data(0x00); 
+    ILI9341_Write_Data(0x02); 
+    ILI9341_Write_Data(0x07); 
+    ILI9341_Write_Data(0x05); 
+    ILI9341_Write_Data(0x25); 
+    ILI9341_Write_Data(0x2d); 
+    ILI9341_Write_Data(0x44); 
+    ILI9341_Write_Data(0x45); 
+    ILI9341_Write_Data(0x1c); 
+    ILI9341_Write_Data(0x18); 
+    ILI9341_Write_Data(0x16); 
+    ILI9341_Write_Data(0x1c); 
+    ILI9341_Write_Data(0x1d); 
+  
 	
-	/*  Power on sequence control (EDh) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xED );
-	ILI9341_Write_Data ( 0x64 );
-	ILI9341_Write_Data ( 0x03 );
-	ILI9341_Write_Data ( 0x12 );
-	ILI9341_Write_Data ( 0x81 );
+//	/* column address control set */
+//	ILI9341_Write_Cmd ( CMD_SetCoordinateX ); 
+//	ILI9341_Write_Data ( 0x00 );
+//	ILI9341_Write_Data ( 0x00 );
+//	ILI9341_Write_Data ( 0x00 );
+//	ILI9341_Write_Data ( 0xEF );
+//	
+//	/* page address control set */
+//	DEBUG_DELAY ();
+//	ILI9341_Write_Cmd ( CMD_SetCoordinateY ); 
+//	ILI9341_Write_Data ( 0x00 );
+//	ILI9341_Write_Data ( 0x00 );
+//	ILI9341_Write_Data ( 0x01 );
+//	ILI9341_Write_Data ( 0x3F );
 	
-	/*  Driver timing control A (E8h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xE8 );
-	ILI9341_Write_Data ( 0x85 );
-	ILI9341_Write_Data ( 0x10 );
-	ILI9341_Write_Data ( 0x78 );
 	
-	/*  Power control A (CBh) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xCB );
-	ILI9341_Write_Data ( 0x39 );
-	ILI9341_Write_Data ( 0x2C );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x34 );
-	ILI9341_Write_Data ( 0x02 );
-	
-	/* Pump ratio control (F7h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xF7 );
-	ILI9341_Write_Data ( 0x20 );
-	
-	/* Driver timing control B */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xEA );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x00 );
-	
-	/* Frame Rate Control (In Normal Mode/Full Colors) (B1h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xB1 );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x1B );
-	
-	/*  Display Function Control (B6h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xB6 );
-	ILI9341_Write_Data ( 0x0A );
-	ILI9341_Write_Data ( 0xA2 );
-	
-	/* Power Control 1 (C0h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xC0 );
-	ILI9341_Write_Data ( 0x35 );
-	
-	/* Power Control 2 (C1h) */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0xC1 );
-	ILI9341_Write_Data ( 0x11 );
-	
-	/* VCOM Control 1 (C5h) */
-	ILI9341_Write_Cmd ( 0xC5 );
-	ILI9341_Write_Data ( 0x45 );
-	ILI9341_Write_Data ( 0x45 );
-	
-	/*  VCOM Control 2 (C7h)  */
-	ILI9341_Write_Cmd ( 0xC7 );
-	ILI9341_Write_Data ( 0xA2 );
-	
-	/* Enable 3G (F2h) */
-	ILI9341_Write_Cmd ( 0xF2 );
-	ILI9341_Write_Data ( 0x00 );
-	
-	/* Gamma Set (26h) */
-	ILI9341_Write_Cmd ( 0x26 );
-	ILI9341_Write_Data ( 0x01 );
-	DEBUG_DELAY ();
-	
-	/* Positive Gamma Correction */
-	ILI9341_Write_Cmd ( 0xE0 ); //Set Gamma
-	ILI9341_Write_Data ( 0x0F );
-	ILI9341_Write_Data ( 0x26 );
-	ILI9341_Write_Data ( 0x24 );
-	ILI9341_Write_Data ( 0x0B );
-	ILI9341_Write_Data ( 0x0E );
-	ILI9341_Write_Data ( 0x09 );
-	ILI9341_Write_Data ( 0x54 );
-	ILI9341_Write_Data ( 0xA8 );
-	ILI9341_Write_Data ( 0x46 );
-	ILI9341_Write_Data ( 0x0C );
-	ILI9341_Write_Data ( 0x17 );
-	ILI9341_Write_Data ( 0x09 );
-	ILI9341_Write_Data ( 0x0F );
-	ILI9341_Write_Data ( 0x07 );
-	ILI9341_Write_Data ( 0x00 );
-	
-	/* Negative Gamma Correction (E1h) */
-	ILI9341_Write_Cmd ( 0XE1 ); //Set Gamma
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x19 );
-	ILI9341_Write_Data ( 0x1B );
-	ILI9341_Write_Data ( 0x04 );
-	ILI9341_Write_Data ( 0x10 );
-	ILI9341_Write_Data ( 0x07 );
-	ILI9341_Write_Data ( 0x2A );
-	ILI9341_Write_Data ( 0x47 );
-	ILI9341_Write_Data ( 0x39 );
-	ILI9341_Write_Data ( 0x03 );
-	ILI9341_Write_Data ( 0x06 );
-	ILI9341_Write_Data ( 0x06 );
-	ILI9341_Write_Data ( 0x30 );
-	ILI9341_Write_Data ( 0x38 );
-	ILI9341_Write_Data ( 0x0F );
-	
-	/* memory access control set */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0x36 ); 	
-	ILI9341_Write_Data ( 0xC8 );    /*竖屏  左上角到 (起点)到右下角 (终点)扫描方式*/
-	DEBUG_DELAY ();
-	
-	/* column address control set */
-	ILI9341_Write_Cmd ( CMD_SetCoordinateX ); 
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0xEF );
-	
-	/* page address control set */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( CMD_SetCoordinateY ); 
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x00 );
-	ILI9341_Write_Data ( 0x01 );
-	ILI9341_Write_Data ( 0x3F );
-	
-	/*  Pixel Format Set (3Ah)  */
-	DEBUG_DELAY ();
-	ILI9341_Write_Cmd ( 0x3a ); 
-	ILI9341_Write_Data ( 0x55 );
-	
-	/* Sleep Out (11h)  */
-	ILI9341_Write_Cmd ( 0x11 );	
-	ILI9341_Delay ( 0xAFFf<<2 );
-	DEBUG_DELAY ();
-	
-	/* Display ON (29h) */
-	ILI9341_Write_Cmd ( 0x29 ); 
-	
+    /* Sleep Out (11h)  */
+    ILI9341_Write_Cmd ( 0x11 );	  //Exit Sleep
+    ILI9341_Delay ( 0xAFFf<<2 );
+    DEBUG_DELAY ();
+    
+    /* Display ON (29h) */
+    ILI9341_Write_Cmd ( 0x29 );   //Display on
+    
+    ILI9341_Write_Cmd(0x2c);
+  }
 	
 }
 
@@ -467,6 +633,44 @@ void ILI9341_BackLed_Control ( FunctionalState enumState )
 		
 }
 
+
+/**
+ * @brief  读取LCD驱动芯片ID函数，可用于测试底层的读写函数
+ * @param  无
+ * @retval 正常时返回值为LCD驱动芯片ID: LCDID_ILI9341/LCDID_ST7789V
+ *         否则返回: LCDID_UNKNOWN
+ */
+uint16_t ILI9341_ReadID(void)
+{
+	uint16_t id = 0;
+	
+	ILI9341_Write_Cmd(0x04);
+	ILI9341_Read_Data();
+	ILI9341_Read_Data();
+	id = ILI9341_Read_Data();
+	id <<= 8;
+	id |= ILI9341_Read_Data();
+	
+  if(id == LCDID_ST7789V)
+  {
+    return id;
+  }
+  else
+  {
+    ILI9341_Write_Cmd(0xD3);
+    ILI9341_Read_Data();
+    ILI9341_Read_Data();
+    id = ILI9341_Read_Data();
+    id <<= 8;
+    id |= ILI9341_Read_Data();
+    if(id == LCDID_ILI9341)
+    {
+      return id;
+    }
+  }
+  
+	return LCDID_UNKNOWN;
+}
 
 
 /**
@@ -562,8 +766,15 @@ void ILI9341_GramScan ( uint8_t ucOption )
 	}
 
 	//0x36命令参数的高3位可用于设置GRAM扫描方向	
-	ILI9341_Write_Cmd ( 0x36 ); 
-	ILI9341_Write_Data ( 0x08 |(ucOption<<5));//根据ucOption的值设置LCD参数，共0-7种模式
+	ILI9341_Write_Cmd ( 0x36 );
+  if(lcdid == LCDID_ILI9341)
+  {
+    ILI9341_Write_Data ( 0x08 |(ucOption<<5));//根据ucOption的值设置LCD参数，共0-7种模式
+  }
+  else if(lcdid == LCDID_ST7789V)
+  {
+    ILI9341_Write_Data ( 0x00 |(ucOption<<5));//根据ucOption的值设置LCD参数，共0-7种模式
+  }
 	ILI9341_Write_Cmd ( CMD_SetCoordinateX ); 
 	ILI9341_Write_Data ( 0x00 );		/* x 起始坐标高8位 */
 	ILI9341_Write_Data ( 0x00 );		/* x 起始坐标低8位 */
@@ -678,26 +889,24 @@ void ILI9341_SetPointPixel ( uint16_t usX, uint16_t usY )
 
 
 /**
- * @brief  读取ILI9341 GRAN 的一个像素数据
+ * @brief  读取 GRAM 的一个像素数据
  * @param  无
  * @retval 像素数据
  */
 static uint16_t ILI9341_Read_PixelData ( void )	
 {	
-	uint16_t us_RG=0, usB=0 ;
+	uint16_t usRG=0, usB=0 ;
 
 	
-	ILI9341_Write_Cmd ( 0x2E00 );   /* 读数据 */
-	//前读取三次结果去掉
-	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
-	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
-	us_RG = ILI9341_Read_Data (); 	/*FIRST READ OUT DUMMY DATA*/
+	ILI9341_Write_Cmd ( 0x2E );   /* 读数据 */
+	//去掉前一次读取结果
+	ILI9341_Read_Data (); 	      /*FIRST READ OUT DUMMY DATA*/
 	
 	//获取红色通道与绿色通道的值
-	us_RG = ILI9341_Read_Data ();  	/*READ OUT RED AND GREEN DATA  */
+	usRG = ILI9341_Read_Data ();  	/*READ OUT RED AND GREEN DATA  */
 	usB = ILI9341_Read_Data ();  		/*READ OUT BLUE DATA*/
 
-  return   (us_RG&0xF800)| ((us_RG<<3)&0x7E0) | (usB>>11) ;
+  return ( (usRG&0xF800)| ((usRG<<3)&0x7E0) | (usB>>11) );
 }
 
 

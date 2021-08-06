@@ -170,13 +170,18 @@ extern uint8_t LCD_SCAN_MODE;
 /******************************* 定义 ILI934 常用命令 ********************************/
 #define      CMD_SetCoordinateX		 		    0x2A	     //设置X坐标
 #define      CMD_SetCoordinateY		 		    0x2B	     //设置Y坐标
-#define      CMD_SetPixel		 		          0x2C	     //填充像素
+#define      CMD_SetPixel		 		        0x2C	     //填充像素
 
 
+/* 定义 LCD 驱动芯片 ID */
+#define     LCDID_UNKNOWN             0
+#define     LCDID_ILI9341             0x9341
+#define     LCDID_ST7789V             0x8552
 
 
 /********************************** 声明 ILI934 函数 ***************************************/
 void                     ILI9341_Init                    ( void );
+uint16_t                 ILI9341_ReadID                  ( void );
 void                     ILI9341_Rst                     ( void );
 void                     ILI9341_BackLed_Control         ( FunctionalState enumState );
 void                     ILI9341_GramScan                ( uint8_t ucOtion );
